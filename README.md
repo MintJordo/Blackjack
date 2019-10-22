@@ -1,5 +1,20 @@
-## Blackjack Application 
-##### Hunter Demeyer | Jordan Oberg | Conor Ford | Luke Fleck
+# Blackjack
 
-To run the application on a windows machine do:
-`blackjack.exe` 
+Blackjack Project for CSC-470
+
+## Team
+
+```bash
+Hunter Demyer
+Luke Fleck
+Connor Ford
+Jordan Oberg
+```
+
+## Usage
+
+Coming Soon. 
+
+
+## License
+For educational purposes only.
