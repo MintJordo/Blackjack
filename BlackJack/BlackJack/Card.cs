@@ -47,6 +47,24 @@ namespace BlackJack
             return "..\\..\\cards\\" + Number + Suit + ".png";
         }
 
+        public string getCardValue()
+        {
+            if (Number == "2") return 2;
+            if (Number == "3") return 3;
+            if (Number == "4") return 4;
+            if (Number == "5") return 5;
+            if (Number == "6") return 6;
+            if (Number == "7") return 7;
+            if (Number == "8") return 8;
+            if (Number == "9") return 9;
+            if (Number == "10") return 10;
+            if (Number == "J") return 10;
+            if (Number == "Q") return 10;
+            if (Number == "K") return 10;
+            if (Number == "A") return 1;
+            return -1;
+        }
+
         public static bool operator ==(Card a, Card b)
         {
             return a.Number == b.Number;
