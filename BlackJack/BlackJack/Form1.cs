@@ -108,5 +108,10 @@ namespace BlackJack
         {
 
         }
+
+        private void yourHand2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

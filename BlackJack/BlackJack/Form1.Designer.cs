@@ -217,6 +217,7 @@
             this.yourHand2.Size = new System.Drawing.Size(73, 109);
             this.yourHand2.TabIndex = 5;
             this.yourHand2.TabStop = false;
+            this.yourHand2.Click += new System.EventHandler(this.yourHand2_Click);
             // 
             // yourHand1
             // 
