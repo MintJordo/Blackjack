@@ -12,7 +12,16 @@ namespace BlackJack
 {
     public partial class Form1 : Form
     {
-        
+
+        Deck deck = new Deck();
+
+        Hand myHand = new Hand();
+        Hand dealerHand = new Hand();
+        int playerMoney = 100;
+
+        PictureBox[] dealerHandCardPictures;
+        PictureBox[] player1HandCardPictures;
+
 
         public Form1()
         {
@@ -51,6 +60,7 @@ namespace BlackJack
 
         private void hitButton_Click(object sender, EventArgs e)
         {
+            myHand.addCard(deck.getCard());
 
         }
 

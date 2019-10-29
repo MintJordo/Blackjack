@@ -61,7 +61,7 @@ namespace BlackJack
             if (Number == "J") return 10;
             if (Number == "Q") return 10;
             if (Number == "K") return 10;
-            if (Number == "A") return 1;
+            if (Number == "A") return 11;
             return -1;
         }
 

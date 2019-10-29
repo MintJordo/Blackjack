@@ -28,13 +28,31 @@ namespace BlackJack
             return cardsInHand.ToArray();
         }
 
+        public Boolean aceInHand()
+        {
+            foreach (Card c in cardsInHand.ToArray())
+            {
+                if (c.Number == "A")
+                    return true;
+            }
+            return false;
+        }
+
         public int getHandTotal()
         {
             int total = 0;
-            foreach(Card c in cardsInHand.ToArray())
+            foreach (Card c in cardsInHand.ToArray())
             {
-                
+                total += Int32.Parse(c.getCardValue());
             }
+            if (total > 21)
+            {
+                if(aceInHand())
+                {
+                    total -= 10;
+                }
+            }
+            return total;
         }
     }
 
