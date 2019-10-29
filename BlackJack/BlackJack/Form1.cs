@@ -48,5 +48,65 @@ namespace BlackJack
         {
 
         }
+
+        private void hitButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void standButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void incBet_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void decBet_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void moneyBal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dealerHand1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deckCard_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dealerTotalLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dealerTotalVal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void yourTotalVal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void betLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,11 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.deckCard = new System.Windows.Forms.PictureBox();
-            this.yourHand2 = new System.Windows.Forms.PictureBox();
-            this.yourHand1 = new System.Windows.Forms.PictureBox();
-            this.dealerHand2 = new System.Windows.Forms.PictureBox();
-            this.dealerHand1 = new System.Windows.Forms.PictureBox();
             this.moneyLabel = new System.Windows.Forms.Label();
             this.moneyBal = new System.Windows.Forms.Label();
             this.yourTotalLabel = new System.Windows.Forms.Label();
@@ -42,16 +37,165 @@
             this.hitButton = new System.Windows.Forms.Button();
             this.standButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.betLabel = new System.Windows.Forms.Label();
-            this.decBet = new System.Windows.Forms.Button();
             this.incBet = new System.Windows.Forms.Button();
+            this.decBet = new System.Windows.Forms.Button();
+            this.betLabel = new System.Windows.Forms.Label();
+            this.deckCard = new System.Windows.Forms.PictureBox();
+            this.yourHand2 = new System.Windows.Forms.PictureBox();
+            this.yourHand1 = new System.Windows.Forms.PictureBox();
+            this.dealerHand2 = new System.Windows.Forms.PictureBox();
+            this.dealerHand1 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deckCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yourHand2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yourHand1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerHand2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerHand1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // moneyLabel
+            // 
+            this.moneyLabel.AutoSize = true;
+            this.moneyLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moneyLabel.Location = new System.Drawing.Point(12, 12);
+            this.moneyLabel.Name = "moneyLabel";
+            this.moneyLabel.Size = new System.Drawing.Size(105, 32);
+            this.moneyLabel.TabIndex = 7;
+            this.moneyLabel.Text = "Money:";
+            this.moneyLabel.Click += new System.EventHandler(this.Label1_Click);
+            // 
+            // moneyBal
+            // 
+            this.moneyBal.AutoSize = true;
+            this.moneyBal.Enabled = false;
+            this.moneyBal.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.moneyBal.Location = new System.Drawing.Point(111, 12);
+            this.moneyBal.Name = "moneyBal";
+            this.moneyBal.Size = new System.Drawing.Size(75, 32);
+            this.moneyBal.TabIndex = 8;
+            this.moneyBal.Text = "$100";
+            this.moneyBal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.moneyBal.Click += new System.EventHandler(this.moneyBal_Click);
+            // 
+            // yourTotalLabel
+            // 
+            this.yourTotalLabel.AutoSize = true;
+            this.yourTotalLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yourTotalLabel.Location = new System.Drawing.Point(321, 294);
+            this.yourTotalLabel.Name = "yourTotalLabel";
+            this.yourTotalLabel.Size = new System.Drawing.Size(105, 32);
+            this.yourTotalLabel.TabIndex = 9;
+            this.yourTotalLabel.Text = "Total:";
+            this.yourTotalLabel.Click += new System.EventHandler(this.Label1_Click_1);
+            // 
+            // yourTotalVal
+            // 
+            this.yourTotalVal.AutoSize = true;
+            this.yourTotalVal.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yourTotalVal.Location = new System.Drawing.Point(420, 294);
+            this.yourTotalVal.Name = "yourTotalVal";
+            this.yourTotalVal.Size = new System.Drawing.Size(45, 32);
+            this.yourTotalVal.TabIndex = 10;
+            this.yourTotalVal.Text = "12";
+            this.yourTotalVal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.yourTotalVal.Click += new System.EventHandler(this.yourTotalVal_Click);
+            // 
+            // dealerTotalLabel
+            // 
+            this.dealerTotalLabel.AutoSize = true;
+            this.dealerTotalLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dealerTotalLabel.Location = new System.Drawing.Point(321, 133);
+            this.dealerTotalLabel.Name = "dealerTotalLabel";
+            this.dealerTotalLabel.Size = new System.Drawing.Size(105, 32);
+            this.dealerTotalLabel.TabIndex = 11;
+            this.dealerTotalLabel.Text = "Total:";
+            this.dealerTotalLabel.Click += new System.EventHandler(this.dealerTotalLabel_Click);
+            // 
+            // dealerTotalVal
+            // 
+            this.dealerTotalVal.AutoSize = true;
+            this.dealerTotalVal.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dealerTotalVal.Location = new System.Drawing.Point(420, 133);
+            this.dealerTotalVal.Name = "dealerTotalVal";
+            this.dealerTotalVal.Size = new System.Drawing.Size(45, 32);
+            this.dealerTotalVal.TabIndex = 12;
+            this.dealerTotalVal.Text = "11";
+            this.dealerTotalVal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dealerTotalVal.Click += new System.EventHandler(this.dealerTotalVal_Click);
+            // 
+            // hitButton
+            // 
+            this.hitButton.Location = new System.Drawing.Point(489, 278);
+            this.hitButton.Name = "hitButton";
+            this.hitButton.Size = new System.Drawing.Size(75, 23);
+            this.hitButton.TabIndex = 13;
+            this.hitButton.Text = "Hit";
+            this.hitButton.UseVisualStyleBackColor = true;
+            this.hitButton.Click += new System.EventHandler(this.hitButton_Click);
+            // 
+            // standButton
+            // 
+            this.standButton.Location = new System.Drawing.Point(221, 278);
+            this.standButton.Name = "standButton";
+            this.standButton.Size = new System.Drawing.Size(75, 23);
+            this.standButton.TabIndex = 14;
+            this.standButton.Text = "Stand";
+            this.standButton.UseVisualStyleBackColor = true;
+            this.standButton.Click += new System.EventHandler(this.standButton_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel1.Controls.Add(this.incBet);
+            this.panel1.Controls.Add(this.decBet);
+            this.panel1.Controls.Add(this.betLabel);
+            this.panel1.Location = new System.Drawing.Point(18, 278);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(180, 160);
+            this.panel1.TabIndex = 16;
+            // 
+            // incBet
+            // 
+            this.incBet.BackColor = System.Drawing.Color.DarkGreen;
+            this.incBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.incBet.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.incBet.Location = new System.Drawing.Point(61, 22);
+            this.incBet.Name = "incBet";
+            this.incBet.Padding = new System.Windows.Forms.Padding(1);
+            this.incBet.Size = new System.Drawing.Size(50, 32);
+            this.incBet.TabIndex = 20;
+            this.incBet.Text = "+";
+            this.incBet.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.incBet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.incBet.UseVisualStyleBackColor = false;
+            this.incBet.Click += new System.EventHandler(this.incBet_Click);
+            // 
+            // decBet
+            // 
+            this.decBet.BackColor = System.Drawing.Color.DarkGreen;
+            this.decBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decBet.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.decBet.Location = new System.Drawing.Point(61, 110);
+            this.decBet.Name = "decBet";
+            this.decBet.Padding = new System.Windows.Forms.Padding(1);
+            this.decBet.Size = new System.Drawing.Size(50, 32);
+            this.decBet.TabIndex = 19;
+            this.decBet.Text = "-";
+            this.decBet.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.decBet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.decBet.UseVisualStyleBackColor = false;
+            this.decBet.Click += new System.EventHandler(this.decBet_Click);
+            // 
+            // betLabel
+            // 
+            this.betLabel.AutoSize = true;
+            this.betLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.betLabel.Location = new System.Drawing.Point(26, 66);
+            this.betLabel.Name = "betLabel";
+            this.betLabel.Size = new System.Drawing.Size(120, 32);
+            this.betLabel.TabIndex = 16;
+            this.betLabel.Text = "Bet: $0";
+            this.betLabel.Click += new System.EventHandler(this.betLabel_Click);
             // 
             // deckCard
             // 
@@ -62,6 +206,7 @@
             this.deckCard.Size = new System.Drawing.Size(73, 109);
             this.deckCard.TabIndex = 6;
             this.deckCard.TabStop = false;
+            this.deckCard.Click += new System.EventHandler(this.deckCard_Click);
             // 
             // yourHand2
             // 
@@ -104,141 +249,7 @@
             this.dealerHand1.Size = new System.Drawing.Size(73, 109);
             this.dealerHand1.TabIndex = 2;
             this.dealerHand1.TabStop = false;
-            // 
-            // moneyLabel
-            // 
-            this.moneyLabel.AutoSize = true;
-            this.moneyLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.moneyLabel.Location = new System.Drawing.Point(12, 12);
-            this.moneyLabel.Name = "moneyLabel";
-            this.moneyLabel.Size = new System.Drawing.Size(105, 32);
-            this.moneyLabel.TabIndex = 7;
-            this.moneyLabel.Text = "Money:";
-            this.moneyLabel.Click += new System.EventHandler(this.Label1_Click);
-            // 
-            // moneyBal
-            // 
-            this.moneyBal.AutoSize = true;
-            this.moneyBal.Enabled = false;
-            this.moneyBal.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.moneyBal.Location = new System.Drawing.Point(111, 12);
-            this.moneyBal.Name = "moneyBal";
-            this.moneyBal.Size = new System.Drawing.Size(75, 32);
-            this.moneyBal.TabIndex = 8;
-            this.moneyBal.Text = "$100";
-            this.moneyBal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // yourTotalLabel
-            // 
-            this.yourTotalLabel.AutoSize = true;
-            this.yourTotalLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yourTotalLabel.Location = new System.Drawing.Point(321, 294);
-            this.yourTotalLabel.Name = "yourTotalLabel";
-            this.yourTotalLabel.Size = new System.Drawing.Size(105, 32);
-            this.yourTotalLabel.TabIndex = 9;
-            this.yourTotalLabel.Text = "Total:";
-            this.yourTotalLabel.Click += new System.EventHandler(this.Label1_Click_1);
-            // 
-            // yourTotalVal
-            // 
-            this.yourTotalVal.AutoSize = true;
-            this.yourTotalVal.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yourTotalVal.Location = new System.Drawing.Point(420, 294);
-            this.yourTotalVal.Name = "yourTotalVal";
-            this.yourTotalVal.Size = new System.Drawing.Size(45, 32);
-            this.yourTotalVal.TabIndex = 10;
-            this.yourTotalVal.Text = "12";
-            this.yourTotalVal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // dealerTotalLabel
-            // 
-            this.dealerTotalLabel.AutoSize = true;
-            this.dealerTotalLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dealerTotalLabel.Location = new System.Drawing.Point(321, 133);
-            this.dealerTotalLabel.Name = "dealerTotalLabel";
-            this.dealerTotalLabel.Size = new System.Drawing.Size(105, 32);
-            this.dealerTotalLabel.TabIndex = 11;
-            this.dealerTotalLabel.Text = "Total:";
-            // 
-            // dealerTotalVal
-            // 
-            this.dealerTotalVal.AutoSize = true;
-            this.dealerTotalVal.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dealerTotalVal.Location = new System.Drawing.Point(420, 133);
-            this.dealerTotalVal.Name = "dealerTotalVal";
-            this.dealerTotalVal.Size = new System.Drawing.Size(45, 32);
-            this.dealerTotalVal.TabIndex = 12;
-            this.dealerTotalVal.Text = "11";
-            this.dealerTotalVal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // hitButton
-            // 
-            this.hitButton.Location = new System.Drawing.Point(489, 278);
-            this.hitButton.Name = "hitButton";
-            this.hitButton.Size = new System.Drawing.Size(75, 23);
-            this.hitButton.TabIndex = 13;
-            this.hitButton.Text = "Hit";
-            this.hitButton.UseVisualStyleBackColor = true;
-            // 
-            // standButton
-            // 
-            this.standButton.Location = new System.Drawing.Point(221, 278);
-            this.standButton.Name = "standButton";
-            this.standButton.Size = new System.Drawing.Size(75, 23);
-            this.standButton.TabIndex = 14;
-            this.standButton.Text = "Stand";
-            this.standButton.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel1.Controls.Add(this.incBet);
-            this.panel1.Controls.Add(this.decBet);
-            this.panel1.Controls.Add(this.betLabel);
-            this.panel1.Location = new System.Drawing.Point(18, 278);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(180, 160);
-            this.panel1.TabIndex = 16;
-            // 
-            // betLabel
-            // 
-            this.betLabel.AutoSize = true;
-            this.betLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.betLabel.Location = new System.Drawing.Point(26, 66);
-            this.betLabel.Name = "betLabel";
-            this.betLabel.Size = new System.Drawing.Size(120, 32);
-            this.betLabel.TabIndex = 16;
-            this.betLabel.Text = "Bet: $0";
-            // 
-            // decBet
-            // 
-            this.decBet.BackColor = System.Drawing.Color.DarkGreen;
-            this.decBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.decBet.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.decBet.Location = new System.Drawing.Point(61, 110);
-            this.decBet.Name = "decBet";
-            this.decBet.Padding = new System.Windows.Forms.Padding(1);
-            this.decBet.Size = new System.Drawing.Size(50, 32);
-            this.decBet.TabIndex = 19;
-            this.decBet.Text = "-";
-            this.decBet.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.decBet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.decBet.UseVisualStyleBackColor = false;
-            // 
-            // incBet
-            // 
-            this.incBet.BackColor = System.Drawing.Color.DarkGreen;
-            this.incBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.incBet.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.incBet.Location = new System.Drawing.Point(61, 22);
-            this.incBet.Name = "incBet";
-            this.incBet.Padding = new System.Windows.Forms.Padding(1);
-            this.incBet.Size = new System.Drawing.Size(50, 32);
-            this.incBet.TabIndex = 20;
-            this.incBet.Text = "+";
-            this.incBet.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.incBet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.incBet.UseVisualStyleBackColor = false;
+            this.dealerHand1.Click += new System.EventHandler(this.dealerHand1_Click);
             // 
             // Form1
             // 
@@ -262,13 +273,14 @@
             this.Controls.Add(this.dealerHand1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deckCard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.yourHand2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.yourHand1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerHand2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerHand1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
