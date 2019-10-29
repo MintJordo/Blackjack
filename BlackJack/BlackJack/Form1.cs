@@ -96,8 +96,11 @@ namespace BlackJack
 
         private void hitButton_Click(object sender, EventArgs e)
         {
-            player1.hand.addCard(deck.getCard());
-            updatePlayerHandPictureBox();
+            if (player1.hand.getNumCards() < 5)
+            {
+                player1.hand.addCard(deck.getCard());
+                updatePlayerHandPictureBox();
+            }
 
         }
 

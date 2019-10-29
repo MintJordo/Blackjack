@@ -54,6 +54,11 @@ namespace BlackJack
             }
             return total;
         }
+
+        public int getNumCards()
+        {
+            return cardsInHand.Count();
+        }
     }
 
 }
