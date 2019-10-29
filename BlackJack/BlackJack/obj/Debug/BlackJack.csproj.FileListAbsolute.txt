@@ -17,3 +17,8 @@ C:\Users\DSU\Documents\DSU\Fall2019\CSC-470\final\Blackjack\BlackJack\BlackJack\
 C:\Users\DSU\Documents\DSU\Fall2019\CSC-470\final\Blackjack\BlackJack\BlackJack\obj\Debug\BlackJack.csproj.CoreCompileInputs.cache
 C:\Users\DSU\Documents\DSU\Fall2019\CSC-470\final\Blackjack\BlackJack\BlackJack\obj\Debug\BlackJack.exe
 C:\Users\DSU\Documents\DSU\Fall2019\CSC-470\final\Blackjack\BlackJack\BlackJack\obj\Debug\BlackJack.pdb
+C:\Users\Luke Fleck\Documents\GitHub\Blackjack2\BlackJack\BlackJack\bin\Debug\BlackJack.exe.config
+C:\Users\Luke Fleck\Documents\GitHub\Blackjack2\BlackJack\BlackJack\bin\Debug\BlackJack.exe
+C:\Users\Luke Fleck\Documents\GitHub\Blackjack2\BlackJack\BlackJack\bin\Debug\BlackJack.pdb
+C:\Users\Luke Fleck\Documents\GitHub\Blackjack2\BlackJack\BlackJack\obj\Debug\BlackJack.exe
+C:\Users\Luke Fleck\Documents\GitHub\Blackjack2\BlackJack\BlackJack\obj\Debug\BlackJack.pdb
