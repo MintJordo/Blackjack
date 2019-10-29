@@ -18,6 +18,7 @@ namespace BlackJack
         {
             money = 100;
             hand = new Hand();
+            cardDisplay = new PictureBox[5];
             name = "DBDSC";
         }
 
@@ -25,6 +26,7 @@ namespace BlackJack
         {
             money = m;
             hand = new Hand();
+            cardDisplay = new PictureBox[5];
             name = "DBDSC";
         }
 
@@ -32,6 +34,7 @@ namespace BlackJack
         {
             money = m;
             hand = new Hand();
+            cardDisplay = new PictureBox[5];
             name = s;
         }
 
@@ -39,6 +42,7 @@ namespace BlackJack
         {
             money = 100;
             hand = new Hand();
+            cardDisplay = new PictureBox[5];
             name = s;
         }
 

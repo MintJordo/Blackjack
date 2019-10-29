@@ -13,19 +13,32 @@ namespace BlackJack
     public partial class Form1 : Form
     {
 
-        Deck deck = new Deck();
+        Deck deck;
+        Player player1;
+        Player dealer;
 
-        Hand myHand = new Hand();
-        Hand dealerHand = new Hand();
-        int playerMoney = 100;
 
-        PictureBox[] dealerHandCardPictures = new PictureBox[5];
-        PictureBox[] player1HandCardPictures = new PictureBox[5];
+        public void updatePlayerHandPictureBox()
+        {
+            if (player1.hand.show().Length >= 1)
+                myHand1.BackgroundImage = Image.FromFile(player1.hand.show()[0].getCardPath());
+            if (player1.hand.show().Length >= 2)
+                myHand2.BackgroundImage = Image.FromFile(player1.hand.show()[1].getCardPath());
+            if (player1.hand.show().Length >= 3)
+                myHand3.BackgroundImage = Image.FromFile(player1.hand.show()[2].getCardPath());
+            if (player1.hand.show().Length >= 4)
+                myHand4.BackgroundImage = Image.FromFile(player1.hand.show()[3].getCardPath());
+            if (player1.hand.show().Length == 5)
+                myHand5.BackgroundImage = Image.FromFile(player1.hand.show()[4].getCardPath());
+        }
 
 
         public Form1()
         {
             InitializeComponent();
+            deck = new Deck();
+            player1 = new Player();
+            dealer = new Player();
         }
 
         private void BackgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
@@ -57,7 +70,8 @@ namespace BlackJack
 
         private void hitButton_Click(object sender, EventArgs e)
         {
-            myHand.addCard(deck.getCard());
+            player1.hand.addCard(deck.getCard());
+            updatePlayerHandPictureBox();
 
         }
 

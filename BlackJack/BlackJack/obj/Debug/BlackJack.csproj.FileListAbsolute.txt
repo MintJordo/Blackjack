@@ -7,3 +7,13 @@ C:\Users\Luke Fleck\Documents\GitHub\Blackjack2\BlackJack\BlackJack\obj\Debug\Bl
 C:\Users\Luke Fleck\Documents\GitHub\Blackjack2\BlackJack\BlackJack\obj\Debug\BlackJack.Properties.Resources.resources
 C:\Users\Luke Fleck\Documents\GitHub\Blackjack2\BlackJack\BlackJack\obj\Debug\BlackJack.csproj.GenerateResource.cache
 C:\Users\Luke Fleck\Documents\GitHub\Blackjack2\BlackJack\BlackJack\obj\Debug\BlackJack.csproj.CoreCompileInputs.cache
+C:\Users\DSU\Documents\DSU\Fall2019\CSC-470\final\Blackjack\BlackJack\BlackJack\bin\Debug\BlackJack.exe.config
+C:\Users\DSU\Documents\DSU\Fall2019\CSC-470\final\Blackjack\BlackJack\BlackJack\bin\Debug\BlackJack.exe
+C:\Users\DSU\Documents\DSU\Fall2019\CSC-470\final\Blackjack\BlackJack\BlackJack\bin\Debug\BlackJack.pdb
+C:\Users\DSU\Documents\DSU\Fall2019\CSC-470\final\Blackjack\BlackJack\BlackJack\obj\Debug\BlackJack.csprojAssemblyReference.cache
+C:\Users\DSU\Documents\DSU\Fall2019\CSC-470\final\Blackjack\BlackJack\BlackJack\obj\Debug\BlackJack.Form1.resources
+C:\Users\DSU\Documents\DSU\Fall2019\CSC-470\final\Blackjack\BlackJack\BlackJack\obj\Debug\BlackJack.Properties.Resources.resources
+C:\Users\DSU\Documents\DSU\Fall2019\CSC-470\final\Blackjack\BlackJack\BlackJack\obj\Debug\BlackJack.csproj.GenerateResource.cache
+C:\Users\DSU\Documents\DSU\Fall2019\CSC-470\final\Blackjack\BlackJack\BlackJack\obj\Debug\BlackJack.csproj.CoreCompileInputs.cache
+C:\Users\DSU\Documents\DSU\Fall2019\CSC-470\final\Blackjack\BlackJack\BlackJack\obj\Debug\BlackJack.exe
+C:\Users\DSU\Documents\DSU\Fall2019\CSC-470\final\Blackjack\BlackJack\BlackJack\obj\Debug\BlackJack.pdb

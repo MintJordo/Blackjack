@@ -43,7 +43,7 @@ namespace BlackJack
             int total = 0;
             foreach (Card c in cardsInHand.ToArray())
             {
-                total += Int32.Parse(c.getCardValue());
+                total += c.getCardValue();
             }
             if (total > 21)
             {

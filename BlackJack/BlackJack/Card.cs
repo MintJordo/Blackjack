@@ -44,10 +44,10 @@ namespace BlackJack
 
         public string getCardPath()
         {
-            return "..\\..\\cards\\" + Number + Suit + ".png";
+            return "..\\..\\..\\cards\\" + Number + Suit + ".png";
         }
 
-        public string getCardValue()
+        public int getCardValue()
         {
             if (Number == "2") return 2;
             if (Number == "3") return 3;
