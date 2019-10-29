@@ -19,8 +19,8 @@ namespace BlackJack
         Hand dealerHand = new Hand();
         int playerMoney = 100;
 
-        PictureBox[] dealerHandCardPictures;
-        PictureBox[] player1HandCardPictures;
+        PictureBox[] dealerHandCardPictures = new PictureBox[5];
+        PictureBox[] player1HandCardPictures = new PictureBox[5];
 
 
         public Form1()
