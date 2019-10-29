@@ -21,15 +21,30 @@ namespace BlackJack
         public void updatePlayerHandPictureBox()
         {
             if (player1.hand.show().Length >= 1)
+            {
+                myHand1.Visible = true;
                 myHand1.BackgroundImage = Image.FromFile(player1.hand.show()[0].getCardPath());
+            }
             if (player1.hand.show().Length >= 2)
+            {
+                myHand2.Visible = true;
                 myHand2.BackgroundImage = Image.FromFile(player1.hand.show()[1].getCardPath());
+            }
             if (player1.hand.show().Length >= 3)
+            {
+                myHand3.Visible = true;
                 myHand3.BackgroundImage = Image.FromFile(player1.hand.show()[2].getCardPath());
+            }
             if (player1.hand.show().Length >= 4)
+            {
+                myHand4.Visible = true;
                 myHand4.BackgroundImage = Image.FromFile(player1.hand.show()[3].getCardPath());
+            }
             if (player1.hand.show().Length == 5)
+            {
+                myHand5.Visible = true;
                 myHand5.BackgroundImage = Image.FromFile(player1.hand.show()[4].getCardPath());
+            }
         }
 
 
@@ -39,6 +54,17 @@ namespace BlackJack
             deck = new Deck();
             player1 = new Player();
             dealer = new Player();
+            dealerHand1.Visible = false;
+            dealerHand2.Visible = false;
+            dealerHand3.Visible = false;
+            dealerHand4.Visible = false;
+            dealerHand5.Visible = false;
+
+            myHand1.Visible = false;
+            myHand2.Visible = false;
+            myHand3.Visible = false;
+            myHand4.Visible = false;
+            myHand5.Visible = false;
         }
 
         private void BackgroundWorker1_DoWork(object sender, DoWorkEventArgs e)

@@ -44,7 +44,7 @@ namespace BlackJack
 
         public string getCardPath()
         {
-            return "..\\..\\..\\cards\\" + Number + Suit + ".png";
+            return @"..\..\..\..\cards\" + Number + Suit + ".png";
         }
 
         public int getCardValue()
