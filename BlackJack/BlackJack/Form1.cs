@@ -24,22 +24,22 @@ namespace BlackJack
 
         }
 
-        private void PictureBox3_Click(object sender, EventArgs e)
+        private void yourHand1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void PictureBox1_Click(object sender, EventArgs e)
+        private void dealerHand2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Label1_Click(object sender, EventArgs e)
+        private void youtTotal_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Label1_Click_1(object sender, EventArgs e)
+        private void moneyLabel_Click(object sender, EventArgs e)
         {
 
         }

@@ -62,7 +62,7 @@
             this.moneyLabel.Size = new System.Drawing.Size(105, 32);
             this.moneyLabel.TabIndex = 7;
             this.moneyLabel.Text = "Money:";
-            this.moneyLabel.Click += new System.EventHandler(this.Label1_Click);
+            this.moneyLabel.Click += new System.EventHandler(this.moneyLabel_Click);
             // 
             // moneyBal
             // 
@@ -86,7 +86,7 @@
             this.yourTotalLabel.Size = new System.Drawing.Size(105, 32);
             this.yourTotalLabel.TabIndex = 9;
             this.yourTotalLabel.Text = "Total:";
-            this.yourTotalLabel.Click += new System.EventHandler(this.Label1_Click_1);
+            this.yourTotalLabel.Click += new System.EventHandler(this.youtTotal_Click);
             // 
             // yourTotalVal
             // 
@@ -227,7 +227,7 @@
             this.yourHand1.Size = new System.Drawing.Size(73, 109);
             this.yourHand1.TabIndex = 4;
             this.yourHand1.TabStop = false;
-            this.yourHand1.Click += new System.EventHandler(this.PictureBox3_Click);
+            this.yourHand1.Click += new System.EventHandler(this.yourHand1_Click);
             // 
             // dealerHand2
             // 
@@ -238,7 +238,7 @@
             this.dealerHand2.Size = new System.Drawing.Size(73, 109);
             this.dealerHand2.TabIndex = 3;
             this.dealerHand2.TabStop = false;
-            this.dealerHand2.Click += new System.EventHandler(this.PictureBox1_Click);
+            this.dealerHand2.Click += new System.EventHandler(this.dealerHand2_Click);
             // 
             // dealerHand1
             // 
