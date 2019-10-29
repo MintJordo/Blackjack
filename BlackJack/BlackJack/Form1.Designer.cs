@@ -86,7 +86,7 @@
             this.yourTotalLabel.Size = new System.Drawing.Size(105, 32);
             this.yourTotalLabel.TabIndex = 9;
             this.yourTotalLabel.Text = "Total:";
-            this.yourTotalLabel.Click += new System.EventHandler(this.youtTotal_Click);
+            this.yourTotalLabel.Click += new System.EventHandler(this.yourTotal_Click);
             // 
             // yourTotalVal
             // 

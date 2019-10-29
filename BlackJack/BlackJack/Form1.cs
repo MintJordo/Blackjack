@@ -34,7 +34,7 @@ namespace BlackJack
 
         }
 
-        private void youtTotal_Click(object sender, EventArgs e)
+        private void yourTotal_Click(object sender, EventArgs e)
         {
 
         }
@@ -44,10 +44,7 @@ namespace BlackJack
 
         }
 
-        private void Label1_Click_2(object sender, EventArgs e)
-        {
 
-        }
 
         private void hitButton_Click(object sender, EventArgs e)
         {
