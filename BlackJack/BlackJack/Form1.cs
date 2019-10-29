@@ -125,5 +125,10 @@ namespace BlackJack
         {
 
         }
+
+        private void MyCard5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

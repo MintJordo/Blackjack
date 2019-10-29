@@ -43,9 +43,9 @@
             this.dealerHand5 = new System.Windows.Forms.PictureBox();
             this.dealerHand4 = new System.Windows.Forms.PictureBox();
             this.dealerHand3 = new System.Windows.Forms.PictureBox();
-            this.myCard5 = new System.Windows.Forms.PictureBox();
-            this.myCard4 = new System.Windows.Forms.PictureBox();
-            this.myCard3 = new System.Windows.Forms.PictureBox();
+            this.myHand5 = new System.Windows.Forms.PictureBox();
+            this.myHand4 = new System.Windows.Forms.PictureBox();
+            this.myHand3 = new System.Windows.Forms.PictureBox();
             this.deckCard = new System.Windows.Forms.PictureBox();
             this.myHand2 = new System.Windows.Forms.PictureBox();
             this.myHand1 = new System.Windows.Forms.PictureBox();
@@ -55,9 +55,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dealerHand5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerHand4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerHand3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myCard5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myCard4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myCard3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myHand5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myHand4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myHand3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deckCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myHand2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myHand1)).BeginInit();
@@ -245,38 +245,39 @@
             this.dealerHand3.TabIndex = 20;
             this.dealerHand3.TabStop = false;
             // 
-            // myCard5
+            // myHand5
             // 
-            this.myCard5.BackColor = System.Drawing.Color.Transparent;
-            this.myCard5.BackgroundImage = global::BlackJack.Properties.Resources._2C;
-            this.myCard5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.myCard5.Location = new System.Drawing.Point(432, 329);
-            this.myCard5.Name = "myCard5";
-            this.myCard5.Size = new System.Drawing.Size(73, 109);
-            this.myCard5.TabIndex = 19;
-            this.myCard5.TabStop = false;
+            this.myHand5.BackColor = System.Drawing.Color.Transparent;
+            this.myHand5.BackgroundImage = global::BlackJack.Properties.Resources._2C;
+            this.myHand5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.myHand5.Location = new System.Drawing.Point(432, 329);
+            this.myHand5.Name = "myHand5";
+            this.myHand5.Size = new System.Drawing.Size(73, 109);
+            this.myHand5.TabIndex = 19;
+            this.myHand5.TabStop = false;
+            this.myHand5.Click += new System.EventHandler(this.MyCard5_Click);
             // 
-            // myCard4
+            // myHand4
             // 
-            this.myCard4.BackColor = System.Drawing.Color.Transparent;
-            this.myCard4.BackgroundImage = global::BlackJack.Properties.Resources._2C;
-            this.myCard4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.myCard4.Location = new System.Drawing.Point(413, 329);
-            this.myCard4.Name = "myCard4";
-            this.myCard4.Size = new System.Drawing.Size(73, 109);
-            this.myCard4.TabIndex = 18;
-            this.myCard4.TabStop = false;
+            this.myHand4.BackColor = System.Drawing.Color.Transparent;
+            this.myHand4.BackgroundImage = global::BlackJack.Properties.Resources._2C;
+            this.myHand4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.myHand4.Location = new System.Drawing.Point(413, 329);
+            this.myHand4.Name = "myHand4";
+            this.myHand4.Size = new System.Drawing.Size(73, 109);
+            this.myHand4.TabIndex = 18;
+            this.myHand4.TabStop = false;
             // 
-            // myCard3
+            // myHand3
             // 
-            this.myCard3.BackColor = System.Drawing.Color.Transparent;
-            this.myCard3.BackgroundImage = global::BlackJack.Properties.Resources._2C;
-            this.myCard3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.myCard3.Location = new System.Drawing.Point(392, 329);
-            this.myCard3.Name = "myCard3";
-            this.myCard3.Size = new System.Drawing.Size(73, 109);
-            this.myCard3.TabIndex = 17;
-            this.myCard3.TabStop = false;
+            this.myHand3.BackColor = System.Drawing.Color.Transparent;
+            this.myHand3.BackgroundImage = global::BlackJack.Properties.Resources._2C;
+            this.myHand3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.myHand3.Location = new System.Drawing.Point(392, 329);
+            this.myHand3.Name = "myHand3";
+            this.myHand3.Size = new System.Drawing.Size(73, 109);
+            this.myHand3.TabIndex = 17;
+            this.myHand3.TabStop = false;
             // 
             // deckCard
             // 
@@ -346,9 +347,9 @@
             this.Controls.Add(this.dealerHand5);
             this.Controls.Add(this.dealerHand4);
             this.Controls.Add(this.dealerHand3);
-            this.Controls.Add(this.myCard5);
-            this.Controls.Add(this.myCard4);
-            this.Controls.Add(this.myCard3);
+            this.Controls.Add(this.myHand5);
+            this.Controls.Add(this.myHand4);
+            this.Controls.Add(this.myHand3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.standButton);
             this.Controls.Add(this.hitButton);
@@ -371,9 +372,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dealerHand5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerHand4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerHand3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myCard5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myCard4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.myCard3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myHand5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myHand4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.myHand3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deckCard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myHand2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myHand1)).EndInit();
@@ -403,9 +404,9 @@
         private System.Windows.Forms.Label betLabel;
         private System.Windows.Forms.Button incBet;
         private System.Windows.Forms.Button decBet;
-        private System.Windows.Forms.PictureBox myCard3;
-        private System.Windows.Forms.PictureBox myCard4;
-        private System.Windows.Forms.PictureBox myCard5;
+        private System.Windows.Forms.PictureBox myHand3;
+        private System.Windows.Forms.PictureBox myHand4;
+        private System.Windows.Forms.PictureBox myHand5;
         private System.Windows.Forms.PictureBox dealerHand3;
         private System.Windows.Forms.PictureBox dealerHand4;
         private System.Windows.Forms.PictureBox dealerHand5;
