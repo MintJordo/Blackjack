@@ -24,7 +24,7 @@ namespace BlackJack
 
         }
 
-        private void yourHand1_Click(object sender, EventArgs e)
+        private void myHand1_Click(object sender, EventArgs e)
         {
 
         }
@@ -34,7 +34,7 @@ namespace BlackJack
 
         }
 
-        private void yourTotal_Click(object sender, EventArgs e)
+        private void myTotal_Click(object sender, EventArgs e)
         {
 
         }
@@ -91,7 +91,7 @@ namespace BlackJack
 
         }
 
-        private void yourTotalVal_Click(object sender, EventArgs e)
+        private void myTotalVal_Click(object sender, EventArgs e)
         {
 
         }
@@ -106,7 +106,12 @@ namespace BlackJack
 
         }
 
-        private void yourHand2_Click(object sender, EventArgs e)
+        private void myHand2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DealerHand5_Click(object sender, EventArgs e)
         {
 
         }

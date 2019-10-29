@@ -2,3 +2,8 @@ C:\Users\DSU\source\repos\BlackJack\BlackJack\obj\Debug\BlackJack.csprojAssembly
 C:\Users\DSU\source\repos\BlackJack\BlackJack\obj\Debug\BlackJack.Properties.Resources.resources
 C:\Users\DSU\source\repos\BlackJack\BlackJack\obj\Debug\BlackJack.csproj.GenerateResource.cache
 C:\Users\DSU\source\repos\BlackJack\BlackJack\obj\Debug\BlackJack.csproj.CoreCompileInputs.cache
+C:\Users\Luke Fleck\Documents\GitHub\Blackjack2\BlackJack\BlackJack\obj\Debug\BlackJack.csprojAssemblyReference.cache
+C:\Users\Luke Fleck\Documents\GitHub\Blackjack2\BlackJack\BlackJack\obj\Debug\BlackJack.Form1.resources
+C:\Users\Luke Fleck\Documents\GitHub\Blackjack2\BlackJack\BlackJack\obj\Debug\BlackJack.Properties.Resources.resources
+C:\Users\Luke Fleck\Documents\GitHub\Blackjack2\BlackJack\BlackJack\obj\Debug\BlackJack.csproj.GenerateResource.cache
+C:\Users\Luke Fleck\Documents\GitHub\Blackjack2\BlackJack\BlackJack\obj\Debug\BlackJack.csproj.CoreCompileInputs.cache
