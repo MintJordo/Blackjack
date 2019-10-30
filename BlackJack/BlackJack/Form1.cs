@@ -16,6 +16,7 @@ namespace BlackJack
         Deck deck;
         Player player1;
         Player dealer;
+        int betInc = 5;
 
 
         public void updatePlayerHandPictureBox()
@@ -117,7 +118,13 @@ namespace BlackJack
 
         private void incBet_Click(object sender, EventArgs e)
         {
-
+            if (player1.getMoney() - betInc >= 0)
+            {
+                player1.wager += betInc;
+                player1.takeMoney(betInc);
+                betLabel.Text = "Bet: $" + player1.wager.ToString();
+                moneyBal.Text = "$" + player1.getMoney();
+            }
         }
 
         private void decBet_Click(object sender, EventArgs e)

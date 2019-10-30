@@ -10,6 +10,7 @@ namespace BlackJack
     class Player
     {
         private int money;
+        public int wager;
         public Hand hand;
         public PictureBox[] cardDisplay;
         private string name;
@@ -46,14 +47,21 @@ namespace BlackJack
             name = s;
         }
 
-        void addMoney(int m)
+        public void addMoney(int m)
         {
             money += m;
         }
 
-        void takeMoney(int m)
+        public void takeMoney(int m)
         {
             money -= m;
         }
+
+        public int getMoney()
+        {
+            return money;
+        }
+
+        
     }
 }

@@ -144,7 +144,7 @@
             // hitButton
             // 
             this.hitButton.Location = new System.Drawing.Point(652, 342);
-            this.hitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hitButton.Margin = new System.Windows.Forms.Padding(4);
             this.hitButton.Name = "hitButton";
             this.hitButton.Size = new System.Drawing.Size(100, 28);
             this.hitButton.TabIndex = 13;
@@ -155,7 +155,7 @@
             // standButton
             // 
             this.standButton.Location = new System.Drawing.Point(295, 342);
-            this.standButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.standButton.Margin = new System.Windows.Forms.Padding(4);
             this.standButton.Name = "standButton";
             this.standButton.Size = new System.Drawing.Size(100, 28);
             this.standButton.TabIndex = 14;
@@ -170,7 +170,7 @@
             this.panel1.Controls.Add(this.decBet);
             this.panel1.Controls.Add(this.betLabel);
             this.panel1.Location = new System.Drawing.Point(24, 342);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(240, 197);
             this.panel1.TabIndex = 16;
@@ -181,7 +181,7 @@
             this.incBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.incBet.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.incBet.Location = new System.Drawing.Point(81, 27);
-            this.incBet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.incBet.Margin = new System.Windows.Forms.Padding(4);
             this.incBet.Name = "incBet";
             this.incBet.Padding = new System.Windows.Forms.Padding(1);
             this.incBet.Size = new System.Drawing.Size(67, 39);
@@ -198,7 +198,7 @@
             this.decBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.decBet.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.decBet.Location = new System.Drawing.Point(81, 135);
-            this.decBet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.decBet.Margin = new System.Windows.Forms.Padding(4);
             this.decBet.Name = "decBet";
             this.decBet.Padding = new System.Windows.Forms.Padding(1);
             this.decBet.Size = new System.Drawing.Size(67, 39);
@@ -229,7 +229,7 @@
             this.dealerHand5.Enabled = false;
             this.dealerHand5.Image = global::BlackJack.Properties.Resources.transparent;
             this.dealerHand5.Location = new System.Drawing.Point(576, 15);
-            this.dealerHand5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dealerHand5.Margin = new System.Windows.Forms.Padding(4);
             this.dealerHand5.Name = "dealerHand5";
             this.dealerHand5.Size = new System.Drawing.Size(97, 134);
             this.dealerHand5.TabIndex = 22;
@@ -242,7 +242,7 @@
             this.dealerHand4.BackgroundImage = global::BlackJack.Properties.Resources._9H;
             this.dealerHand4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.dealerHand4.Location = new System.Drawing.Point(551, 15);
-            this.dealerHand4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dealerHand4.Margin = new System.Windows.Forms.Padding(4);
             this.dealerHand4.Name = "dealerHand4";
             this.dealerHand4.Size = new System.Drawing.Size(97, 134);
             this.dealerHand4.TabIndex = 21;
@@ -254,7 +254,7 @@
             this.dealerHand3.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.dealerHand3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.dealerHand3.Location = new System.Drawing.Point(523, 15);
-            this.dealerHand3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dealerHand3.Margin = new System.Windows.Forms.Padding(4);
             this.dealerHand3.Name = "dealerHand3";
             this.dealerHand3.Size = new System.Drawing.Size(97, 134);
             this.dealerHand3.TabIndex = 20;
@@ -266,7 +266,7 @@
             this.myHand5.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.myHand5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.myHand5.Location = new System.Drawing.Point(576, 405);
-            this.myHand5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.myHand5.Margin = new System.Windows.Forms.Padding(4);
             this.myHand5.Name = "myHand5";
             this.myHand5.Size = new System.Drawing.Size(97, 134);
             this.myHand5.TabIndex = 19;
@@ -279,7 +279,7 @@
             this.myHand4.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.myHand4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.myHand4.Location = new System.Drawing.Point(551, 405);
-            this.myHand4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.myHand4.Margin = new System.Windows.Forms.Padding(4);
             this.myHand4.Name = "myHand4";
             this.myHand4.Size = new System.Drawing.Size(97, 134);
             this.myHand4.TabIndex = 18;
@@ -291,7 +291,7 @@
             this.myHand3.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.myHand3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.myHand3.Location = new System.Drawing.Point(523, 405);
-            this.myHand3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.myHand3.Margin = new System.Windows.Forms.Padding(4);
             this.myHand3.Name = "myHand3";
             this.myHand3.Size = new System.Drawing.Size(97, 134);
             this.myHand3.TabIndex = 17;
@@ -302,7 +302,7 @@
             this.deckCard.BackgroundImage = global::BlackJack.Properties.Resources.red_back;
             this.deckCard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.deckCard.Location = new System.Drawing.Point(717, 15);
-            this.deckCard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deckCard.Margin = new System.Windows.Forms.Padding(4);
             this.deckCard.Name = "deckCard";
             this.deckCard.Size = new System.Drawing.Size(97, 134);
             this.deckCard.TabIndex = 6;
@@ -315,7 +315,7 @@
             this.myHand2.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.myHand2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.myHand2.Location = new System.Drawing.Point(497, 405);
-            this.myHand2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.myHand2.Margin = new System.Windows.Forms.Padding(4);
             this.myHand2.Name = "myHand2";
             this.myHand2.Size = new System.Drawing.Size(97, 134);
             this.myHand2.TabIndex = 5;
@@ -328,7 +328,7 @@
             this.myHand1.BackgroundImage = global::BlackJack.Properties.Resources._10C;
             this.myHand1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.myHand1.Location = new System.Drawing.Point(471, 405);
-            this.myHand1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.myHand1.Margin = new System.Windows.Forms.Padding(4);
             this.myHand1.Name = "myHand1";
             this.myHand1.Size = new System.Drawing.Size(97, 134);
             this.myHand1.TabIndex = 4;
@@ -341,7 +341,7 @@
             this.dealerHand2.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.dealerHand2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.dealerHand2.Location = new System.Drawing.Point(497, 15);
-            this.dealerHand2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dealerHand2.Margin = new System.Windows.Forms.Padding(4);
             this.dealerHand2.Name = "dealerHand2";
             this.dealerHand2.Size = new System.Drawing.Size(97, 134);
             this.dealerHand2.TabIndex = 3;
@@ -354,7 +354,7 @@
             this.dealerHand1.BackgroundImage = global::BlackJack.Properties.Resources._9H;
             this.dealerHand1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.dealerHand1.Location = new System.Drawing.Point(471, 15);
-            this.dealerHand1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dealerHand1.Margin = new System.Windows.Forms.Padding(4);
             this.dealerHand1.Name = "dealerHand1";
             this.dealerHand1.Size = new System.Drawing.Size(97, 134);
             this.dealerHand1.TabIndex = 2;
@@ -387,9 +387,9 @@
             this.Controls.Add(this.myHand1);
             this.Controls.Add(this.dealerHand2);
             this.Controls.Add(this.dealerHand1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Blackjack";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
