@@ -24,26 +24,31 @@ namespace BlackJack
             {
                 myHand1.Visible = true;
                 myHand1.BackgroundImage = Image.FromFile(player1.hand.show()[0].getCardPath());
+                myHand1.BringToFront();
             }
             if (player1.hand.show().Length >= 2)
             {
                 myHand2.Visible = true;
                 myHand2.BackgroundImage = Image.FromFile(player1.hand.show()[1].getCardPath());
+                myHand2.BringToFront();
             }
             if (player1.hand.show().Length >= 3)
             {
                 myHand3.Visible = true;
                 myHand3.BackgroundImage = Image.FromFile(player1.hand.show()[2].getCardPath());
+                myHand3.BringToFront();
             }
             if (player1.hand.show().Length >= 4)
             {
                 myHand4.Visible = true;
                 myHand4.BackgroundImage = Image.FromFile(player1.hand.show()[3].getCardPath());
+                myHand4.BringToFront();
             }
             if (player1.hand.show().Length == 5)
             {
                 myHand5.Visible = true;
                 myHand5.BackgroundImage = Image.FromFile(player1.hand.show()[4].getCardPath());
+                myHand5.BringToFront();
             }
         }
 
