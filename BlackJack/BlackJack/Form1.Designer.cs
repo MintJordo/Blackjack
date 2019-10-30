@@ -137,7 +137,7 @@
             this.dealerTotalVal.Name = "dealerTotalVal";
             this.dealerTotalVal.Size = new System.Drawing.Size(36, 40);
             this.dealerTotalVal.TabIndex = 12;
-            this.dealerTotalVal.Text = "0";
+            this.dealerTotalVal.Text = "?";
             this.dealerTotalVal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.dealerTotalVal.Click += new System.EventHandler(this.dealerTotalVal_Click);
             // 

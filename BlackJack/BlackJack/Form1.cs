@@ -17,6 +17,7 @@ namespace BlackJack
         Player player1;
         Player dealer;
         int betInc = 5;
+        string cardBackFileLocation = @"..\..\..\..\cards\red_back.png";
 
 
         public void updatePlayerHandPictureBox()
@@ -53,6 +54,90 @@ namespace BlackJack
             }
         }
 
+        public void updateDealerHandPictureBox()
+        {
+            if (dealer.hand.show().Length >= 1)
+            {
+                dealerHand1.Visible = true;
+                dealerHand1.BackgroundImage = Image.FromFile(dealer.hand.show()[0].getCardPath());
+                dealerHand1.BringToFront();
+            }
+            if (dealer.hand.show().Length >= 2)
+            {
+                dealerHand2.Visible = true;
+                dealerHand2.BackgroundImage = Image.FromFile(cardBackFileLocation);
+                dealerHand2.BringToFront();
+            }
+            if (dealer.hand.show().Length >= 3)
+            {
+                dealerHand3.Visible = true;
+                dealerHand3.BackgroundImage = Image.FromFile(cardBackFileLocation);
+                dealerHand3.BringToFront();
+            }
+            if (dealer.hand.show().Length >= 4)
+            {
+                dealerHand4.Visible = true;
+                dealerHand4.BackgroundImage = Image.FromFile(cardBackFileLocation);
+                dealerHand4.BringToFront();
+            }
+            if (dealer.hand.show().Length == 5)
+            {
+                dealerHand5.Visible = true;
+                dealerHand5.BackgroundImage = Image.FromFile(cardBackFileLocation);
+                dealerHand5.BringToFront();
+            }
+        }
+
+        public void showDealerCards()
+        {
+            if (dealer.hand.show().Length >= 1)
+            {
+                dealerHand1.Visible = true;
+                dealerHand1.BackgroundImage = Image.FromFile(dealer.hand.show()[0].getCardPath());
+                dealerHand1.BringToFront();
+            }
+            if (dealer.hand.show().Length >= 2)
+            {
+                dealerHand2.Visible = true;
+                dealerHand2.BackgroundImage = Image.FromFile(dealer.hand.show()[1].getCardPath());
+                dealerHand2.BringToFront();
+            }
+            if (dealer.hand.show().Length >= 3)
+            {
+                dealerHand3.Visible = true;
+                dealerHand3.BackgroundImage = Image.FromFile(dealer.hand.show()[2].getCardPath());
+                dealerHand3.BringToFront();
+            }
+            if (dealer.hand.show().Length >= 4)
+            {
+                dealerHand4.Visible = true;
+                dealerHand4.BackgroundImage = Image.FromFile(dealer.hand.show()[3].getCardPath());
+                dealerHand4.BringToFront();
+            }
+            if (dealer.hand.show().Length == 5)
+            {
+                dealerHand5.Visible = true;
+                dealerHand5.BackgroundImage = Image.FromFile(dealer.hand.show()[4].getCardPath());
+                dealerHand5.BringToFront();
+            }
+        }
+
+        public void endGame()
+        {
+            showDealerCards();
+            dealerTotalVal.Text = dealer.hand.getHandTotal().ToString();
+            if(player1.hand.getHandTotal() <= 21 && dealer.hand.getHandTotal() <= 21 && player1.hand.getHandTotal() > dealer.hand.getHandTotal())
+            {
+                player1.addMoney(player1.wager * 2);
+            }
+            if(dealer.hand.getHandTotal() > 21 && player1.hand.getHandTotal() <= 21)
+            {
+                player1.addMoney(player1.wager * 2);
+            }
+            player1.wager = 0;
+            betLabel.Text = "Bet: $0";
+            moneyBal.Text = "$ " + player1.getMoney().ToString();
+        }
 
         public Form1()
         {
@@ -107,13 +192,28 @@ namespace BlackJack
                 player1.hand.addCard(deck.getCard());
                 updatePlayerHandPictureBox();
                 myTotalVal.Text = player1.hand.getHandTotal().ToString();
+                if(player1.hand.getHandTotal() > 21)
+                {
+                    endGame();
+                }
             }
-
+            if(dealer.hand.getHandTotal() < 17)
+            {
+                System.Threading.Thread.Sleep(500);
+                dealer.hand.addCard(deck.getCard());
+                updateDealerHandPictureBox();
+            }
         }
 
         private void standButton_Click(object sender, EventArgs e)
         {
-
+            while(dealer.hand.getHandTotal() < 17)
+            {
+                dealer.hand.addCard(deck.getCard());
+                updateDealerHandPictureBox();
+                System.Threading.Thread.Sleep(500);
+            }
+            endGame();
         }
 
         private void incBet_Click(object sender, EventArgs e)
