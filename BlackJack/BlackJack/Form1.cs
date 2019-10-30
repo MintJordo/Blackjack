@@ -100,6 +100,7 @@ namespace BlackJack
             {
                 player1.hand.addCard(deck.getCard());
                 updatePlayerHandPictureBox();
+                myTotalVal.Text = player1.hand.getHandTotal().ToString();
             }
 
         }
