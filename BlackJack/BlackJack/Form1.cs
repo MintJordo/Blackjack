@@ -145,6 +145,10 @@ namespace BlackJack
             {
                 player1.addMoney(player1.wager * 2);
             }
+            if(player1.hand.getHandTotal() == dealer.hand.getHandTotal())
+            {
+                player1.addMoney(player1.wager);
+            }
             player1.wager = 0;
             betLabel.Text = "Bet: $0";
             moneyBal.Text = "$ " + player1.getMoney().ToString();
