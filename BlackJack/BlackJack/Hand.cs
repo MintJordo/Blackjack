@@ -59,6 +59,11 @@ namespace BlackJack
         {
             return cardsInHand.Count();
         }
+
+        public void emptyHand()
+        {
+            cardsInHand = new List<Card>();
+        }
     }
 
 }

@@ -148,6 +148,17 @@ namespace BlackJack
             player1.wager = 0;
             betLabel.Text = "Bet: $0";
             moneyBal.Text = "$ " + player1.getMoney().ToString();
+
+            standButton.Visible = false;
+            hitButton.Visible = false;
+            dealButton.Visible = true;
+            incBet.Visible = true;
+            decBet.Visible = true;
+
+            player1.hand.emptyHand();
+            dealer.hand.emptyHand();
+
+
         }
 
         /* This function intercepts all the commands sent to the application. 
@@ -173,8 +184,17 @@ namespace BlackJack
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-        
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15, 15));
+
+            hitButton.Visible = false;
+            standButton.Visible = false;
+
+            dealerTotalLabel.Visible = false;
+            dealerTotalVal.Visible = false;
+
+            myTotalLabel.Visible = false;
+            myTotalVal.Visible = false;
+
             deck = new Deck();
             player1 = new Player();
             dealer = new Player();
@@ -189,6 +209,42 @@ namespace BlackJack
             myHand3.Visible = false;
             myHand4.Visible = false;
             myHand5.Visible = false;
+        }
+
+        public void startGame()
+        {
+            dealerHand1.Visible = false;
+            dealerHand2.Visible = false;
+            dealerHand3.Visible = false;
+            dealerHand4.Visible = false;
+            dealerHand5.Visible = false;
+
+            myHand1.Visible = false;
+            myHand2.Visible = false;
+            myHand3.Visible = false;
+            myHand4.Visible = false;
+            myHand5.Visible = false;
+
+            player1.hand.addCard(deck.getCard());
+            dealer.hand.addCard(deck.getCard());
+            player1.hand.addCard(deck.getCard());
+            dealer.hand.addCard(deck.getCard());
+
+            dealButton.Visible = false;
+            hitButton.Visible = true;
+            standButton.Visible = true;
+            dealerTotalLabel.Visible = true;
+            dealerTotalVal.Visible = true;
+            myTotalLabel.Visible = true;
+            myTotalVal.Visible = true;
+            incBet.Visible = false;
+            decBet.Visible = false;
+
+            dealerTotalVal.Text = "?";
+
+            updatePlayerHandPictureBox();
+            updateDealerHandPictureBox();
+            myTotalVal.Text = player1.hand.getHandTotal().ToString();
         }
 
         private void BackgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
@@ -227,15 +283,17 @@ namespace BlackJack
                 myTotalVal.Text = player1.hand.getHandTotal().ToString();
                 if(player1.hand.getHandTotal() > 21)
                 {
+                    if(dealer.hand.getHandTotal() < 17)
+                    {
+                        System.Threading.Thread.Sleep(500);
+                        dealer.hand.addCard(deck.getCard());
+                        updateDealerHandPictureBox();
+                    }
                     endGame();
+
                 }
             }
-            if(dealer.hand.getHandTotal() < 17)
-            {
-                System.Threading.Thread.Sleep(500);
-                dealer.hand.addCard(deck.getCard());
-                updateDealerHandPictureBox();
-            }
+            
         }
 
         private void standButton_Click(object sender, EventArgs e)
@@ -327,7 +385,7 @@ namespace BlackJack
 
         private void DealButton_Click(object sender, EventArgs e)
         {
-
+            startGame();
         }
     }
 }
