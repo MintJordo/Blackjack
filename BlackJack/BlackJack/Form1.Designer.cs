@@ -36,8 +36,8 @@
             this.dealerTotalLabel = new System.Windows.Forms.Label();
             this.dealerTotalVal = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.incBet = new System.Windows.Forms.Button();
-            this.decBet = new System.Windows.Forms.Button();
+            this.decBet = new ePOSOne.btnProduct.Button_WOC();
+            this.incBet = new ePOSOne.btnProduct.Button_WOC();
             this.betLabel = new System.Windows.Forms.Label();
             this.dealerHand5 = new System.Windows.Forms.PictureBox();
             this.dealerHand4 = new System.Windows.Forms.PictureBox();
@@ -142,45 +142,57 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel1.Controls.Add(this.incBet);
             this.panel1.Controls.Add(this.decBet);
+            this.panel1.Controls.Add(this.incBet);
             this.panel1.Controls.Add(this.betLabel);
             this.panel1.Location = new System.Drawing.Point(18, 278);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(180, 160);
             this.panel1.TabIndex = 16;
             // 
-            // incBet
-            // 
-            this.incBet.BackColor = System.Drawing.Color.DarkGreen;
-            this.incBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.incBet.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.incBet.Location = new System.Drawing.Point(61, 22);
-            this.incBet.Name = "incBet";
-            this.incBet.Padding = new System.Windows.Forms.Padding(1);
-            this.incBet.Size = new System.Drawing.Size(50, 32);
-            this.incBet.TabIndex = 20;
-            this.incBet.Text = "+";
-            this.incBet.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.incBet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.incBet.UseVisualStyleBackColor = false;
-            this.incBet.Click += new System.EventHandler(this.incBet_Click);
-            // 
             // decBet
             // 
-            this.decBet.BackColor = System.Drawing.Color.DarkGreen;
-            this.decBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.decBet.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.decBet.Location = new System.Drawing.Point(61, 110);
+            this.decBet.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.decBet.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.decBet.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
+            this.decBet.FlatAppearance.BorderSize = 0;
+            this.decBet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGreen;
+            this.decBet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
+            this.decBet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.decBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decBet.Location = new System.Drawing.Point(57, 105);
             this.decBet.Name = "decBet";
-            this.decBet.Padding = new System.Windows.Forms.Padding(1);
-            this.decBet.Size = new System.Drawing.Size(50, 32);
-            this.decBet.TabIndex = 19;
+            this.decBet.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.decBet.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.decBet.OnHoverTextColor = System.Drawing.Color.White;
+            this.decBet.Size = new System.Drawing.Size(54, 32);
+            this.decBet.TabIndex = 29;
             this.decBet.Text = "-";
-            this.decBet.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.decBet.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.decBet.UseVisualStyleBackColor = false;
+            this.decBet.TextColor = System.Drawing.Color.Black;
+            this.decBet.UseVisualStyleBackColor = true;
             this.decBet.Click += new System.EventHandler(this.decBet_Click);
+            // 
+            // incBet
+            // 
+            this.incBet.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.incBet.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.incBet.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
+            this.incBet.FlatAppearance.BorderSize = 0;
+            this.incBet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGreen;
+            this.incBet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
+            this.incBet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.incBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.incBet.Location = new System.Drawing.Point(57, 28);
+            this.incBet.Name = "incBet";
+            this.incBet.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.incBet.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.incBet.OnHoverTextColor = System.Drawing.Color.White;
+            this.incBet.Size = new System.Drawing.Size(54, 32);
+            this.incBet.TabIndex = 28;
+            this.incBet.Text = "+";
+            this.incBet.TextColor = System.Drawing.Color.Black;
+            this.incBet.UseVisualStyleBackColor = true;
+            this.incBet.Click += new System.EventHandler(this.incBet_Click);
             // 
             // betLabel
             // 
@@ -466,8 +478,6 @@
         private System.Windows.Forms.Label dealerTotalVal;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label betLabel;
-        private System.Windows.Forms.Button incBet;
-        private System.Windows.Forms.Button decBet;
         private System.Windows.Forms.PictureBox myHand3;
         private System.Windows.Forms.PictureBox myHand4;
         private System.Windows.Forms.PictureBox myHand5;
@@ -478,6 +488,8 @@
         private ePOSOne.btnProduct.Button_WOC dealButton;
         private ePOSOne.btnProduct.Button_WOC standButton;
         private ePOSOne.btnProduct.Button_WOC hitButton;
+        private ePOSOne.btnProduct.Button_WOC incBet;
+        private ePOSOne.btnProduct.Button_WOC decBet;
     }
 }
 
