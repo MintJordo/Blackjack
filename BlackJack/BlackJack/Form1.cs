@@ -7,11 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace BlackJack
 {
     public partial class Form1 : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,     // x-coordinate of upper-left corner
+            int nTopRect,      // y-coordinate of upper-left corner
+            int nRightRect,    // x-coordinate of lower-right corner
+            int nBottomRect,   // y-coordinate of lower-right corner
+            int nWidthEllipse, // height of ellipse
+            int nHeightEllipse // width of ellipse
+        );
 
         Deck deck;
         Player player1;
@@ -139,9 +150,31 @@ namespace BlackJack
             moneyBal.Text = "$ " + player1.getMoney().ToString();
         }
 
+        /* This function intercepts all the commands sent to the application. 
+            It checks to see of the message is a mouse click in the application. 
+            It passes the action to the base action by default. It reassigns 
+            the action to the title bar if it occured in the client area
+            to allow the drag and move behavior.
+        */
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case 0x84:
+                    base.WndProc(ref m);
+                    if ((int)m.Result == 0x1)
+                        m.Result = (IntPtr)0x2;
+                    return;
+            }
+
+            base.WndProc(ref m);
+        }
         public Form1()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+        
             deck = new Deck();
             player1 = new Player();
             dealer = new Player();
@@ -283,6 +316,16 @@ namespace BlackJack
         }
 
         private void MyCard5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void DealButton_Click(object sender, EventArgs e)
         {
 
         }
