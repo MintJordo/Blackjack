@@ -35,8 +35,6 @@
             this.myTotalVal = new System.Windows.Forms.Label();
             this.dealerTotalLabel = new System.Windows.Forms.Label();
             this.dealerTotalVal = new System.Windows.Forms.Label();
-            this.hitButton = new System.Windows.Forms.Button();
-            this.standButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.incBet = new System.Windows.Forms.Button();
             this.decBet = new System.Windows.Forms.Button();
@@ -54,6 +52,8 @@
             this.dealerHand1 = new System.Windows.Forms.PictureBox();
             this.closeButton = new System.Windows.Forms.PictureBox();
             this.dealButton = new ePOSOne.btnProduct.Button_WOC();
+            this.standButton = new ePOSOne.btnProduct.Button_WOC();
+            this.hitButton = new ePOSOne.btnProduct.Button_WOC();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dealerHand5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerHand4)).BeginInit();
@@ -138,26 +138,6 @@
             this.dealerTotalVal.Text = "?";
             this.dealerTotalVal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.dealerTotalVal.Click += new System.EventHandler(this.dealerTotalVal_Click);
-            // 
-            // hitButton
-            // 
-            this.hitButton.Location = new System.Drawing.Point(489, 278);
-            this.hitButton.Name = "hitButton";
-            this.hitButton.Size = new System.Drawing.Size(75, 23);
-            this.hitButton.TabIndex = 13;
-            this.hitButton.Text = "Hit";
-            this.hitButton.UseVisualStyleBackColor = true;
-            this.hitButton.Click += new System.EventHandler(this.hitButton_Click);
-            // 
-            // standButton
-            // 
-            this.standButton.Location = new System.Drawing.Point(221, 278);
-            this.standButton.Name = "standButton";
-            this.standButton.Size = new System.Drawing.Size(75, 23);
-            this.standButton.TabIndex = 14;
-            this.standButton.Text = "Stand";
-            this.standButton.UseVisualStyleBackColor = true;
-            this.standButton.Click += new System.EventHandler(this.standButton_Click);
             // 
             // panel1
             // 
@@ -363,7 +343,7 @@
             this.dealButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.dealButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dealButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dealButton.Location = new System.Drawing.Point(300, 184);
+            this.dealButton.Location = new System.Drawing.Point(287, 184);
             this.dealButton.Name = "dealButton";
             this.dealButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.dealButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -375,12 +355,58 @@
             this.dealButton.UseVisualStyleBackColor = true;
             this.dealButton.Click += new System.EventHandler(this.DealButton_Click);
             // 
+            // standButton
+            // 
+            this.standButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.standButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.standButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.standButton.FlatAppearance.BorderSize = 0;
+            this.standButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.standButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.standButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.standButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.standButton.Location = new System.Drawing.Point(211, 269);
+            this.standButton.Name = "standButton";
+            this.standButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.standButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.standButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.standButton.Size = new System.Drawing.Size(82, 32);
+            this.standButton.TabIndex = 26;
+            this.standButton.Text = "Stand";
+            this.standButton.TextColor = System.Drawing.Color.Black;
+            this.standButton.UseVisualStyleBackColor = true;
+            this.standButton.Click += new System.EventHandler(this.standButton_Click);
+            // 
+            // hitButton
+            // 
+            this.hitButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.hitButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.hitButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.hitButton.FlatAppearance.BorderSize = 0;
+            this.hitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.hitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.hitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hitButton.Location = new System.Drawing.Point(481, 269);
+            this.hitButton.Name = "hitButton";
+            this.hitButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.hitButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.hitButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.hitButton.Size = new System.Drawing.Size(82, 32);
+            this.hitButton.TabIndex = 27;
+            this.hitButton.Text = "Hit";
+            this.hitButton.TextColor = System.Drawing.Color.Black;
+            this.hitButton.UseVisualStyleBackColor = true;
+            this.hitButton.Click += new System.EventHandler(this.hitButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.hitButton);
+            this.Controls.Add(this.standButton);
             this.Controls.Add(this.dealButton);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.dealerHand5);
@@ -390,8 +416,6 @@
             this.Controls.Add(this.myHand4);
             this.Controls.Add(this.myHand3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.standButton);
-            this.Controls.Add(this.hitButton);
             this.Controls.Add(this.dealerTotalVal);
             this.Controls.Add(this.dealerTotalLabel);
             this.Controls.Add(this.myTotalVal);
@@ -440,8 +464,6 @@
         private System.Windows.Forms.Label myTotalVal;
         private System.Windows.Forms.Label dealerTotalLabel;
         private System.Windows.Forms.Label dealerTotalVal;
-        private System.Windows.Forms.Button hitButton;
-        private System.Windows.Forms.Button standButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label betLabel;
         private System.Windows.Forms.Button incBet;
@@ -454,6 +476,8 @@
         private System.Windows.Forms.PictureBox dealerHand5;
         private System.Windows.Forms.PictureBox closeButton;
         private ePOSOne.btnProduct.Button_WOC dealButton;
+        private ePOSOne.btnProduct.Button_WOC standButton;
+        private ePOSOne.btnProduct.Button_WOC hitButton;
     }
 }
 
