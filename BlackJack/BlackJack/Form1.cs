@@ -30,7 +30,6 @@ namespace BlackJack
         int betInc = 5;
         string cardBackFileLocation = @"..\..\..\..\cards\red_back.png";
 
-
         public void updatePlayerHandPictureBox()
         {
             if (player1.hand.show().Length >= 1)
@@ -161,8 +160,7 @@ namespace BlackJack
 
             player1.hand.emptyHand();
             dealer.hand.emptyHand();
-
-
+            deck.shuffle();
         }
 
         /* This function intercepts all the commands sent to the application. 
@@ -189,6 +187,7 @@ namespace BlackJack
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15, 15));
+            moneyBal.Text = System.IO.File.ReadAllText(@"..\..\..\Money.txt");
 
             hitButton.Visible = false;
             standButton.Visible = false;
@@ -390,6 +389,7 @@ namespace BlackJack
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
+            System.IO.File.WriteAllText(@"..\..\..\Money.txt", moneyBal.Text);
             Close();
         }
 
