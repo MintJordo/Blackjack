@@ -324,7 +324,13 @@ namespace BlackJack
 
         private void decBet_Click(object sender, EventArgs e)
         {
-
+            if (player1.wager > 0)
+            {
+                player1.wager -= betInc;
+                player1.addMoney(betInc);
+                betLabel.Text = "Bet: $" + player1.wager.ToString();
+                moneyBal.Text = "$" + player1.getMoney();
+            }
         }
 
         private void moneyBal_Click(object sender, EventArgs e)
