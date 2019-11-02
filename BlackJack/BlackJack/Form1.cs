@@ -150,7 +150,7 @@ namespace BlackJack
             }
             player1.wager = 0;
             betLabel.Text = "Bet: $0";
-            moneyBal.Text = "$ " + player1.getMoney().ToString();
+            moneyBal.Text = "$" + player1.getMoney().ToString();
 
             standButton.Visible = false;
             hitButton.Visible = false;
@@ -188,6 +188,10 @@ namespace BlackJack
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15, 15));
             moneyBal.Text = System.IO.File.ReadAllText(@"..\..\..\Money.txt");
+            if(moneyBal.Text == "$0")
+            {
+                moneyBal.Text = "$100";
+            }
 
             hitButton.Visible = false;
             standButton.Visible = false;
