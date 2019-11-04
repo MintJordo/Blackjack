@@ -29,6 +29,7 @@ namespace BlackJack
         Player dealer;
         int betInc = 5;
         string cardBackFileLocation = @"..\..\..\..\cards\red_back.png";
+        public bool Timerbool = true;
 
 
         public void updatePlayerHandPictureBox()
@@ -155,12 +156,16 @@ namespace BlackJack
 
             standButton.Visible = false;
             hitButton.Visible = false;
-            dealButton.Visible = true;
+            dealButton.Visible = false;
             incBet.Visible = true;
             decBet.Visible = true;
 
             player1.hand.emptyHand();
             dealer.hand.emptyHand();
+
+            //timer Code
+            BetTimer.Enabled = true;
+            blinkPanel.BackColor = System.Drawing.Color.FromArgb(212, 175, 55);
 
 
         }
@@ -187,8 +192,17 @@ namespace BlackJack
         public Form1()
         {
             InitializeComponent();
+
+            //Timer Code
+            BetTimer.Start();
+            BetTimer.Enabled = true;
+
+            //Get rounded corners on the form
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15, 15));
+
+            //Hide Deal Button until bet
+            dealButton.Visible = false;
 
             hitButton.Visible = false;
             standButton.Visible = false;
@@ -217,6 +231,10 @@ namespace BlackJack
 
         public void startGame()
         {
+            //Timer Code
+            BetTimer.Enabled = false;
+            blinkPanel.BackColor = System.Drawing.Color.DarkGreen;
+
             dealerHand1.Visible = false;
             dealerHand2.Visible = false;
             dealerHand3.Visible = false;
@@ -319,12 +337,26 @@ namespace BlackJack
                 player1.takeMoney(betInc);
                 betLabel.Text = "Bet: $" + player1.wager.ToString();
                 moneyBal.Text = "$" + player1.getMoney();
+
+                //Dont show dealer button until they bet.
+                if (player1.wager > 0)
+                    dealButton.Visible = true;
             }
         }
 
         private void decBet_Click(object sender, EventArgs e)
         {
+            if (player1.wager > 0)
+            {
+                player1.wager -= betInc;
+                player1.addMoney(betInc);
+                betLabel.Text = "Bet: $" + player1.wager.ToString();
+                moneyBal.Text = "$" + player1.getMoney();
 
+                //Dont show dealer button until they bet.
+                if (player1.wager <= 0)
+                    dealButton.Visible = false;
+            }
         }
 
         private void moneyBal_Click(object sender, EventArgs e)
@@ -392,5 +424,18 @@ namespace BlackJack
             startGame();
         }
 
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            Timerbool = !Timerbool;
+            if(Timerbool)
+                blinkPanel.BackColor = System.Drawing.Color.DarkGreen;
+            if (!Timerbool)
+                blinkPanel.BackColor = System.Drawing.Color.FromArgb(212, 175, 55);
+        }
     }
 }
