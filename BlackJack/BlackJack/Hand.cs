@@ -41,16 +41,19 @@ namespace BlackJack
         public int getHandTotal()
         {
             int total = 0;
+            int numAces = 0;
             foreach (Card c in cardsInHand.ToArray())
             {
                 total += c.getCardValue();
-            }
-            if (total > 21)
-            {
-                if(aceInHand())
+                if (c.getCardValue() == 11)
                 {
-                    total -= 10;
+                    numAces++;
                 }
+            }
+            while (total > 21 && numAces > 0)
+            {
+                total -= 10;
+                numAces--;
             }
             return total;
         }

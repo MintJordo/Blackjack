@@ -13,6 +13,7 @@ namespace BlackJack
 {
     public partial class Form1 : Form
     {
+        //import for rounded corners and code to make it happen
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -24,6 +25,7 @@ namespace BlackJack
             int nHeightEllipse // width of ellipse
         );
 
+        // begin game variable
         Deck deck;
         Player player1;
         Player dealer;
