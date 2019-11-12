@@ -12,14 +12,14 @@ namespace BlackJack
         private int money;
         public int wager;
         public Hand hand;
-        public PictureBox[] cardDisplay;
+        public List<PictureBox> cardDisplay;
         private string name;
 
         public Player()
         {
             money = 100;
             hand = new Hand();
-            cardDisplay = new PictureBox[5];
+            cardDisplay = new List<PictureBox>();
             name = "DBDSC";
         }
 
@@ -27,7 +27,7 @@ namespace BlackJack
         {
             money = m;
             hand = new Hand();
-            cardDisplay = new PictureBox[5];
+            cardDisplay = new List<PictureBox>();
             name = "DBDSC";
         }
 

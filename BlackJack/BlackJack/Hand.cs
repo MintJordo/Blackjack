@@ -19,8 +19,7 @@ namespace BlackJack
 
         public void addCard(Card c)
         {
-            if(numCardsInHand < 5)
-                cardsInHand.Add(c);
+            cardsInHand.Add(c);
         }
 
         public Card[] show()
