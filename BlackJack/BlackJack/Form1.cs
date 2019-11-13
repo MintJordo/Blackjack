@@ -200,6 +200,9 @@ namespace BlackJack
 
         public void makeLogin()
         {
+            GamePanel.Visible = false;
+            SignInPanel.Visible = false;
+
             SignUpPanel.BackColor = Color.FromArgb(0, 25, 50);
             SignInButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
             this.BackColor = Color.FromArgb(0, 25, 50);
@@ -213,10 +216,13 @@ namespace BlackJack
             SignUpConfirm.BackColor = Color.FromArgb(74, 154, 122);
             SignUpConfirm.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
 
-            GamePanel.Visible = false;
+            SignUpPanel.Visible = true;
+            SignUpPanel.Location = new Point(209, 34);
+
         }
         public void goToLogin()
         {
+
             SignUpPanel.Visible = false;
             GamePanel.Visible = false;
 
@@ -224,15 +230,13 @@ namespace BlackJack
             SignUpButton2.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
             this.BackColor = Color.FromArgb(0, 25, 50);
             underSignIn2.BackColor = Color.FromArgb(74, 154, 122);
-            FirstNameBox2.BackColor = Color.FromArgb(0, 25, 50);
             UserNameBox2.BackColor = Color.FromArgb(0, 25, 50);
-            addressBox2.BackColor = Color.FromArgb(0, 25, 50);
-            phoneBox.BackColor = Color.FromArgb(0, 25, 50);
-            ccBox.BackColor = Color.FromArgb(0, 25, 50);
-            PasswordBox.BackColor = Color.FromArgb(0, 25, 50);
-            SignUpConfirm.BackColor = Color.FromArgb(74, 154, 122);
-            SignUpConfirm.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
+            passwordBox2.BackColor = Color.FromArgb(0, 25, 50);
+            SignInConfirm.BackColor = Color.FromArgb(74, 154, 122);
+            SignInConfirm.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
 
+            SignInPanel.Visible = true;
+            SignInPanel.Location = new Point(209,34);
 
         }
 
@@ -530,6 +534,11 @@ namespace BlackJack
         private void MyTextBox4_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void SignUpButton2_Click(object sender, EventArgs e)
+        {
+            makeLogin();
         }
     }
 }
