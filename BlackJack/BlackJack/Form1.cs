@@ -240,6 +240,14 @@ namespace BlackJack
 
         }
 
+        public void LaunchGame()
+        {
+            SignUpPanel.Visible = false;
+            SignInPanel.Visible = false;
+            GamePanel.Visible = true;
+            GamePanel.Location = new Point(13,13);
+            this.BackColor = Color.Green;
+        }
 
         public Form1()
         {
@@ -539,6 +547,11 @@ namespace BlackJack
         private void SignUpButton2_Click(object sender, EventArgs e)
         {
             makeLogin();
+        }
+
+        private void SignInConfirm_Click(object sender, EventArgs e)
+        {
+            LaunchGame();
         }
     }
 }
