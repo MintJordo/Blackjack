@@ -35,7 +35,7 @@ namespace BlackJack
         {
             money = m;
             hand = new Hand();
-            cardDisplay = new PictureBox[5];
+            cardDisplay = new List<PictureBox>();
             name = s;
         }
 
@@ -43,7 +43,7 @@ namespace BlackJack
         {
             money = 100;
             hand = new Hand();
-            cardDisplay = new PictureBox[5];
+            cardDisplay = new List<PictureBox>();
             name = s;
         }
 
