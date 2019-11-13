@@ -13,6 +13,8 @@ namespace BlackJack
 {
     public partial class Form1 : Form
     {
+
+
         //import for rounded corners and code to make it happen
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -195,9 +197,50 @@ namespace BlackJack
 
             base.WndProc(ref m);
         }
+
+        public void makeLogin()
+        {
+            SignUpPanel.BackColor = Color.FromArgb(0, 25, 50);
+            SignInButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
+            this.BackColor = Color.FromArgb(0, 25, 50);
+            underSignUp.BackColor = Color.FromArgb(74, 154, 122);
+            FirstNameBox.BackColor = Color.FromArgb(0, 25, 50);
+            UserNameBox.BackColor = Color.FromArgb(0, 25, 50);
+            addressBox.BackColor = Color.FromArgb(0, 25, 50);
+            phoneBox.BackColor = Color.FromArgb(0, 25, 50);
+            ccBox.BackColor = Color.FromArgb(0, 25, 50);
+            PasswordBox.BackColor = Color.FromArgb(0, 25, 50);
+            SignUpConfirm.BackColor = Color.FromArgb(74, 154, 122);
+            SignUpConfirm.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
+
+            GamePanel.Visible = false;
+        }
+        public void goToLogin()
+        {
+            SignUpPanel.Visible = false;
+            GamePanel.Visible = false;
+
+            SignInPanel.BackColor = Color.FromArgb(0, 25, 50);
+            SignUpButton2.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
+            this.BackColor = Color.FromArgb(0, 25, 50);
+            underSignIn2.BackColor = Color.FromArgb(74, 154, 122);
+            FirstNameBox2.BackColor = Color.FromArgb(0, 25, 50);
+            UserNameBox2.BackColor = Color.FromArgb(0, 25, 50);
+            addressBox2.BackColor = Color.FromArgb(0, 25, 50);
+            phoneBox.BackColor = Color.FromArgb(0, 25, 50);
+            ccBox.BackColor = Color.FromArgb(0, 25, 50);
+            PasswordBox.BackColor = Color.FromArgb(0, 25, 50);
+            SignUpConfirm.BackColor = Color.FromArgb(74, 154, 122);
+            SignUpConfirm.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
+
+
+        }
+
+
         public Form1()
         {
             InitializeComponent();
+            makeLogin();
 
             //Timer Code
             BetTimer.Start();
@@ -452,6 +495,41 @@ namespace BlackJack
                 blinkPanel.BackColor = System.Drawing.Color.DarkGreen;
             if (!Timerbool)
                 blinkPanel.BackColor = System.Drawing.Color.FromArgb(212, 175, 55);
+        }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SignUpPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SignInButton_Click(object sender, EventArgs e)
+        {
+            goToLogin();
+        }
+
+        private void FirstLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserNameBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MyTextBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
