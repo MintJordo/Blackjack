@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Xml;
+
 
 namespace BlackJack
 {
@@ -242,11 +244,26 @@ namespace BlackJack
 
         public void LaunchGame()
         {
-            SignUpPanel.Visible = false;
-            SignInPanel.Visible = false;
-            GamePanel.Visible = true;
-            GamePanel.Location = new Point(13,13);
-            this.BackColor = Color.Green;
+            // Check right here if login is correct
+            string entered_username = UserNameBox2.Text;
+            string entered_password = passwordBox2.Text;
+            XmlDocument doc = new XmlDocument();
+            doc.Load("Players.xml");
+            foreach(XmlNode node in doc.DocumentElement) {
+                string username = node.Attributes[0].InnerText;
+                string password = node.ChildNodes[1].InnerText;
+                Console.WriteLine(username);
+                if (entered_username == username && entered_password == password) {
+                    SignUpPanel.Visible = false;
+                    SignInPanel.Visible = false;
+                    GamePanel.Visible = true;
+                    GamePanel.Location = new Point(13, 13);
+                    this.BackColor = Color.Green;
+                }
+                else {
+                    Console.WriteLine("User does not exist or password is incorrect");
+                }
+            }
         }
 
         public Form1()

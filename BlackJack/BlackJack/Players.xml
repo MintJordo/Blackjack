@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<players>
+  <player username="davidbishop">
+    <name>David Bishop</name>
+    <password>scrum</password>
+    <balance>0.69</balance>
+  </player>
+  <player username="clford">
+    <name>Connor Ford</name>
+    <password>cocoa</password>
+    <balance>1000000</balance>
+  </player>
+</players>
