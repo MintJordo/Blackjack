@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Xml;
+
 
 namespace BlackJack
 {
@@ -202,6 +204,8 @@ namespace BlackJack
         {
             GamePanel.Visible = false;
             SignInPanel.Visible = false;
+            forgotPanel.Visible = false;
+            newPassPanel.Visible = false;
 
             SignUpPanel.BackColor = Color.FromArgb(0, 25, 50);
             SignInButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
@@ -216,6 +220,18 @@ namespace BlackJack
             SignUpConfirm.BackColor = Color.FromArgb(74, 154, 122);
             SignUpConfirm.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
 
+            //changePassword
+            Password1.BackColor = Color.FromArgb(0, 25, 50);
+            Password2.BackColor = Color.FromArgb(0, 25, 50);
+            setPassword.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
+            setPassword.BackColor = Color.FromArgb(74, 154, 122);
+
+            //forgotPassPanel
+            verifyNum.BackColor = Color.FromArgb(0, 25, 50);
+            verifyUsername.BackColor = Color.FromArgb(0, 25, 50);
+            verifyButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
+            verifyButton.BackColor = Color.FromArgb(74, 154, 122);
+
             SignUpPanel.Visible = true;
             SignUpPanel.Location = new Point(209, 34);
 
@@ -225,6 +241,7 @@ namespace BlackJack
 
             SignUpPanel.Visible = false;
             GamePanel.Visible = false;
+            forgotPanel.Visible = false;
 
             SignInPanel.BackColor = Color.FromArgb(0, 25, 50);
             SignUpButton2.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
@@ -239,14 +256,42 @@ namespace BlackJack
             SignInPanel.Location = new Point(209,34);
 
         }
-
+        public void forgotPass()
+        {
+            SignInPanel.Visible = false;
+            forgotPanel.Visible = true;
+            forgotPanel.Location = new Point(209, 34);
+        }
+        public void newPass()
+        {
+            newPassPanel.Visible = true;
+            forgotPanel.Visible = false;
+            newPassPanel.Location = new Point(209, 34);
+        }
         public void LaunchGame()
         {
-            SignUpPanel.Visible = false;
-            SignInPanel.Visible = false;
-            GamePanel.Visible = true;
-            GamePanel.Location = new Point(13,13);
-            this.BackColor = Color.Green;
+            // Check right here if login is correct
+            string entered_username = UserNameBox2.Text;
+            string entered_password = passwordBox2.Text;
+            XmlDocument doc = new XmlDocument();
+            doc.Load("Players.xml");
+            foreach(XmlNode node in doc.DocumentElement) {
+                string username = node.Attributes[0].InnerText;
+                string password = node.ChildNodes[1].InnerText;
+                Console.WriteLine(username);
+                if (entered_username == username && entered_password == password) {
+                    SignUpPanel.Visible = false;
+                    SignInPanel.Visible = false;
+                    forgotPanel.Visible = false;
+                    newPassPanel.Visible = false;
+                    GamePanel.Visible = true;
+                    GamePanel.Location = new Point(13, 13);
+                    this.BackColor = Color.Green;
+                }
+                else {
+                    Console.WriteLine("User does not exist or password is incorrect");
+                }
+            }
         }
 
         public Form1()
@@ -319,6 +364,7 @@ namespace BlackJack
             dealer.hand.addCard(deck.getCard());
 
             dealButton.Visible = false;
+            splitButton.Visible = false;
             hitButton.Visible = true;
             standButton.Visible = true;
             dealerTotalLabel.Visible = true;
@@ -333,6 +379,11 @@ namespace BlackJack
             updatePlayerHandPictureBox();
             updateDealerHandPictureBox();
             myTotalVal.Text = player1.hand.getHandTotal().ToString();
+
+            if(player1.hand.show()[0].Number == player1.hand.show()[1].Number)
+            {
+                splitButton.Visible = true;
+            }
         }
 
         private void BackgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
@@ -552,6 +603,41 @@ namespace BlackJack
         private void SignInConfirm_Click(object sender, EventArgs e)
         {
             LaunchGame();
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click_1(object sender, EventArgs e)
+        {
+            forgotPass();
+        }
+
+        private void MyTextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label4_Click(object sender, EventArgs e)
+        {
+            goToLogin();
+        }
+
+        private void Label9_Click(object sender, EventArgs e)
+        {
+            goToLogin();
         }
     }
 }

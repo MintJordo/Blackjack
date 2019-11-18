@@ -40,3 +40,15 @@ C:\Users\Luke\Documents\GitHub\Blackjack\BlackJack\BlackJack\obj\Debug\BlackJack
 C:\Users\Luke\Documents\GitHub\Blackjack\BlackJack\BlackJack\obj\Debug\BlackJack.exe
 C:\Users\Luke\Documents\GitHub\Blackjack\BlackJack\BlackJack\obj\Debug\BlackJack.pdb
 C:\Users\Luke Fleck\Documents\GitHub\Blackjack2\BlackJack\BlackJack\obj\Debug\BlackJack.csprojAssemblyReference.cache
+C:\Users\fords\Documents\GitHub\Blackjack\BlackJack\BlackJack\bin\Debug\BlackJack.exe.config
+C:\Users\fords\Documents\GitHub\Blackjack\BlackJack\BlackJack\bin\Debug\BlackJack.exe
+C:\Users\fords\Documents\GitHub\Blackjack\BlackJack\BlackJack\bin\Debug\BlackJack.pdb
+C:\Users\fords\Documents\GitHub\Blackjack\BlackJack\BlackJack\obj\Debug\BlackJack.csprojAssemblyReference.cache
+C:\Users\fords\Documents\GitHub\Blackjack\BlackJack\BlackJack\obj\Debug\BlackJack.Form1.resources
+C:\Users\fords\Documents\GitHub\Blackjack\BlackJack\BlackJack\obj\Debug\BlackJack.Properties.Resources.resources
+C:\Users\fords\Documents\GitHub\Blackjack\BlackJack\BlackJack\obj\Debug\BlackJack.csproj.GenerateResource.cache
+C:\Users\fords\Documents\GitHub\Blackjack\BlackJack\BlackJack\obj\Debug\BlackJack.exe
+C:\Users\fords\Documents\GitHub\Blackjack\BlackJack\BlackJack\obj\Debug\BlackJack.pdb
+C:\Users\fords\Documents\GitHub\Blackjack\BlackJack\BlackJack\bin\Debug\Players.xml
+C:\Users\Jordan\Documents\GitHub\Blackjack\BlackJack\BlackJack\bin\Debug\Players.xml
+C:\Users\Luke Fleck\Documents\GitHub\Blackjack2\BlackJack\BlackJack\bin\Debug\Players.xml

@@ -105,5 +105,10 @@
   <ItemGroup>
     <None Include="Resources\FrontScreen.bmp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Players.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
