@@ -66,7 +66,23 @@ namespace BlackJack
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.GamePanel = new System.Windows.Forms.Panel();
+            this.newPassPanel = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.setPassword = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.blinkPanel = new System.Windows.Forms.Panel();
+            this.forgotPanel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.verifyButton = new System.Windows.Forms.Button();
+            this.verifyUserLabel1 = new System.Windows.Forms.Label();
+            this.UsernameLabelVerify = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.SignUpPanel = new System.Windows.Forms.Panel();
             this.phoneLabel = new System.Windows.Forms.Label();
             this.ccLabel = new System.Windows.Forms.Label();
@@ -93,28 +109,13 @@ namespace BlackJack
             this.panel8 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.SignUpButton2 = new System.Windows.Forms.Button();
-            this.forgotPanel = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.verifyButton = new System.Windows.Forms.Button();
-            this.verifyUserLabel1 = new System.Windows.Forms.Label();
-            this.UsernameLabelVerify = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.newPassPanel = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.setPassword = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.splitButton = new ePOSOne.btnProduct.Button_WOC();
             this.Password2 = new ePOSOne.btnProduct.MyTextBox();
             this.Password1 = new ePOSOne.btnProduct.MyTextBox();
-            this.verifyNum = new ePOSOne.btnProduct.MyTextBox();
-            this.verifyUsername = new ePOSOne.btnProduct.MyTextBox();
             this.decBet = new ePOSOne.btnProduct.Button_WOC();
             this.incBet = new ePOSOne.btnProduct.Button_WOC();
+            this.verifyNum = new ePOSOne.btnProduct.MyTextBox();
+            this.verifyUsername = new ePOSOne.btnProduct.MyTextBox();
             this.hitButton = new ePOSOne.btnProduct.Button_WOC();
             this.standButton = new ePOSOne.btnProduct.Button_WOC();
             this.dealButton = new ePOSOne.btnProduct.Button_WOC();
@@ -126,7 +127,7 @@ namespace BlackJack
             this.FirstNameBox = new ePOSOne.btnProduct.MyTextBox();
             this.passwordBox2 = new ePOSOne.btnProduct.MyTextBox();
             this.UserNameBox2 = new ePOSOne.btnProduct.MyTextBox();
-            this.splitButton = new ePOSOne.btnProduct.Button_WOC();
+            this.insuranceButton = new ePOSOne.btnProduct.Button_WOC();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerHand5)).BeginInit();
@@ -141,11 +142,11 @@ namespace BlackJack
             ((System.ComponentModel.ISupportInitialize)(this.dealerHand2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerHand1)).BeginInit();
             this.GamePanel.SuspendLayout();
+            this.newPassPanel.SuspendLayout();
             this.blinkPanel.SuspendLayout();
+            this.forgotPanel.SuspendLayout();
             this.SignUpPanel.SuspendLayout();
             this.SignInPanel.SuspendLayout();
-            this.forgotPanel.SuspendLayout();
-            this.newPassPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // moneyLabel
@@ -399,6 +400,7 @@ namespace BlackJack
             // GamePanel
             // 
             this.GamePanel.BackColor = System.Drawing.Color.Green;
+            this.GamePanel.Controls.Add(this.insuranceButton);
             this.GamePanel.Controls.Add(this.splitButton);
             this.GamePanel.Controls.Add(this.newPassPanel);
             this.GamePanel.Controls.Add(this.blinkPanel);
@@ -429,6 +431,107 @@ namespace BlackJack
             this.GamePanel.TabIndex = 32;
             this.GamePanel.Visible = false;
             // 
+            // newPassPanel
+            // 
+            this.newPassPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(50)))));
+            this.newPassPanel.Controls.Add(this.label8);
+            this.newPassPanel.Controls.Add(this.label9);
+            this.newPassPanel.Controls.Add(this.setPassword);
+            this.newPassPanel.Controls.Add(this.label10);
+            this.newPassPanel.Controls.Add(this.label11);
+            this.newPassPanel.Controls.Add(this.label12);
+            this.newPassPanel.Controls.Add(this.Password2);
+            this.newPassPanel.Controls.Add(this.Password1);
+            this.newPassPanel.Controls.Add(this.panel10);
+            this.newPassPanel.Location = new System.Drawing.Point(619, 391);
+            this.newPassPanel.Name = "newPassPanel";
+            this.newPassPanel.Size = new System.Drawing.Size(376, 352);
+            this.newPassPanel.TabIndex = 36;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(102, 256);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(174, 18);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Passwords do not match";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.ForeColor = System.Drawing.Color.Teal;
+            this.label9.Location = new System.Drawing.Point(161, 330);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(40, 13);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Cancel";
+            this.label9.Click += new System.EventHandler(this.Label9_Click);
+            // 
+            // setPassword
+            // 
+            this.setPassword.BackColor = System.Drawing.Color.Black;
+            this.setPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.setPassword.FlatAppearance.BorderSize = 0;
+            this.setPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.setPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.setPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setPassword.ForeColor = System.Drawing.Color.White;
+            this.setPassword.Location = new System.Drawing.Point(63, 284);
+            this.setPassword.Name = "setPassword";
+            this.setPassword.Size = new System.Drawing.Size(246, 35);
+            this.setPassword.TabIndex = 16;
+            this.setPassword.Text = "Set Password";
+            this.setPassword.UseVisualStyleBackColor = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Gray;
+            this.label10.Location = new System.Drawing.Point(60, 201);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(68, 16);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "Password";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Gray;
+            this.label11.Location = new System.Drawing.Point(62, 132);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(68, 16);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "Password";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(40, 63);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(282, 25);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "Please enter new password.";
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Transparent;
+            this.panel10.Location = new System.Drawing.Point(65, 56);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(118, 3);
+            this.panel10.TabIndex = 5;
+            // 
             // blinkPanel
             // 
             this.blinkPanel.BackColor = System.Drawing.Color.DarkGreen;
@@ -437,6 +540,109 @@ namespace BlackJack
             this.blinkPanel.Name = "blinkPanel";
             this.blinkPanel.Size = new System.Drawing.Size(166, 166);
             this.blinkPanel.TabIndex = 30;
+            // 
+            // forgotPanel
+            // 
+            this.forgotPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(50)))));
+            this.forgotPanel.Controls.Add(this.label2);
+            this.forgotPanel.Controls.Add(this.label4);
+            this.forgotPanel.Controls.Add(this.verifyButton);
+            this.forgotPanel.Controls.Add(this.verifyUserLabel1);
+            this.forgotPanel.Controls.Add(this.UsernameLabelVerify);
+            this.forgotPanel.Controls.Add(this.label7);
+            this.forgotPanel.Controls.Add(this.verifyNum);
+            this.forgotPanel.Controls.Add(this.verifyUsername);
+            this.forgotPanel.Controls.Add(this.panel9);
+            this.forgotPanel.Location = new System.Drawing.Point(188, 409);
+            this.forgotPanel.Name = "forgotPanel";
+            this.forgotPanel.Size = new System.Drawing.Size(376, 352);
+            this.forgotPanel.TabIndex = 35;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(69, 255);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(238, 18);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Information does not match a user.";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.ForeColor = System.Drawing.Color.Teal;
+            this.label4.Location = new System.Drawing.Point(161, 330);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Cancel";
+            this.label4.Click += new System.EventHandler(this.Label4_Click);
+            // 
+            // verifyButton
+            // 
+            this.verifyButton.BackColor = System.Drawing.Color.Black;
+            this.verifyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.verifyButton.FlatAppearance.BorderSize = 0;
+            this.verifyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.verifyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.verifyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.verifyButton.ForeColor = System.Drawing.Color.White;
+            this.verifyButton.Location = new System.Drawing.Point(63, 284);
+            this.verifyButton.Name = "verifyButton";
+            this.verifyButton.Size = new System.Drawing.Size(246, 35);
+            this.verifyButton.TabIndex = 16;
+            this.verifyButton.Text = "Verify";
+            this.verifyButton.UseVisualStyleBackColor = false;
+            // 
+            // verifyUserLabel1
+            // 
+            this.verifyUserLabel1.AutoSize = true;
+            this.verifyUserLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.verifyUserLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.verifyUserLabel1.ForeColor = System.Drawing.Color.Gray;
+            this.verifyUserLabel1.Location = new System.Drawing.Point(60, 201);
+            this.verifyUserLabel1.Name = "verifyUserLabel1";
+            this.verifyUserLabel1.Size = new System.Drawing.Size(98, 16);
+            this.verifyUserLabel1.TabIndex = 15;
+            this.verifyUserLabel1.Text = "Phone Number";
+            this.verifyUserLabel1.Click += new System.EventHandler(this.Label5_Click);
+            // 
+            // UsernameLabelVerify
+            // 
+            this.UsernameLabelVerify.AutoSize = true;
+            this.UsernameLabelVerify.BackColor = System.Drawing.Color.Transparent;
+            this.UsernameLabelVerify.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameLabelVerify.ForeColor = System.Drawing.Color.Gray;
+            this.UsernameLabelVerify.Location = new System.Drawing.Point(62, 132);
+            this.UsernameLabelVerify.Name = "UsernameLabelVerify";
+            this.UsernameLabelVerify.Size = new System.Drawing.Size(77, 16);
+            this.UsernameLabelVerify.TabIndex = 13;
+            this.UsernameLabelVerify.Text = "User Name";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(40, 65);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(296, 25);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Please verify user information";
+            this.label7.Click += new System.EventHandler(this.Label7_Click);
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Transparent;
+            this.panel9.Location = new System.Drawing.Point(65, 56);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(118, 3);
+            this.panel9.TabIndex = 5;
             // 
             // SignUpPanel
             // 
@@ -777,209 +983,27 @@ namespace BlackJack
             this.SignUpButton2.UseVisualStyleBackColor = false;
             this.SignUpButton2.Click += new System.EventHandler(this.SignUpButton2_Click);
             // 
-            // forgotPanel
+            // splitButton
             // 
-            this.forgotPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(50)))));
-            this.forgotPanel.Controls.Add(this.label2);
-            this.forgotPanel.Controls.Add(this.label4);
-            this.forgotPanel.Controls.Add(this.verifyButton);
-            this.forgotPanel.Controls.Add(this.verifyUserLabel1);
-            this.forgotPanel.Controls.Add(this.UsernameLabelVerify);
-            this.forgotPanel.Controls.Add(this.label7);
-            this.forgotPanel.Controls.Add(this.verifyNum);
-            this.forgotPanel.Controls.Add(this.verifyUsername);
-            this.forgotPanel.Controls.Add(this.panel9);
-            this.forgotPanel.Location = new System.Drawing.Point(188, 409);
-            this.forgotPanel.Name = "forgotPanel";
-            this.forgotPanel.Size = new System.Drawing.Size(376, 352);
-            this.forgotPanel.TabIndex = 35;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(69, 255);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(238, 18);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Information does not match a user.";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.ForeColor = System.Drawing.Color.Teal;
-            this.label4.Location = new System.Drawing.Point(161, 330);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Cancel";
-            this.label4.Click += new System.EventHandler(this.Label4_Click);
-            // 
-            // verifyButton
-            // 
-            this.verifyButton.BackColor = System.Drawing.Color.Black;
-            this.verifyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.verifyButton.FlatAppearance.BorderSize = 0;
-            this.verifyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.verifyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.verifyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.verifyButton.ForeColor = System.Drawing.Color.White;
-            this.verifyButton.Location = new System.Drawing.Point(63, 284);
-            this.verifyButton.Name = "verifyButton";
-            this.verifyButton.Size = new System.Drawing.Size(246, 35);
-            this.verifyButton.TabIndex = 16;
-            this.verifyButton.Text = "Verify";
-            this.verifyButton.UseVisualStyleBackColor = false;
-            // 
-            // verifyUserLabel1
-            // 
-            this.verifyUserLabel1.AutoSize = true;
-            this.verifyUserLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.verifyUserLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.verifyUserLabel1.ForeColor = System.Drawing.Color.Gray;
-            this.verifyUserLabel1.Location = new System.Drawing.Point(60, 201);
-            this.verifyUserLabel1.Name = "verifyUserLabel1";
-            this.verifyUserLabel1.Size = new System.Drawing.Size(98, 16);
-            this.verifyUserLabel1.TabIndex = 15;
-            this.verifyUserLabel1.Text = "Phone Number";
-            this.verifyUserLabel1.Click += new System.EventHandler(this.Label5_Click);
-            // 
-            // UsernameLabelVerify
-            // 
-            this.UsernameLabelVerify.AutoSize = true;
-            this.UsernameLabelVerify.BackColor = System.Drawing.Color.Transparent;
-            this.UsernameLabelVerify.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameLabelVerify.ForeColor = System.Drawing.Color.Gray;
-            this.UsernameLabelVerify.Location = new System.Drawing.Point(62, 132);
-            this.UsernameLabelVerify.Name = "UsernameLabelVerify";
-            this.UsernameLabelVerify.Size = new System.Drawing.Size(77, 16);
-            this.UsernameLabelVerify.TabIndex = 13;
-            this.UsernameLabelVerify.Text = "User Name";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(40, 65);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(296, 25);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Please verify user information";
-            this.label7.Click += new System.EventHandler(this.Label7_Click);
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.Transparent;
-            this.panel9.Location = new System.Drawing.Point(65, 56);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(118, 3);
-            this.panel9.TabIndex = 5;
-            // 
-            // newPassPanel
-            // 
-            this.newPassPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(50)))));
-            this.newPassPanel.Controls.Add(this.label8);
-            this.newPassPanel.Controls.Add(this.label9);
-            this.newPassPanel.Controls.Add(this.setPassword);
-            this.newPassPanel.Controls.Add(this.label10);
-            this.newPassPanel.Controls.Add(this.label11);
-            this.newPassPanel.Controls.Add(this.label12);
-            this.newPassPanel.Controls.Add(this.Password2);
-            this.newPassPanel.Controls.Add(this.Password1);
-            this.newPassPanel.Controls.Add(this.panel10);
-            this.newPassPanel.Location = new System.Drawing.Point(619, 391);
-            this.newPassPanel.Name = "newPassPanel";
-            this.newPassPanel.Size = new System.Drawing.Size(376, 352);
-            this.newPassPanel.TabIndex = 36;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(102, 256);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(174, 18);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Passwords do not match";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.ForeColor = System.Drawing.Color.Teal;
-            this.label9.Location = new System.Drawing.Point(161, 330);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 13);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "Cancel";
-            this.label9.Click += new System.EventHandler(this.Label9_Click);
-            // 
-            // setPassword
-            // 
-            this.setPassword.BackColor = System.Drawing.Color.Black;
-            this.setPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.setPassword.FlatAppearance.BorderSize = 0;
-            this.setPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.setPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.setPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setPassword.ForeColor = System.Drawing.Color.White;
-            this.setPassword.Location = new System.Drawing.Point(63, 284);
-            this.setPassword.Name = "setPassword";
-            this.setPassword.Size = new System.Drawing.Size(246, 35);
-            this.setPassword.TabIndex = 16;
-            this.setPassword.Text = "Set Password";
-            this.setPassword.UseVisualStyleBackColor = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Gray;
-            this.label10.Location = new System.Drawing.Point(60, 201);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 16);
-            this.label10.TabIndex = 15;
-            this.label10.Text = "Password";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(62, 132);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(68, 16);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "Password";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(40, 63);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(282, 25);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "Please enter new password.";
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.Transparent;
-            this.panel10.Location = new System.Drawing.Point(65, 56);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(118, 3);
-            this.panel10.TabIndex = 5;
+            this.splitButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.splitButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.splitButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.splitButton.FlatAppearance.BorderSize = 0;
+            this.splitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.splitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.splitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.splitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.splitButton.Location = new System.Drawing.Point(334, 242);
+            this.splitButton.Name = "splitButton";
+            this.splitButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.splitButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.splitButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.splitButton.Size = new System.Drawing.Size(82, 32);
+            this.splitButton.TabIndex = 37;
+            this.splitButton.Text = "Split";
+            this.splitButton.TextColor = System.Drawing.Color.Black;
+            this.splitButton.UseVisualStyleBackColor = true;
+            this.splitButton.Visible = false;
             // 
             // Password2
             // 
@@ -1006,31 +1030,6 @@ namespace BlackJack
             this.Password1.Name = "Password1";
             this.Password1.Size = new System.Drawing.Size(246, 24);
             this.Password1.TabIndex = 8;
-            // 
-            // verifyNum
-            // 
-            this.verifyNum.BackColor = System.Drawing.Color.Turquoise;
-            this.verifyNum.BorderColor = System.Drawing.Color.Gray;
-            this.verifyNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.verifyNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.verifyNum.ForeColor = System.Drawing.Color.Gray;
-            this.verifyNum.Location = new System.Drawing.Point(63, 222);
-            this.verifyNum.Name = "verifyNum";
-            this.verifyNum.PasswordChar = '*';
-            this.verifyNum.Size = new System.Drawing.Size(246, 24);
-            this.verifyNum.TabIndex = 10;
-            // 
-            // verifyUsername
-            // 
-            this.verifyUsername.BackColor = System.Drawing.Color.Turquoise;
-            this.verifyUsername.BorderColor = System.Drawing.Color.Gray;
-            this.verifyUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.verifyUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.verifyUsername.ForeColor = System.Drawing.Color.Gray;
-            this.verifyUsername.Location = new System.Drawing.Point(63, 151);
-            this.verifyUsername.Name = "verifyUsername";
-            this.verifyUsername.Size = new System.Drawing.Size(246, 24);
-            this.verifyUsername.TabIndex = 8;
             // 
             // decBet
             // 
@@ -1075,6 +1074,31 @@ namespace BlackJack
             this.incBet.TextColor = System.Drawing.Color.Black;
             this.incBet.UseVisualStyleBackColor = true;
             this.incBet.Click += new System.EventHandler(this.incBet_Click);
+            // 
+            // verifyNum
+            // 
+            this.verifyNum.BackColor = System.Drawing.Color.Turquoise;
+            this.verifyNum.BorderColor = System.Drawing.Color.Gray;
+            this.verifyNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.verifyNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.verifyNum.ForeColor = System.Drawing.Color.Gray;
+            this.verifyNum.Location = new System.Drawing.Point(63, 222);
+            this.verifyNum.Name = "verifyNum";
+            this.verifyNum.PasswordChar = '*';
+            this.verifyNum.Size = new System.Drawing.Size(246, 24);
+            this.verifyNum.TabIndex = 10;
+            // 
+            // verifyUsername
+            // 
+            this.verifyUsername.BackColor = System.Drawing.Color.Turquoise;
+            this.verifyUsername.BorderColor = System.Drawing.Color.Gray;
+            this.verifyUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.verifyUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.verifyUsername.ForeColor = System.Drawing.Color.Gray;
+            this.verifyUsername.Location = new System.Drawing.Point(63, 151);
+            this.verifyUsername.Name = "verifyUsername";
+            this.verifyUsername.Size = new System.Drawing.Size(246, 24);
+            this.verifyUsername.TabIndex = 8;
             // 
             // hitButton
             // 
@@ -1241,26 +1265,27 @@ namespace BlackJack
             this.UserNameBox2.TabIndex = 8;
             this.UserNameBox2.TextChanged += new System.EventHandler(this.UserNameBox2_TextChanged);
             // 
-            // splitButton
+            // insuranceButton
             // 
-            this.splitButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.splitButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.splitButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.splitButton.FlatAppearance.BorderSize = 0;
-            this.splitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.splitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.splitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.splitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splitButton.Location = new System.Drawing.Point(331, 242);
-            this.splitButton.Name = "splitButton";
-            this.splitButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.splitButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.splitButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.splitButton.Size = new System.Drawing.Size(82, 32);
-            this.splitButton.TabIndex = 37;
-            this.splitButton.Text = "Split";
-            this.splitButton.TextColor = System.Drawing.Color.Black;
-            this.splitButton.UseVisualStyleBackColor = true;
+            this.insuranceButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.insuranceButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.insuranceButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.insuranceButton.FlatAppearance.BorderSize = 0;
+            this.insuranceButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.insuranceButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.insuranceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.insuranceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insuranceButton.Location = new System.Drawing.Point(37, 211);
+            this.insuranceButton.Name = "insuranceButton";
+            this.insuranceButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.insuranceButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.insuranceButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.insuranceButton.Size = new System.Drawing.Size(91, 41);
+            this.insuranceButton.TabIndex = 38;
+            this.insuranceButton.Text = "Insurance";
+            this.insuranceButton.TextColor = System.Drawing.Color.Black;
+            this.insuranceButton.UseVisualStyleBackColor = true;
+            this.insuranceButton.Visible = false;
             // 
             // Form1
             // 
@@ -1297,15 +1322,15 @@ namespace BlackJack
             ((System.ComponentModel.ISupportInitialize)(this.dealerHand1)).EndInit();
             this.GamePanel.ResumeLayout(false);
             this.GamePanel.PerformLayout();
+            this.newPassPanel.ResumeLayout(false);
+            this.newPassPanel.PerformLayout();
             this.blinkPanel.ResumeLayout(false);
+            this.forgotPanel.ResumeLayout(false);
+            this.forgotPanel.PerformLayout();
             this.SignUpPanel.ResumeLayout(false);
             this.SignUpPanel.PerformLayout();
             this.SignInPanel.ResumeLayout(false);
             this.SignInPanel.PerformLayout();
-            this.forgotPanel.ResumeLayout(false);
-            this.forgotPanel.PerformLayout();
-            this.newPassPanel.ResumeLayout(false);
-            this.newPassPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1396,6 +1421,7 @@ namespace BlackJack
         private ePOSOne.btnProduct.MyTextBox Password1;
         private System.Windows.Forms.Panel panel10;
         private ePOSOne.btnProduct.Button_WOC splitButton;
+        private ePOSOne.btnProduct.Button_WOC insuranceButton;
     }
 }
 

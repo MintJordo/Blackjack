@@ -364,6 +364,7 @@ namespace BlackJack
             dealer.hand.addCard(deck.getCard());
 
             dealButton.Visible = false;
+            splitButton.Visible = false;
             hitButton.Visible = true;
             standButton.Visible = true;
             dealerTotalLabel.Visible = true;
@@ -379,9 +380,9 @@ namespace BlackJack
             updateDealerHandPictureBox();
             myTotalVal.Text = player1.hand.getHandTotal().ToString();
 
-            if(player1.hand.show()[0].getCardValue() == player1.hand.show()[1].getCardValue())
+            if(player1.hand.show()[0].Number == player1.hand.show()[1].Number)
             {
-
+                splitButton.Visible = true;
             }
         }
 
