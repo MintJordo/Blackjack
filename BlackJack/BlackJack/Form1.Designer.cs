@@ -126,6 +126,7 @@ namespace BlackJack
             this.FirstNameBox = new ePOSOne.btnProduct.MyTextBox();
             this.passwordBox2 = new ePOSOne.btnProduct.MyTextBox();
             this.UserNameBox2 = new ePOSOne.btnProduct.MyTextBox();
+            this.splitButton = new ePOSOne.btnProduct.Button_WOC();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerHand5)).BeginInit();
@@ -398,7 +399,10 @@ namespace BlackJack
             // GamePanel
             // 
             this.GamePanel.BackColor = System.Drawing.Color.Green;
+            this.GamePanel.Controls.Add(this.splitButton);
+            this.GamePanel.Controls.Add(this.newPassPanel);
             this.GamePanel.Controls.Add(this.blinkPanel);
+            this.GamePanel.Controls.Add(this.forgotPanel);
             this.GamePanel.Controls.Add(this.hitButton);
             this.GamePanel.Controls.Add(this.standButton);
             this.GamePanel.Controls.Add(this.dealButton);
@@ -419,7 +423,7 @@ namespace BlackJack
             this.GamePanel.Controls.Add(this.myHand1);
             this.GamePanel.Controls.Add(this.dealerHand2);
             this.GamePanel.Controls.Add(this.dealerHand1);
-            this.GamePanel.Location = new System.Drawing.Point(31, 402);
+            this.GamePanel.Location = new System.Drawing.Point(22, 20);
             this.GamePanel.Name = "GamePanel";
             this.GamePanel.Size = new System.Drawing.Size(753, 424);
             this.GamePanel.TabIndex = 32;
@@ -785,7 +789,7 @@ namespace BlackJack
             this.forgotPanel.Controls.Add(this.verifyNum);
             this.forgotPanel.Controls.Add(this.verifyUsername);
             this.forgotPanel.Controls.Add(this.panel9);
-            this.forgotPanel.Location = new System.Drawing.Point(36, 20);
+            this.forgotPanel.Location = new System.Drawing.Point(188, 409);
             this.forgotPanel.Name = "forgotPanel";
             this.forgotPanel.Size = new System.Drawing.Size(376, 352);
             this.forgotPanel.TabIndex = 35;
@@ -888,7 +892,7 @@ namespace BlackJack
             this.newPassPanel.Controls.Add(this.Password2);
             this.newPassPanel.Controls.Add(this.Password1);
             this.newPassPanel.Controls.Add(this.panel10);
-            this.newPassPanel.Location = new System.Drawing.Point(418, 20);
+            this.newPassPanel.Location = new System.Drawing.Point(619, 391);
             this.newPassPanel.Name = "newPassPanel";
             this.newPassPanel.Size = new System.Drawing.Size(376, 352);
             this.newPassPanel.TabIndex = 36;
@@ -1237,14 +1241,33 @@ namespace BlackJack
             this.UserNameBox2.TabIndex = 8;
             this.UserNameBox2.TextChanged += new System.EventHandler(this.UserNameBox2_TextChanged);
             // 
+            // splitButton
+            // 
+            this.splitButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.splitButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.splitButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.splitButton.FlatAppearance.BorderSize = 0;
+            this.splitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.splitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.splitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.splitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.splitButton.Location = new System.Drawing.Point(331, 242);
+            this.splitButton.Name = "splitButton";
+            this.splitButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.splitButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.splitButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.splitButton.Size = new System.Drawing.Size(82, 32);
+            this.splitButton.TabIndex = 37;
+            this.splitButton.Text = "Split";
+            this.splitButton.TextColor = System.Drawing.Color.Black;
+            this.splitButton.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.newPassPanel);
-            this.Controls.Add(this.forgotPanel);
             this.Controls.Add(this.GamePanel);
             this.Controls.Add(this.SignUpPanel);
             this.Controls.Add(this.SignInPanel);
@@ -1372,6 +1395,7 @@ namespace BlackJack
         private ePOSOne.btnProduct.MyTextBox Password2;
         private ePOSOne.btnProduct.MyTextBox Password1;
         private System.Windows.Forms.Panel panel10;
+        private ePOSOne.btnProduct.Button_WOC splitButton;
     }
 }
 
