@@ -350,6 +350,11 @@ namespace BlackJack
             updatePlayerHandPictureBox();
             updateDealerHandPictureBox();
             myTotalVal.Text = player1.hand.getHandTotal().ToString();
+
+            if(player1.hand.show()[0].getCardValue() == player1.hand.show()[1].getCardValue())
+            {
+
+            }
         }
 
         private void BackgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
