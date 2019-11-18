@@ -204,6 +204,8 @@ namespace BlackJack
         {
             GamePanel.Visible = false;
             SignInPanel.Visible = false;
+            forgotPanel.Visible = false;
+            newPassPanel.Visible = false;
 
             SignUpPanel.BackColor = Color.FromArgb(0, 25, 50);
             SignInButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
@@ -218,6 +220,18 @@ namespace BlackJack
             SignUpConfirm.BackColor = Color.FromArgb(74, 154, 122);
             SignUpConfirm.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
 
+            //changePassword
+            Password1.BackColor = Color.FromArgb(0, 25, 50);
+            Password2.BackColor = Color.FromArgb(0, 25, 50);
+            setPassword.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
+            setPassword.BackColor = Color.FromArgb(74, 154, 122);
+
+            //forgotPassPanel
+            verifyNum.BackColor = Color.FromArgb(0, 25, 50);
+            verifyUsername.BackColor = Color.FromArgb(0, 25, 50);
+            verifyButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
+            verifyButton.BackColor = Color.FromArgb(74, 154, 122);
+
             SignUpPanel.Visible = true;
             SignUpPanel.Location = new Point(209, 34);
 
@@ -227,6 +241,7 @@ namespace BlackJack
 
             SignUpPanel.Visible = false;
             GamePanel.Visible = false;
+            forgotPanel.Visible = false;
 
             SignInPanel.BackColor = Color.FromArgb(0, 25, 50);
             SignUpButton2.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
@@ -241,7 +256,18 @@ namespace BlackJack
             SignInPanel.Location = new Point(209,34);
 
         }
-
+        public void forgotPass()
+        {
+            SignInPanel.Visible = false;
+            forgotPanel.Visible = true;
+            forgotPanel.Location = new Point(209, 34);
+        }
+        public void newPass()
+        {
+            newPassPanel.Visible = true;
+            forgotPanel.Visible = false;
+            newPassPanel.Location = new Point(209, 34);
+        }
         public void LaunchGame()
         {
             // Check right here if login is correct
@@ -256,6 +282,8 @@ namespace BlackJack
                 if (entered_username == username && entered_password == password) {
                     SignUpPanel.Visible = false;
                     SignInPanel.Visible = false;
+                    forgotPanel.Visible = false;
+                    newPassPanel.Visible = false;
                     GamePanel.Visible = true;
                     GamePanel.Location = new Point(13, 13);
                     this.BackColor = Color.Green;
@@ -569,6 +597,41 @@ namespace BlackJack
         private void SignInConfirm_Click(object sender, EventArgs e)
         {
             LaunchGame();
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click_1(object sender, EventArgs e)
+        {
+            forgotPass();
+        }
+
+        private void MyTextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label4_Click(object sender, EventArgs e)
+        {
+            goToLogin();
+        }
+
+        private void Label9_Click(object sender, EventArgs e)
+        {
+            goToLogin();
         }
     }
 }
