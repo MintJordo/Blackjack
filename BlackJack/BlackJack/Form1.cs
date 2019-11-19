@@ -803,6 +803,31 @@ namespace BlackJack
             }
         }
 
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            GamePanel.Visible = false;
+            settingsPanel.Visible = true;
+            settingsPanel.Location = new Point(209, 34);
+            this.BackColor = Color.FromArgb(0, 25, 50);
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+            GamePanel.Visible = true;
+            settingsPanel.Visible = false;
+            settingsPanel.Location = new Point(209, 34);
+            this.BackColor = Color.Green;
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 
