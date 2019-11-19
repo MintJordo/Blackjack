@@ -9,5 +9,8 @@
     <name>Connor Ford</name>
     <password>cocoa</password>
     <balance>1000000</balance>
+    <address>820 N Washington Ave, Madison, SD 57042</address>
+    <phone_number>1234567890</phone_number>
+    <credit_card>1234567812345678</credit_card>
   </player>
 </players>

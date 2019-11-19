@@ -206,6 +206,7 @@ namespace BlackJack
             SignInPanel.Visible = false;
             forgotPanel.Visible = false;
             newPassPanel.Visible = false;
+            incorrectLabel.Visible = false;
 
             SignUpPanel.BackColor = Color.FromArgb(0, 25, 50);
             SignInButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
@@ -270,6 +271,7 @@ namespace BlackJack
         }
         public void LaunchGame()
         {
+            
             // Check right here if login is correct
             string entered_username = UserNameBox2.Text;
             string entered_password = passwordBox2.Text;
@@ -289,7 +291,7 @@ namespace BlackJack
                     this.BackColor = Color.Green;
                 }
                 else {
-                    Console.WriteLine("User does not exist or password is incorrect");
+                    incorrectLabel.Visible = true;
                 }
             }
         }
@@ -299,6 +301,7 @@ namespace BlackJack
             InitializeComponent();
             makeLogin();
 
+            this.Size = new Size(800, 450);
             //Timer Code
             BetTimer.Start();
             BetTimer.Enabled = true;
