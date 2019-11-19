@@ -271,6 +271,7 @@ namespace BlackJack
         }
         public void LaunchGame()
         {
+            
             // Check right here if login is correct
             string entered_username = UserNameBox2.Text;
             string entered_password = passwordBox2.Text;
@@ -300,6 +301,7 @@ namespace BlackJack
             InitializeComponent();
             makeLogin();
 
+            this.Size = new Size(800, 450);
             //Timer Code
             BetTimer.Start();
             BetTimer.Enabled = true;
