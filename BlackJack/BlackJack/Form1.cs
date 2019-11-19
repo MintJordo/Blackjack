@@ -314,6 +314,7 @@ namespace BlackJack
         {
             InitializeComponent();
             makeLogin();
+            goToLogin();
 
             this.Size = new Size(800, 450);
             //Timer Code
@@ -825,6 +826,86 @@ namespace BlackJack
         }
 
         private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void passChangebtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void balChange_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void phoneChange_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ccChange_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void saveSettings_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void passChange_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addChange_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void unsmaeChange_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nameChange_TextChanged(object sender, EventArgs e)
         {
 
         }
