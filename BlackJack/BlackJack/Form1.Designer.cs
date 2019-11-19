@@ -131,6 +131,11 @@ namespace BlackJack
             this.verifyUsername = new ePOSOne.btnProduct.MyTextBox();
             this.passwordBox2 = new ePOSOne.btnProduct.MyTextBox();
             this.UserNameBox2 = new ePOSOne.btnProduct.MyTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerHand5)).BeginInit();
@@ -150,6 +155,11 @@ namespace BlackJack
             this.forgotPanel.SuspendLayout();
             this.SignUpPanel.SuspendLayout();
             this.SignInPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // moneyLabel
@@ -264,7 +274,7 @@ namespace BlackJack
             this.dealerHand5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.dealerHand5.Enabled = false;
             this.dealerHand5.Image = global::BlackJack.Properties.Resources.transparent;
-            this.dealerHand5.Location = new System.Drawing.Point(419, 1);
+            this.dealerHand5.Location = new System.Drawing.Point(418, 5);
             this.dealerHand5.Name = "dealerHand5";
             this.dealerHand5.Size = new System.Drawing.Size(73, 109);
             this.dealerHand5.TabIndex = 22;
@@ -276,7 +286,7 @@ namespace BlackJack
             this.dealerHand4.BackColor = System.Drawing.Color.Transparent;
             this.dealerHand4.BackgroundImage = global::BlackJack.Properties.Resources._9H;
             this.dealerHand4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dealerHand4.Location = new System.Drawing.Point(399, 1);
+            this.dealerHand4.Location = new System.Drawing.Point(399, 5);
             this.dealerHand4.Name = "dealerHand4";
             this.dealerHand4.Size = new System.Drawing.Size(73, 109);
             this.dealerHand4.TabIndex = 21;
@@ -287,7 +297,7 @@ namespace BlackJack
             this.dealerHand3.BackColor = System.Drawing.Color.Transparent;
             this.dealerHand3.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.dealerHand3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dealerHand3.Location = new System.Drawing.Point(379, 1);
+            this.dealerHand3.Location = new System.Drawing.Point(378, 5);
             this.dealerHand3.Name = "dealerHand3";
             this.dealerHand3.Size = new System.Drawing.Size(73, 109);
             this.dealerHand3.TabIndex = 20;
@@ -298,7 +308,7 @@ namespace BlackJack
             this.myHand5.BackColor = System.Drawing.Color.Transparent;
             this.myHand5.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.myHand5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.myHand5.Location = new System.Drawing.Point(419, 312);
+            this.myHand5.Location = new System.Drawing.Point(502, 309);
             this.myHand5.Name = "myHand5";
             this.myHand5.Size = new System.Drawing.Size(73, 109);
             this.myHand5.TabIndex = 19;
@@ -310,7 +320,7 @@ namespace BlackJack
             this.myHand4.BackColor = System.Drawing.Color.Transparent;
             this.myHand4.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.myHand4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.myHand4.Location = new System.Drawing.Point(399, 312);
+            this.myHand4.Location = new System.Drawing.Point(483, 309);
             this.myHand4.Name = "myHand4";
             this.myHand4.Size = new System.Drawing.Size(73, 109);
             this.myHand4.TabIndex = 18;
@@ -321,7 +331,7 @@ namespace BlackJack
             this.myHand3.BackColor = System.Drawing.Color.Transparent;
             this.myHand3.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.myHand3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.myHand3.Location = new System.Drawing.Point(379, 312);
+            this.myHand3.Location = new System.Drawing.Point(462, 309);
             this.myHand3.Name = "myHand3";
             this.myHand3.Size = new System.Drawing.Size(73, 109);
             this.myHand3.TabIndex = 17;
@@ -343,7 +353,7 @@ namespace BlackJack
             this.myHand2.BackColor = System.Drawing.Color.Transparent;
             this.myHand2.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.myHand2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.myHand2.Location = new System.Drawing.Point(359, 312);
+            this.myHand2.Location = new System.Drawing.Point(443, 309);
             this.myHand2.Name = "myHand2";
             this.myHand2.Size = new System.Drawing.Size(73, 109);
             this.myHand2.TabIndex = 5;
@@ -355,7 +365,7 @@ namespace BlackJack
             this.myHand1.BackColor = System.Drawing.Color.Transparent;
             this.myHand1.BackgroundImage = global::BlackJack.Properties.Resources._10C;
             this.myHand1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.myHand1.Location = new System.Drawing.Point(339, 312);
+            this.myHand1.Location = new System.Drawing.Point(423, 309);
             this.myHand1.Name = "myHand1";
             this.myHand1.Size = new System.Drawing.Size(73, 109);
             this.myHand1.TabIndex = 4;
@@ -367,7 +377,7 @@ namespace BlackJack
             this.dealerHand2.BackColor = System.Drawing.Color.Transparent;
             this.dealerHand2.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.dealerHand2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dealerHand2.Location = new System.Drawing.Point(359, 1);
+            this.dealerHand2.Location = new System.Drawing.Point(359, 5);
             this.dealerHand2.Name = "dealerHand2";
             this.dealerHand2.Size = new System.Drawing.Size(73, 109);
             this.dealerHand2.TabIndex = 3;
@@ -379,7 +389,7 @@ namespace BlackJack
             this.dealerHand1.BackColor = System.Drawing.Color.Transparent;
             this.dealerHand1.BackgroundImage = global::BlackJack.Properties.Resources._9H;
             this.dealerHand1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dealerHand1.Location = new System.Drawing.Point(339, 1);
+            this.dealerHand1.Location = new System.Drawing.Point(339, 5);
             this.dealerHand1.Name = "dealerHand1";
             this.dealerHand1.Size = new System.Drawing.Size(73, 109);
             this.dealerHand1.TabIndex = 2;
@@ -406,6 +416,11 @@ namespace BlackJack
             // 
             this.GamePanel.BackColor = System.Drawing.Color.Green;
             this.GamePanel.Controls.Add(this.insuranceLabel);
+            this.GamePanel.Controls.Add(this.pictureBox1);
+            this.GamePanel.Controls.Add(this.pictureBox2);
+            this.GamePanel.Controls.Add(this.pictureBox3);
+            this.GamePanel.Controls.Add(this.pictureBox4);
+            this.GamePanel.Controls.Add(this.pictureBox5);
             this.GamePanel.Controls.Add(this.insuranceButton);
             this.GamePanel.Controls.Add(this.splitButton);
             this.GamePanel.Controls.Add(this.blinkPanel);
@@ -429,11 +444,55 @@ namespace BlackJack
             this.GamePanel.Controls.Add(this.myHand1);
             this.GamePanel.Controls.Add(this.dealerHand2);
             this.GamePanel.Controls.Add(this.dealerHand1);
-            this.GamePanel.Location = new System.Drawing.Point(22, 456);
+            this.GamePanel.Location = new System.Drawing.Point(31, 398);
             this.GamePanel.Name = "GamePanel";
             this.GamePanel.Size = new System.Drawing.Size(753, 424);
             this.GamePanel.TabIndex = 32;
             this.GamePanel.Visible = false;
+            // 
+            // insuranceButton
+            // 
+            this.insuranceButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.insuranceButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.insuranceButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.insuranceButton.FlatAppearance.BorderSize = 0;
+            this.insuranceButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.insuranceButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.insuranceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.insuranceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insuranceButton.Location = new System.Drawing.Point(37, 211);
+            this.insuranceButton.Name = "insuranceButton";
+            this.insuranceButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.insuranceButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.insuranceButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.insuranceButton.Size = new System.Drawing.Size(91, 41);
+            this.insuranceButton.TabIndex = 38;
+            this.insuranceButton.Text = "Insurance";
+            this.insuranceButton.TextColor = System.Drawing.Color.Black;
+            this.insuranceButton.UseVisualStyleBackColor = true;
+            this.insuranceButton.Visible = false;
+            // 
+            // splitButton
+            // 
+            this.splitButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.splitButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.splitButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.splitButton.FlatAppearance.BorderSize = 0;
+            this.splitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.splitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.splitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.splitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.splitButton.Location = new System.Drawing.Point(339, 238);
+            this.splitButton.Name = "splitButton";
+            this.splitButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.splitButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.splitButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.splitButton.Size = new System.Drawing.Size(82, 32);
+            this.splitButton.TabIndex = 37;
+            this.splitButton.Text = "Split";
+            this.splitButton.TextColor = System.Drawing.Color.Black;
+            this.splitButton.UseVisualStyleBackColor = true;
+            this.splitButton.Visible = false;
             // 
             // blinkPanel
             // 
@@ -1348,13 +1407,68 @@ namespace BlackJack
             this.UserNameBox2.Size = new System.Drawing.Size(246, 24);
             this.UserNameBox2.TabIndex = 8;
             this.UserNameBox2.TextChanged += new System.EventHandler(this.UserNameBox2_TextChanged);
+            //
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::BlackJack.Properties.Resources._2C;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(320, 309);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(73, 109);
+            this.pictureBox1.TabIndex = 43;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::BlackJack.Properties.Resources._2C;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(301, 309);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(73, 109);
+            this.pictureBox2.TabIndex = 42;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = global::BlackJack.Properties.Resources._2C;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(280, 309);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(73, 109);
+            this.pictureBox3.TabIndex = 41;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImage = global::BlackJack.Properties.Resources._2C;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(261, 309);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(73, 109);
+            this.pictureBox4.TabIndex = 40;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImage = global::BlackJack.Properties.Resources._10C;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(241, 309);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(73, 109);
+            this.pictureBox5.TabIndex = 39;
+            this.pictureBox5.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1459, 897);
+            this.ClientSize = new System.Drawing.Size(1455, 854);
             this.Controls.Add(this.GamePanel);
             this.Controls.Add(this.SignUpPanel);
             this.Controls.Add(this.newPassPanel);
@@ -1395,6 +1509,11 @@ namespace BlackJack
             this.SignUpPanel.PerformLayout();
             this.SignInPanel.ResumeLayout(false);
             this.SignInPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1489,6 +1608,11 @@ namespace BlackJack
         private Label insuranceLabel;
         private ePOSOne.btnProduct.Button_WOC insuranceDecBet;
         private ePOSOne.btnProduct.Button_WOC insuranceIncBet;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox5;
     }
 }
 
