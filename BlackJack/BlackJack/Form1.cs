@@ -442,6 +442,7 @@ namespace BlackJack
             insuranceIncBet.Visible = false;
             insuranceDecBet.Visible = false;
             insuranceLabel.Visible = false;
+            testButton.Visible = false;
 
             dealerTotalVal.Text = "?";
 
