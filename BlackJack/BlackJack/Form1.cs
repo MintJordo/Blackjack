@@ -849,7 +849,7 @@ namespace BlackJack
 
         private void insuranceIncBet_Click(object sender, EventArgs e)
         {
-            if (player1.insurance < player1.wager / 2)
+            if (player1.insurance + 5 < player1.wager / 2)
             {
                 player1.insurance += betInc;
                 player1.takeMoney(betInc);
