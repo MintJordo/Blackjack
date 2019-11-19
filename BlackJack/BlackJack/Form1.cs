@@ -337,6 +337,7 @@ namespace BlackJack
                     SignInPanel.Visible = false;
                     forgotPanel.Visible = false;
                     newPassPanel.Visible = false;
+                    splitButton.Visible = false;
                     testButton.Visible = true;
                     GamePanel.Visible = true;
                     GamePanel.Location = new Point(13, 13);
@@ -789,6 +790,10 @@ namespace BlackJack
             {
                 card1 = new Card(dcard1.Substring(1, 1), dcard1.Substring(0, 1));
             }
+            else if(dcard1.Length == 0)
+            {
+                return;
+            }
             else
             {
                 card1 = new Card(dcard1.Substring(2, 1), dcard1.Substring(0, 2));
@@ -798,6 +803,10 @@ namespace BlackJack
             if (dcard2.Length == 2)
             {
                 card2 = new Card(dcard2.Substring(1, 1), dcard2.Substring(0, 1));
+            }
+            else if (dcard2.Length == 0)
+            {
+                return;
             }
             else
             {
@@ -809,6 +818,10 @@ namespace BlackJack
             {
                 card3 = new Card(pcard1.Substring(1, 1), pcard1.Substring(0, 1));
             }
+            else if (pcard1.Length == 0)
+            {
+                return;
+            }
             else
             {
                 card3 = new Card(pcard1.Substring(2, 1), pcard1.Substring(0, 2));
@@ -818,6 +831,10 @@ namespace BlackJack
             if (pcard2.Length == 2)
             {
                 card4 = new Card(pcard2.Substring(1, 1), pcard2.Substring(0, 1));
+            }
+            else if (pcard2.Length == 0)
+            {
+                return;
             }
             else
             {
@@ -971,6 +988,7 @@ namespace BlackJack
         {
 
         }
+
     }
 }
 

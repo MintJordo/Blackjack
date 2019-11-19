@@ -70,14 +70,16 @@ namespace BlackJack
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.GamePanel = new System.Windows.Forms.Panel();
+            this.myTotalVal2 = new System.Windows.Forms.Label();
+            this.myTotalLabel2 = new System.Windows.Forms.Label();
+            this.SettingsButton = new System.Windows.Forms.PictureBox();
+            this.testButton = new ePOSOne.btnProduct.Button_WOC();
             this.insuranceLabel = new System.Windows.Forms.Label();
             this.myHand10 = new System.Windows.Forms.PictureBox();
             this.myHand9 = new System.Windows.Forms.PictureBox();
             this.myHand8 = new System.Windows.Forms.PictureBox();
             this.myHand7 = new System.Windows.Forms.PictureBox();
             this.myHand6 = new System.Windows.Forms.PictureBox();
-            this.SettingsButton = new System.Windows.Forms.PictureBox();
-            this.testButton = new ePOSOne.btnProduct.Button_WOC();
             this.insuranceButton = new ePOSOne.btnProduct.Button_WOC();
             this.splitButton = new ePOSOne.btnProduct.Button_WOC();
             this.blinkPanel = new System.Windows.Forms.Panel();
@@ -138,8 +140,6 @@ namespace BlackJack
             this.panel8 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.SignUpButton2 = new System.Windows.Forms.Button();
-            this.myTotalLabel2 = new System.Windows.Forms.Label();
-            this.myTotalVal2 = new System.Windows.Forms.Label();
             this.settingsPanel = new System.Windows.Forms.Panel();
             this.CancelSettings = new System.Windows.Forms.Label();
             this.passChangebtn = new System.Windows.Forms.Button();
@@ -173,12 +173,12 @@ namespace BlackJack
             ((System.ComponentModel.ISupportInitialize)(this.dealerHand2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerHand1)).BeginInit();
             this.GamePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SettingsButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myHand10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myHand9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myHand8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myHand7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myHand6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SettingsButton)).BeginInit();
             this.blinkPanel.SuspendLayout();
             this.newPassPanel.SuspendLayout();
             this.forgotPanel.SuspendLayout();
@@ -569,7 +569,29 @@ namespace BlackJack
             this.GamePanel.TabIndex = 32;
             this.GamePanel.Visible = false;
             // 
-            // insuranceLabel
+            // myTotalVal2
+            // 
+            this.myTotalVal2.AutoSize = true;
+            this.myTotalVal2.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.myTotalVal2.Location = new System.Drawing.Point(319, 277);
+            this.myTotalVal2.Name = "myTotalVal2";
+            this.myTotalVal2.Size = new System.Drawing.Size(30, 32);
+            this.myTotalVal2.TabIndex = 45;
+            this.myTotalVal2.Text = "0";
+            this.myTotalVal2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.myTotalVal2.Visible = false;
+            // 
+            // myTotalLabel2
+            // 
+            this.myTotalLabel2.AutoSize = true;
+            this.myTotalLabel2.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.myTotalLabel2.Location = new System.Drawing.Point(219, 277);
+            this.myTotalLabel2.Name = "myTotalLabel2";
+            this.myTotalLabel2.Size = new System.Drawing.Size(105, 32);
+            this.myTotalLabel2.TabIndex = 44;
+            this.myTotalLabel2.Text = "Total:";
+            this.myTotalLabel2.Visible = false;
+            // 
             // SettingsButton
             // 
             this.SettingsButton.Image = global::BlackJack.Properties.Resources.icons8_person_64;
@@ -604,37 +626,6 @@ namespace BlackJack
             // 
             // insuranceLabel
             // 
-            this.insuranceLabel.AutoSize = true;
-            this.insuranceLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insuranceLabel.Location = new System.Drawing.Point(8, 173);
-            this.insuranceLabel.Name = "insuranceLabel";
-            this.insuranceLabel.Size = new System.Drawing.Size(210, 32);
-            this.insuranceLabel.TabIndex = 39;
-            this.insuranceLabel.Text = "Insurance: $0";
-            this.insuranceLabel.Visible = false;
-            // 
-            // insuranceButton
-            // 
-            this.insuranceButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.insuranceButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.insuranceButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.insuranceButton.FlatAppearance.BorderSize = 0;
-            this.insuranceButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.insuranceButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.insuranceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.insuranceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insuranceButton.Location = new System.Drawing.Point(37, 211);
-            this.insuranceButton.Name = "insuranceButton";
-            this.insuranceButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.insuranceButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.insuranceButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.insuranceButton.Size = new System.Drawing.Size(91, 41);
-            this.insuranceButton.TabIndex = 38;
-            this.insuranceButton.Text = "Insurance";
-            this.insuranceButton.TextColor = System.Drawing.Color.Black;
-            this.insuranceButton.UseVisualStyleBackColor = true;
-            this.insuranceButton.Visible = false;
-            this.insuranceButton.Click += new System.EventHandler(this.insuranceButton_Click);
             this.insuranceLabel.AutoSize = true;
             this.insuranceLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.insuranceLabel.Location = new System.Drawing.Point(8, 173);
@@ -704,6 +695,50 @@ namespace BlackJack
             this.myHand6.TabStop = false;
             this.myHand6.Visible = false;
             // 
+            // insuranceButton
+            // 
+            this.insuranceButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.insuranceButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.insuranceButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.insuranceButton.FlatAppearance.BorderSize = 0;
+            this.insuranceButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.insuranceButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.insuranceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.insuranceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insuranceButton.Location = new System.Drawing.Point(37, 211);
+            this.insuranceButton.Name = "insuranceButton";
+            this.insuranceButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.insuranceButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.insuranceButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.insuranceButton.Size = new System.Drawing.Size(91, 41);
+            this.insuranceButton.TabIndex = 38;
+            this.insuranceButton.Text = "Insurance";
+            this.insuranceButton.TextColor = System.Drawing.Color.Black;
+            this.insuranceButton.UseVisualStyleBackColor = true;
+            this.insuranceButton.Visible = false;
+            this.insuranceButton.Click += new System.EventHandler(this.insuranceButton_Click);
+            // 
+            // splitButton
+            // 
+            this.splitButton.BackColor = System.Drawing.Color.Transparent;
+            this.splitButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.splitButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.splitButton.FlatAppearance.BorderSize = 0;
+            this.splitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.splitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.splitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.splitButton.Location = new System.Drawing.Point(337, 255);
+            this.splitButton.Name = "splitButton";
+            this.splitButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.splitButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.splitButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.splitButton.Size = new System.Drawing.Size(75, 23);
+            this.splitButton.TabIndex = 46;
+            this.splitButton.Text = "Split";
+            this.splitButton.TextColor = System.Drawing.Color.Black;
+            this.splitButton.UseVisualStyleBackColor = false;
+            this.splitButton.Click += new System.EventHandler(this.splitButton_Click);
+            // 
             // blinkPanel
             // 
             this.blinkPanel.BackColor = System.Drawing.Color.DarkGreen;
@@ -723,7 +758,7 @@ namespace BlackJack
             this.hitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.hitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.hitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hitButton.Location = new System.Drawing.Point(467, 255);
+            this.hitButton.Location = new System.Drawing.Point(467, 240);
             this.hitButton.Name = "hitButton";
             this.hitButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.hitButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -745,7 +780,7 @@ namespace BlackJack
             this.standButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.standButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.standButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.standButton.Location = new System.Drawing.Point(197, 255);
+            this.standButton.Location = new System.Drawing.Point(197, 240);
             this.standButton.Name = "standButton";
             this.standButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.standButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -1473,29 +1508,6 @@ namespace BlackJack
             this.SignUpButton2.UseVisualStyleBackColor = false;
             this.SignUpButton2.Click += new System.EventHandler(this.SignUpButton2_Click);
             // 
-            // myTotalLabel2
-            // 
-            this.myTotalLabel2.AutoSize = true;
-            this.myTotalLabel2.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.myTotalLabel2.Location = new System.Drawing.Point(219, 277);
-            this.myTotalLabel2.Name = "myTotalLabel2";
-            this.myTotalLabel2.Size = new System.Drawing.Size(105, 32);
-            this.myTotalLabel2.TabIndex = 44;
-            this.myTotalLabel2.Text = "Total:";
-            this.myTotalLabel2.Visible = false;
-            // 
-            // myTotalVal2
-            // 
-            this.myTotalVal2.AutoSize = true;
-            this.myTotalVal2.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.myTotalVal2.Location = new System.Drawing.Point(319, 277);
-            this.myTotalVal2.Name = "myTotalVal2";
-            this.myTotalVal2.Size = new System.Drawing.Size(30, 32);
-            this.myTotalVal2.TabIndex = 45;
-            this.myTotalVal2.Text = "0";
-            this.myTotalVal2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.myTotalVal2.Visible = false;
-            // 
             // settingsPanel
             // 
             this.settingsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(50)))));
@@ -1804,12 +1816,12 @@ namespace BlackJack
             ((System.ComponentModel.ISupportInitialize)(this.dealerHand1)).EndInit();
             this.GamePanel.ResumeLayout(false);
             this.GamePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SettingsButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myHand10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myHand9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myHand8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myHand7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.myHand6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SettingsButton)).EndInit();
             this.blinkPanel.ResumeLayout(false);
             this.newPassPanel.ResumeLayout(false);
             this.newPassPanel.PerformLayout();
