@@ -1,13 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <players>
-  <player username="davidbishop">
-    <name>David Bishop</name>
-    <password>scrum</password>
-    <balance>0.69</balance>
-  </player>
-  <player username="clford">
+  <player username="cford">
     <name>Connor Ford</name>
     <password>cocoa</password>
+    <balance>1000000</balance>
+    <address>820 N Washington Ave, Madison, SD 57042</address>
+    <phone_number>1234567890</phone_number>
+    <credit_card>1234567812345678</credit_card>
+  </player>
+  <player username="hdemeyer">
+    <name>Hunter Demeyer</name>
+    <password>hunter</password>
+    <balance>1000000</balance>
+    <address>820 N Washington Ave, Madison, SD 57042</address>
+    <phone_number>1234567890</phone_number>
+    <credit_card>1234567812345678</credit_card>
+  </player>
+  <player username="lfleck">
+    <name>Luke Fleck</name>
+    <password>luke</password>
+    <balance>1000000</balance>
+    <address>820 N Washington Ave, Madison, SD 57042</address>
+    <phone_number>1234567890</phone_number>
+    <credit_card>1234567812345678</credit_card>
+  </player>
+  <player username="joberg">
+    <name>Jordan Oberg</name>
+    <password>jordan</password>
     <balance>1000000</balance>
     <address>820 N Washington Ave, Madison, SD 57042</address>
     <phone_number>1234567890</phone_number>
