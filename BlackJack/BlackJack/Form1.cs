@@ -159,13 +159,21 @@ namespace BlackJack
             {
                 player1.addMoney(player1.wager);
             }
+            if(dealer.hand.getHandTotal() == 21 && dealer.hand.show().Length == 2)
+            {
+                player1.addMoney(player1.insurance * 2 + player1.insurance);
+            }
             player1.wager = 0;
+            player1.insurance = 0;
+            insuranceLabel.Visible = false;
             betLabel.Text = "Bet: $0";
             moneyBal.Text = "$" + player1.getMoney().ToString();
 
             standButton.Visible = false;
             hitButton.Visible = false;
             dealButton.Visible = false;
+            insuranceIncBet.Visible = false;
+            insuranceDecBet.Visible = false;
             incBet.Visible = true;
             decBet.Visible = true;
 
@@ -368,6 +376,7 @@ namespace BlackJack
 
             dealButton.Visible = false;
             splitButton.Visible = false;
+            insuranceButton.Visible = false;
             hitButton.Visible = true;
             standButton.Visible = true;
             dealerTotalLabel.Visible = true;
@@ -376,6 +385,9 @@ namespace BlackJack
             myTotalVal.Visible = true;
             incBet.Visible = false;
             decBet.Visible = false;
+            insuranceIncBet.Visible = false;
+            insuranceDecBet.Visible = false;
+            insuranceLabel.Visible = false;
 
             dealerTotalVal.Text = "?";
 
@@ -386,6 +398,10 @@ namespace BlackJack
             if(player1.hand.show()[0].Number == player1.hand.show()[1].Number)
             {
                 splitButton.Visible = true;
+            }
+            if(dealer.hand.show()[0].Number == "A")
+            {
+                insuranceButton.Visible = true;
             }
         }
 
@@ -418,6 +434,8 @@ namespace BlackJack
 
         private void hitButton_Click(object sender, EventArgs e)
         {
+            splitButton.Visible = false;
+            insuranceButton.Visible = false;
             if (player1.hand.getNumCards() < 5)
             {
                 player1.hand.addCard(deck.getCard());
@@ -444,6 +462,8 @@ namespace BlackJack
 
         private void standButton_Click(object sender, EventArgs e)
         {
+            splitButton.Visible = false;
+            insuranceButton.Visible = false;
             while(dealer.hand.getHandTotal() < 17)
             {
                 dealer.hand.addCard(deck.getCard());
@@ -481,6 +501,13 @@ namespace BlackJack
                 if (player1.wager <= 0)
                     dealButton.Visible = false;
             }
+        }
+
+        private void insuranceBet()
+        {
+            insuranceIncBet.Visible = true;
+            insuranceDecBet.Visible = true;
+            insuranceLabel.Visible = true;
         }
 
         private void moneyBal_Click(object sender, EventArgs e)
@@ -641,6 +668,33 @@ namespace BlackJack
         private void Label9_Click(object sender, EventArgs e)
         {
             goToLogin();
+        }
+
+        private void insuranceButton_Click(object sender, EventArgs e)
+        {
+            insuranceBet();
+        }
+
+        private void insuranceIncBet_Click(object sender, EventArgs e)
+        {
+            if (player1.insurance < player1.wager/2)
+            {
+                player1.insurance += betInc;
+                player1.takeMoney(betInc);
+                insuranceLabel.Text = "Insurance: $" + player1.insurance.ToString();
+                moneyBal.Text = "$" + player1.getMoney();
+            }
+        }
+
+        private void insuranceDecBet_Click(object sender, EventArgs e)
+        {
+            if (player1.insurance > 0)
+            {
+                player1.insurance -= betInc;
+                player1.addMoney(betInc);
+                insuranceLabel.Text = "Insurance: $" + player1.insurance.ToString();
+                moneyBal.Text = "$" + player1.getMoney();
+            }
         }
     }
 }
