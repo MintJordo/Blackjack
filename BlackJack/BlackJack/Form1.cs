@@ -206,6 +206,7 @@ namespace BlackJack
             SignInPanel.Visible = false;
             forgotPanel.Visible = false;
             newPassPanel.Visible = false;
+            incorrectLabel.Visible = false;
 
             SignUpPanel.BackColor = Color.FromArgb(0, 25, 50);
             SignInButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
@@ -289,7 +290,7 @@ namespace BlackJack
                     this.BackColor = Color.Green;
                 }
                 else {
-                    Console.WriteLine("User does not exist or password is incorrect");
+                    incorrectLabel.Visible = true;
                 }
             }
         }
