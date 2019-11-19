@@ -43,31 +43,70 @@ namespace BlackJack
             {
                 myHand1.Visible = true;
                 myHand1.BackgroundImage = Image.FromFile(player1.hand.show()[0].getCardPath());
+                myHand1.Location = new Point(339, 309);
                 myHand1.BringToFront();
             }
             if (player1.hand.show().Length >= 2)
             {
                 myHand2.Visible = true;
                 myHand2.BackgroundImage = Image.FromFile(player1.hand.show()[1].getCardPath());
+                myHand2.Location = new Point(359, 309);
                 myHand2.BringToFront();
             }
             if (player1.hand.show().Length >= 3)
             {
                 myHand3.Visible = true;
                 myHand3.BackgroundImage = Image.FromFile(player1.hand.show()[2].getCardPath());
+                myHand3.Location = new Point(379, 309);
                 myHand3.BringToFront();
             }
             if (player1.hand.show().Length >= 4)
             {
                 myHand4.Visible = true;
                 myHand4.BackgroundImage = Image.FromFile(player1.hand.show()[3].getCardPath());
+                myHand4.Location = new Point(399, 309);
                 myHand4.BringToFront();
             }
             if (player1.hand.show().Length == 5)
             {
                 myHand5.Visible = true;
                 myHand5.BackgroundImage = Image.FromFile(player1.hand.show()[4].getCardPath());
+                myHand5.Location = new Point(419, 309);
                 myHand5.BringToFront();
+            }
+        }
+
+        public void updatePlayerSplitHandPictureBox()
+        {
+            if (player1.splitHand.show().Length >= 1)
+            {
+                myHand6.Visible = true;
+                myHand6.BackgroundImage = Image.FromFile(player1.hand.show()[0].getCardPath());
+                myHand6.BringToFront();
+            }
+            if (player1.splitHand.show().Length >= 2)
+            {
+                myHand7.Visible = true;
+                myHand7.BackgroundImage = Image.FromFile(player1.hand.show()[1].getCardPath());
+                myHand7.BringToFront();
+            }
+            if (player1.splitHand.show().Length >= 3)
+            {
+                myHand8.Visible = true;
+                myHand8.BackgroundImage = Image.FromFile(player1.hand.show()[2].getCardPath());
+                myHand8.BringToFront();
+            }
+            if (player1.splitHand.show().Length >= 4)
+            {
+                myHand9.Visible = true;
+                myHand9.BackgroundImage = Image.FromFile(player1.hand.show()[3].getCardPath());
+                myHand9.BringToFront();
+            }
+            if (player1.splitHand.show().Length == 5)
+            {
+                myHand10.Visible = true;
+                myHand10.BackgroundImage = Image.FromFile(player1.hand.show()[4].getCardPath());
+                myHand10.BringToFront();
             }
         }
 
@@ -368,6 +407,13 @@ namespace BlackJack
             myHand3.Visible = false;
             myHand4.Visible = false;
             myHand5.Visible = false;
+            myHand6.Visible = false;
+            myHand7.Visible = false;
+            myHand8.Visible = false;
+            myHand9.Visible = false;
+            myHand10.Visible = false;
+            myTotalLabel2.Visible = false;
+            myTotalVal2.Visible = false;
 
             player1.hand.addCard(deck.getCard());
             dealer.hand.addCard(deck.getCard());
@@ -393,9 +439,11 @@ namespace BlackJack
 
             updatePlayerHandPictureBox();
             updateDealerHandPictureBox();
+            myTotalLabel.Location = new Point(307, 277);
+            myTotalVal.Location = new Point(407, 277);
             myTotalVal.Text = player1.hand.getHandTotal().ToString();
 
-            if(player1.hand.show()[0].Number == player1.hand.show()[1].Number)
+            if(player1.hand.show()[0].getCardValue() == player1.hand.show()[1].getCardValue())
             {
                 splitButton.Visible = true;
             }
@@ -695,6 +743,20 @@ namespace BlackJack
                 insuranceLabel.Text = "Insurance: $" + player1.insurance.ToString();
                 moneyBal.Text = "$" + player1.getMoney();
             }
+        }
+
+        private void splitButton_Click(object sender, EventArgs e)
+        {
+            myTotalLabel.Location = new Point(428, 277);
+            myTotalVal.Location = new Point(527, 277);
+            myHand1.Location = new Point(423, 309);
+            myHand2.Location = new Point(443, 309);
+            myHand3.Location = new Point(463, 309);
+            myHand4.Location = new Point(483, 309);
+            myHand5.Location = new Point(503, 309);
+            player1.splitHand.addCard(player1.hand.show()[1]);
+            updatePlayerSplitHandPictureBox();
+
         }
     }
 }
