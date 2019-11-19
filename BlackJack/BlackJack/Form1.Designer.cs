@@ -727,12 +727,13 @@ namespace BlackJack
             this.splitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.splitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.splitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.splitButton.Location = new System.Drawing.Point(337, 255);
+            this.splitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.splitButton.Location = new System.Drawing.Point(337, 240);
             this.splitButton.Name = "splitButton";
             this.splitButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.splitButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.splitButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.splitButton.Size = new System.Drawing.Size(75, 23);
+            this.splitButton.Size = new System.Drawing.Size(82, 32);
             this.splitButton.TabIndex = 46;
             this.splitButton.Text = "Split";
             this.splitButton.TextColor = System.Drawing.Color.Black;
