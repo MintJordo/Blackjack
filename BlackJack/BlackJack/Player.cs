@@ -11,6 +11,7 @@ namespace BlackJack
     {
         private int money;
         public int wager;
+        public int insurance;
         public Hand hand;
         public List<PictureBox> cardDisplay;
         private string name;
