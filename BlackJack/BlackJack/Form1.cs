@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Xml;
-
+using Microsoft.VisualBasic;
 
 namespace BlackJack
 {
@@ -186,19 +186,19 @@ namespace BlackJack
             {
                 player1.addMoney(player1.wager * 2);
             }
-            if(player1.hand.getHandTotal() <= 21 && dealer.hand.getHandTotal() <= 21 && player1.hand.getHandTotal() > dealer.hand.getHandTotal())
+            if (player1.hand.getHandTotal() <= 21 && dealer.hand.getHandTotal() <= 21 && player1.hand.getHandTotal() > dealer.hand.getHandTotal())
             {
                 player1.addMoney(player1.wager * 2);
             }
-            if(dealer.hand.getHandTotal() > 21 && player1.hand.getHandTotal() <= 21)
+            if (dealer.hand.getHandTotal() > 21 && player1.hand.getHandTotal() <= 21)
             {
                 player1.addMoney(player1.wager * 2);
             }
-            if(player1.hand.getHandTotal() == dealer.hand.getHandTotal())
+            if (player1.hand.getHandTotal() == dealer.hand.getHandTotal())
             {
                 player1.addMoney(player1.wager);
             }
-            if(dealer.hand.getHandTotal() == 21 && dealer.hand.show().Length == 2)
+            if (dealer.hand.getHandTotal() == 21 && dealer.hand.show().Length == 2)
             {
                 player1.addMoney(player1.insurance * 2 + player1.insurance);
             }
@@ -219,6 +219,7 @@ namespace BlackJack
             player1.hand.emptyHand();
             dealer.hand.emptyHand();
 
+            testButton.Visible = true;
             //timer Code
             BetTimer.Enabled = true;
             blinkPanel.BackColor = System.Drawing.Color.FromArgb(212, 175, 55);
@@ -254,6 +255,7 @@ namespace BlackJack
             forgotPanel.Visible = false;
             newPassPanel.Visible = false;
             incorrectLabel.Visible = false;
+            testButton.Visible = false;
 
             SignUpPanel.BackColor = Color.FromArgb(0, 25, 50);
             SignInButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
@@ -301,7 +303,7 @@ namespace BlackJack
             SignInConfirm.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
 
             SignInPanel.Visible = true;
-            SignInPanel.Location = new Point(209,34);
+            SignInPanel.Location = new Point(209, 34);
 
         }
         public void forgotPass()
@@ -318,26 +320,30 @@ namespace BlackJack
         }
         public void LaunchGame()
         {
-            
+
             // Check right here if login is correct
             string entered_username = UserNameBox2.Text;
             string entered_password = passwordBox2.Text;
             XmlDocument doc = new XmlDocument();
             doc.Load("Players.xml");
-            foreach(XmlNode node in doc.DocumentElement) {
+            foreach (XmlNode node in doc.DocumentElement)
+            {
                 string username = node.Attributes[0].InnerText;
                 string password = node.ChildNodes[1].InnerText;
                 Console.WriteLine(username);
-                if (entered_username == username && entered_password == password) {
+                if (entered_username == username && entered_password == password)
+                {
                     SignUpPanel.Visible = false;
                     SignInPanel.Visible = false;
                     forgotPanel.Visible = false;
                     newPassPanel.Visible = false;
+                    testButton.Visible = true;
                     GamePanel.Visible = true;
                     GamePanel.Location = new Point(13, 13);
                     this.BackColor = Color.Green;
                 }
-                else {
+                else
+                {
                     incorrectLabel.Visible = true;
                 }
             }
@@ -347,6 +353,7 @@ namespace BlackJack
         {
             InitializeComponent();
             makeLogin();
+            goToLogin();
 
             this.Size = new Size(800, 450);
             //Timer Code
@@ -357,7 +364,7 @@ namespace BlackJack
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15, 15));
             moneyBal.Text = System.IO.File.ReadAllText(@"..\..\..\Money.txt");
-            if(moneyBal.Text == "$0")
+            if (moneyBal.Text == "$0")
             {
                 moneyBal.Text = "$100";
             }
@@ -447,12 +454,61 @@ namespace BlackJack
             {
                 splitButton.Visible = true;
             }
-            if(dealer.hand.show()[0].Number == "A")
+            if (dealer.hand.show()[0].Number == "A")
             {
                 insuranceButton.Visible = true;
             }
         }
+        public void startGame2(Card a, Card b, Card c, Card d)
+        {
+            //Timer Code
+            BetTimer.Enabled = false;
+            blinkPanel.BackColor = System.Drawing.Color.DarkGreen;
 
+            dealerHand1.Visible = false;
+            dealerHand2.Visible = false;
+            dealerHand3.Visible = false;
+            dealerHand4.Visible = false;
+            dealerHand5.Visible = false;
+
+            myHand1.Visible = false;
+            myHand2.Visible = false;
+            myHand3.Visible = false;
+            myHand4.Visible = false;
+            myHand5.Visible = false;
+
+            player1.hand.addCard(c);
+            dealer.hand.addCard(a);
+            player1.hand.addCard(d);
+            dealer.hand.addCard(b);
+
+            dealButton.Visible = false;
+            splitButton.Visible = false;
+            hitButton.Visible = true;
+            standButton.Visible = true;
+            dealerTotalLabel.Visible = true;
+            dealerTotalVal.Visible = true;
+            myTotalLabel.Visible = true;
+            myTotalVal.Visible = true;
+            incBet.Visible = false;
+            decBet.Visible = false;
+            testButton.Visible = false;
+
+            dealerTotalVal.Text = "?";
+
+            updatePlayerHandPictureBox();
+            updateDealerHandPictureBox();
+            myTotalVal.Text = player1.hand.getHandTotal().ToString();
+
+            if (player1.hand.show()[0].Number == player1.hand.show()[1].Number)
+            {
+                splitButton.Visible = true;
+            }
+            if (dealer.hand.show()[0].Number == "A" || dealer.hand.show()[0].Number == "a")
+            {
+                insuranceButton.Visible = true;
+            }
+        }
         private void BackgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
 
@@ -489,9 +545,9 @@ namespace BlackJack
                 player1.hand.addCard(deck.getCard());
                 updatePlayerHandPictureBox();
                 myTotalVal.Text = player1.hand.getHandTotal().ToString();
-                if(player1.hand.getHandTotal() > 21)
+                if (player1.hand.getHandTotal() > 21)
                 {
-                    if(dealer.hand.getHandTotal() < 17)
+                    if (dealer.hand.getHandTotal() < 17)
                     {
                         System.Threading.Thread.Sleep(500);
                         dealer.hand.addCard(deck.getCard());
@@ -501,18 +557,19 @@ namespace BlackJack
 
                 }
             }
-            if(player1.hand.getNumCards() == 5)
+            if (player1.hand.getNumCards() == 5)
             {
                 endGame();
             }
-            
+
         }
 
         private void standButton_Click(object sender, EventArgs e)
         {
+
             splitButton.Visible = false;
             insuranceButton.Visible = false;
-            while(dealer.hand.getHandTotal() < 17)
+            while (dealer.hand.getHandTotal() < 17)
             {
                 dealer.hand.addCard(deck.getCard());
                 updateDealerHandPictureBox();
@@ -632,7 +689,7 @@ namespace BlackJack
         private void Timer1_Tick(object sender, EventArgs e)
         {
             Timerbool = !Timerbool;
-            if(Timerbool)
+            if (Timerbool)
                 blinkPanel.BackColor = System.Drawing.Color.DarkGreen;
             if (!Timerbool)
                 blinkPanel.BackColor = System.Drawing.Color.FromArgb(212, 175, 55);
@@ -718,6 +775,56 @@ namespace BlackJack
             goToLogin();
         }
 
+        private void SignUpConfirm_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void testButton_Click(object sender, EventArgs e)
+        {
+            Card card1, card2, card3, card4;
+            string dcard1 = Interaction.InputBox("Dealer Card 1", "Dealer Hand", "(ex: 2D for 2 of Diamonds)");
+            //SignInButton.Text = dcard1;
+            if (dcard1.Length == 2)
+            {
+                card1 = new Card(dcard1.Substring(1, 1), dcard1.Substring(0, 1));
+            }
+            else
+            {
+                card1 = new Card(dcard1.Substring(2, 1), dcard1.Substring(0, 2));
+            }
+            string dcard2 = Interaction.InputBox("Dealer Card 2", "Dealer Hand", "(ex: 2D for 2 of Diamonds)");
+            //SignInButton.Text = dcard2;
+            if (dcard2.Length == 2)
+            {
+                card2 = new Card(dcard2.Substring(1, 1), dcard2.Substring(0, 1));
+            }
+            else
+            {
+                card2 = new Card(dcard2.Substring(2, 1), dcard2.Substring(0, 2));
+            }
+            string pcard1 = Interaction.InputBox("Player Card 1", "Player Hand", "(ex: 2D for 2 of Diamonds)");
+            //SignInButton.Text = pcard1;
+            if (pcard1.Length == 2)
+            {
+                card3 = new Card(pcard1.Substring(1, 1), pcard1.Substring(0, 1));
+            }
+            else
+            {
+                card3 = new Card(pcard1.Substring(2, 1), pcard1.Substring(0, 2));
+            }
+            string pcard2 = Interaction.InputBox("Player Card 2", "Players Hand", "(ex: 2D for 2 of Diamonds)");
+            //SignInButton.Text = pcard2;
+            if (pcard2.Length == 2)
+            {
+                card4 = new Card(pcard2.Substring(1, 1), pcard2.Substring(0, 1));
+            }
+            else
+            {
+                card4 = new Card(pcard2.Substring(2, 1), pcard2.Substring(0, 2));
+            }
+            startGame2(card1, card2, card3, card4);
+        }
         private void insuranceButton_Click(object sender, EventArgs e)
         {
             insuranceBet();
@@ -725,7 +832,7 @@ namespace BlackJack
 
         private void insuranceIncBet_Click(object sender, EventArgs e)
         {
-            if (player1.insurance < player1.wager/2)
+            if (player1.insurance < player1.wager / 2)
             {
                 player1.insurance += betInc;
                 player1.takeMoney(betInc);
@@ -758,5 +865,112 @@ namespace BlackJack
             updatePlayerSplitHandPictureBox();
 
         }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SettingsButton_Click(object sender, EventArgs e)
+        {
+            GamePanel.Visible = false;
+            settingsPanel.Visible = true;
+            settingsPanel.Location = new Point(209, 34);
+            this.BackColor = Color.FromArgb(0, 25, 50);
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+            GamePanel.Visible = true;
+            settingsPanel.Visible = false;
+            settingsPanel.Location = new Point(209, 34);
+            this.BackColor = Color.Green;
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void passChangebtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void balChange_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void phoneChange_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ccChange_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void saveSettings_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void passChange_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addChange_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void unsmaeChange_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nameChange_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+
