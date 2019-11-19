@@ -455,6 +455,10 @@ namespace BlackJack
             {
                 splitButton.Visible = true;
             }
+            if (dealer.hand.show()[0].Number == "A" || dealer.hand.show()[0].Number == "a")
+            {
+                insuranceButton.Visible = true;
+            }
         }
         private void BackgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -798,6 +802,7 @@ namespace BlackJack
                 moneyBal.Text = "$" + player1.getMoney();
             }
         }
+
     }
 }
 
