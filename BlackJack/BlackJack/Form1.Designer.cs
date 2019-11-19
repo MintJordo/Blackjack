@@ -50,8 +50,6 @@ namespace BlackJack
             this.dealerTotalLabel = new System.Windows.Forms.Label();
             this.dealerTotalVal = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.decBet = new ePOSOne.btnProduct.Button_WOC();
-            this.incBet = new ePOSOne.btnProduct.Button_WOC();
             this.betLabel = new System.Windows.Forms.Label();
             this.closeButton = new System.Windows.Forms.PictureBox();
             this.dealerHand5 = new System.Windows.Forms.PictureBox();
@@ -68,12 +66,7 @@ namespace BlackJack
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.GamePanel = new System.Windows.Forms.Panel();
-            this.insuranceButton = new ePOSOne.btnProduct.Button_WOC();
-            this.splitButton = new ePOSOne.btnProduct.Button_WOC();
             this.blinkPanel = new System.Windows.Forms.Panel();
-            this.hitButton = new ePOSOne.btnProduct.Button_WOC();
-            this.standButton = new ePOSOne.btnProduct.Button_WOC();
-            this.dealButton = new ePOSOne.btnProduct.Button_WOC();
             this.newPassPanel = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -81,8 +74,6 @@ namespace BlackJack
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.Password2 = new ePOSOne.btnProduct.MyTextBox();
-            this.Password1 = new ePOSOne.btnProduct.MyTextBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.forgotPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -91,24 +82,16 @@ namespace BlackJack
             this.verifyUserLabel1 = new System.Windows.Forms.Label();
             this.UsernameLabelVerify = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.verifyNum = new ePOSOne.btnProduct.MyTextBox();
-            this.verifyUsername = new ePOSOne.btnProduct.MyTextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.SignUpPanel = new System.Windows.Forms.Panel();
             this.phoneLabel = new System.Windows.Forms.Label();
-            this.phoneBox = new ePOSOne.btnProduct.MyTextBox();
             this.ccLabel = new System.Windows.Forms.Label();
-            this.ccBox = new ePOSOne.btnProduct.MyTextBox();
             this.SignUpConfirm = new System.Windows.Forms.Button();
             this.passwordLabel = new System.Windows.Forms.Label();
             this.addressLabel = new System.Windows.Forms.Label();
             this.usernameLabel = new System.Windows.Forms.Label();
             this.FirstLabel = new System.Windows.Forms.Label();
             this.CreateAccount = new System.Windows.Forms.Label();
-            this.PasswordBox = new ePOSOne.btnProduct.MyTextBox();
-            this.addressBox = new ePOSOne.btnProduct.MyTextBox();
-            this.UserNameBox = new ePOSOne.btnProduct.MyTextBox();
-            this.FirstNameBox = new ePOSOne.btnProduct.MyTextBox();
             this.underSignUp = new System.Windows.Forms.Panel();
             this.SignInButton = new System.Windows.Forms.Button();
             this.signUpButton = new System.Windows.Forms.Button();
@@ -122,12 +105,32 @@ namespace BlackJack
             this.label3 = new System.Windows.Forms.Label();
             this.usernameLabel2 = new System.Windows.Forms.Label();
             this.welcomeBack = new System.Windows.Forms.Label();
-            this.passwordBox2 = new ePOSOne.btnProduct.MyTextBox();
-            this.UserNameBox2 = new ePOSOne.btnProduct.MyTextBox();
             this.underSignIn2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.SignUpButton2 = new System.Windows.Forms.Button();
+            this.insuranceLabel = new System.Windows.Forms.Label();
+            this.insuranceButton = new ePOSOne.btnProduct.Button_WOC();
+            this.splitButton = new ePOSOne.btnProduct.Button_WOC();
+            this.insuranceDecBet = new ePOSOne.btnProduct.Button_WOC();
+            this.insuranceIncBet = new ePOSOne.btnProduct.Button_WOC();
+            this.decBet = new ePOSOne.btnProduct.Button_WOC();
+            this.incBet = new ePOSOne.btnProduct.Button_WOC();
+            this.hitButton = new ePOSOne.btnProduct.Button_WOC();
+            this.standButton = new ePOSOne.btnProduct.Button_WOC();
+            this.dealButton = new ePOSOne.btnProduct.Button_WOC();
+            this.phoneBox = new ePOSOne.btnProduct.MyTextBox();
+            this.ccBox = new ePOSOne.btnProduct.MyTextBox();
+            this.PasswordBox = new ePOSOne.btnProduct.MyTextBox();
+            this.addressBox = new ePOSOne.btnProduct.MyTextBox();
+            this.UserNameBox = new ePOSOne.btnProduct.MyTextBox();
+            this.FirstNameBox = new ePOSOne.btnProduct.MyTextBox();
+            this.Password2 = new ePOSOne.btnProduct.MyTextBox();
+            this.Password1 = new ePOSOne.btnProduct.MyTextBox();
+            this.verifyNum = new ePOSOne.btnProduct.MyTextBox();
+            this.verifyUsername = new ePOSOne.btnProduct.MyTextBox();
+            this.passwordBox2 = new ePOSOne.btnProduct.MyTextBox();
+            this.UserNameBox2 = new ePOSOne.btnProduct.MyTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.closeButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dealerHand5)).BeginInit();
@@ -222,6 +225,8 @@ namespace BlackJack
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel1.Controls.Add(this.insuranceDecBet);
+            this.panel1.Controls.Add(this.insuranceIncBet);
             this.panel1.Controls.Add(this.decBet);
             this.panel1.Controls.Add(this.incBet);
             this.panel1.Controls.Add(this.betLabel);
@@ -229,50 +234,6 @@ namespace BlackJack
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(160, 160);
             this.panel1.TabIndex = 16;
-            // 
-            // decBet
-            // 
-            this.decBet.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.decBet.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.decBet.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
-            this.decBet.FlatAppearance.BorderSize = 0;
-            this.decBet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGreen;
-            this.decBet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
-            this.decBet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.decBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.decBet.Location = new System.Drawing.Point(50, 105);
-            this.decBet.Name = "decBet";
-            this.decBet.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.decBet.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.decBet.OnHoverTextColor = System.Drawing.Color.White;
-            this.decBet.Size = new System.Drawing.Size(54, 32);
-            this.decBet.TabIndex = 29;
-            this.decBet.Text = "-";
-            this.decBet.TextColor = System.Drawing.Color.Black;
-            this.decBet.UseVisualStyleBackColor = true;
-            this.decBet.Click += new System.EventHandler(this.decBet_Click);
-            // 
-            // incBet
-            // 
-            this.incBet.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.incBet.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.incBet.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
-            this.incBet.FlatAppearance.BorderSize = 0;
-            this.incBet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGreen;
-            this.incBet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
-            this.incBet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.incBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.incBet.Location = new System.Drawing.Point(49, 28);
-            this.incBet.Name = "incBet";
-            this.incBet.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.incBet.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.incBet.OnHoverTextColor = System.Drawing.Color.White;
-            this.incBet.Size = new System.Drawing.Size(54, 32);
-            this.incBet.TabIndex = 28;
-            this.incBet.Text = "+";
-            this.incBet.TextColor = System.Drawing.Color.Black;
-            this.incBet.UseVisualStyleBackColor = true;
-            this.incBet.Click += new System.EventHandler(this.incBet_Click);
             // 
             // betLabel
             // 
@@ -444,6 +405,7 @@ namespace BlackJack
             // GamePanel
             // 
             this.GamePanel.BackColor = System.Drawing.Color.Green;
+            this.GamePanel.Controls.Add(this.insuranceLabel);
             this.GamePanel.Controls.Add(this.insuranceButton);
             this.GamePanel.Controls.Add(this.splitButton);
             this.GamePanel.Controls.Add(this.blinkPanel);
@@ -473,50 +435,6 @@ namespace BlackJack
             this.GamePanel.TabIndex = 32;
             this.GamePanel.Visible = false;
             // 
-            // insuranceButton
-            // 
-            this.insuranceButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.insuranceButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.insuranceButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.insuranceButton.FlatAppearance.BorderSize = 0;
-            this.insuranceButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.insuranceButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.insuranceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.insuranceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insuranceButton.Location = new System.Drawing.Point(37, 211);
-            this.insuranceButton.Name = "insuranceButton";
-            this.insuranceButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.insuranceButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.insuranceButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.insuranceButton.Size = new System.Drawing.Size(91, 41);
-            this.insuranceButton.TabIndex = 38;
-            this.insuranceButton.Text = "Insurance";
-            this.insuranceButton.TextColor = System.Drawing.Color.Black;
-            this.insuranceButton.UseVisualStyleBackColor = true;
-            this.insuranceButton.Visible = false;
-            // 
-            // splitButton
-            // 
-            this.splitButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.splitButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.splitButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.splitButton.FlatAppearance.BorderSize = 0;
-            this.splitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.splitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.splitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.splitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splitButton.Location = new System.Drawing.Point(334, 242);
-            this.splitButton.Name = "splitButton";
-            this.splitButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.splitButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.splitButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.splitButton.Size = new System.Drawing.Size(82, 32);
-            this.splitButton.TabIndex = 37;
-            this.splitButton.Text = "Split";
-            this.splitButton.TextColor = System.Drawing.Color.Black;
-            this.splitButton.UseVisualStyleBackColor = true;
-            this.splitButton.Visible = false;
-            // 
             // blinkPanel
             // 
             this.blinkPanel.BackColor = System.Drawing.Color.DarkGreen;
@@ -525,72 +443,6 @@ namespace BlackJack
             this.blinkPanel.Name = "blinkPanel";
             this.blinkPanel.Size = new System.Drawing.Size(166, 166);
             this.blinkPanel.TabIndex = 30;
-            // 
-            // hitButton
-            // 
-            this.hitButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.hitButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.hitButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.hitButton.FlatAppearance.BorderSize = 0;
-            this.hitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.hitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.hitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.hitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hitButton.Location = new System.Drawing.Point(467, 255);
-            this.hitButton.Name = "hitButton";
-            this.hitButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.hitButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.hitButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.hitButton.Size = new System.Drawing.Size(82, 32);
-            this.hitButton.TabIndex = 27;
-            this.hitButton.Text = "Hit";
-            this.hitButton.TextColor = System.Drawing.Color.Black;
-            this.hitButton.UseVisualStyleBackColor = true;
-            this.hitButton.Click += new System.EventHandler(this.hitButton_Click);
-            // 
-            // standButton
-            // 
-            this.standButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.standButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.standButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.standButton.FlatAppearance.BorderSize = 0;
-            this.standButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.standButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.standButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.standButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.standButton.Location = new System.Drawing.Point(197, 255);
-            this.standButton.Name = "standButton";
-            this.standButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.standButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.standButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.standButton.Size = new System.Drawing.Size(82, 32);
-            this.standButton.TabIndex = 26;
-            this.standButton.Text = "Stand";
-            this.standButton.TextColor = System.Drawing.Color.Black;
-            this.standButton.UseVisualStyleBackColor = true;
-            this.standButton.Click += new System.EventHandler(this.standButton_Click);
-            // 
-            // dealButton
-            // 
-            this.dealButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.dealButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dealButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.dealButton.FlatAppearance.BorderSize = 0;
-            this.dealButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
-            this.dealButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
-            this.dealButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dealButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dealButton.Location = new System.Drawing.Point(273, 170);
-            this.dealButton.Name = "dealButton";
-            this.dealButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.dealButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.dealButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.dealButton.Size = new System.Drawing.Size(205, 62);
-            this.dealButton.TabIndex = 25;
-            this.dealButton.Text = "Deal Hand";
-            this.dealButton.TextColor = System.Drawing.Color.Black;
-            this.dealButton.UseVisualStyleBackColor = true;
-            this.dealButton.Click += new System.EventHandler(this.DealButton_Click);
             // 
             // newPassPanel
             // 
@@ -684,32 +536,6 @@ namespace BlackJack
             this.label12.Size = new System.Drawing.Size(282, 25);
             this.label12.TabIndex = 11;
             this.label12.Text = "Please enter new password.";
-            // 
-            // Password2
-            // 
-            this.Password2.BackColor = System.Drawing.Color.Turquoise;
-            this.Password2.BorderColor = System.Drawing.Color.Gray;
-            this.Password2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Password2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password2.ForeColor = System.Drawing.Color.Gray;
-            this.Password2.Location = new System.Drawing.Point(63, 222);
-            this.Password2.Name = "Password2";
-            this.Password2.PasswordChar = '*';
-            this.Password2.Size = new System.Drawing.Size(246, 24);
-            this.Password2.TabIndex = 10;
-            this.Password2.TextChanged += new System.EventHandler(this.MyTextBox3_TextChanged);
-            // 
-            // Password1
-            // 
-            this.Password1.BackColor = System.Drawing.Color.Turquoise;
-            this.Password1.BorderColor = System.Drawing.Color.Gray;
-            this.Password1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Password1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password1.ForeColor = System.Drawing.Color.Gray;
-            this.Password1.Location = new System.Drawing.Point(63, 151);
-            this.Password1.Name = "Password1";
-            this.Password1.Size = new System.Drawing.Size(246, 24);
-            this.Password1.TabIndex = 8;
             // 
             // panel10
             // 
@@ -814,31 +640,6 @@ namespace BlackJack
             this.label7.Text = "Please verify user information";
             this.label7.Click += new System.EventHandler(this.Label7_Click);
             // 
-            // verifyNum
-            // 
-            this.verifyNum.BackColor = System.Drawing.Color.Turquoise;
-            this.verifyNum.BorderColor = System.Drawing.Color.Gray;
-            this.verifyNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.verifyNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.verifyNum.ForeColor = System.Drawing.Color.Gray;
-            this.verifyNum.Location = new System.Drawing.Point(63, 222);
-            this.verifyNum.Name = "verifyNum";
-            this.verifyNum.PasswordChar = '*';
-            this.verifyNum.Size = new System.Drawing.Size(246, 24);
-            this.verifyNum.TabIndex = 10;
-            // 
-            // verifyUsername
-            // 
-            this.verifyUsername.BackColor = System.Drawing.Color.Turquoise;
-            this.verifyUsername.BorderColor = System.Drawing.Color.Gray;
-            this.verifyUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.verifyUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.verifyUsername.ForeColor = System.Drawing.Color.Gray;
-            this.verifyUsername.Location = new System.Drawing.Point(63, 151);
-            this.verifyUsername.Name = "verifyUsername";
-            this.verifyUsername.Size = new System.Drawing.Size(246, 24);
-            this.verifyUsername.TabIndex = 8;
-            // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.Transparent;
@@ -885,18 +686,6 @@ namespace BlackJack
             this.phoneLabel.TabIndex = 20;
             this.phoneLabel.Text = "Phone Number";
             // 
-            // phoneBox
-            // 
-            this.phoneBox.BackColor = System.Drawing.Color.Turquoise;
-            this.phoneBox.BorderColor = System.Drawing.Color.Gray;
-            this.phoneBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.phoneBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phoneBox.ForeColor = System.Drawing.Color.Gray;
-            this.phoneBox.Location = new System.Drawing.Point(65, 161);
-            this.phoneBox.Name = "phoneBox";
-            this.phoneBox.Size = new System.Drawing.Size(246, 24);
-            this.phoneBox.TabIndex = 19;
-            // 
             // ccLabel
             // 
             this.ccLabel.AutoSize = true;
@@ -908,18 +697,6 @@ namespace BlackJack
             this.ccLabel.Size = new System.Drawing.Size(116, 15);
             this.ccLabel.TabIndex = 18;
             this.ccLabel.Text = "Credit Card Number";
-            // 
-            // ccBox
-            // 
-            this.ccBox.BackColor = System.Drawing.Color.Turquoise;
-            this.ccBox.BorderColor = System.Drawing.Color.Gray;
-            this.ccBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ccBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ccBox.ForeColor = System.Drawing.Color.Gray;
-            this.ccBox.Location = new System.Drawing.Point(65, 202);
-            this.ccBox.Name = "ccBox";
-            this.ccBox.Size = new System.Drawing.Size(246, 24);
-            this.ccBox.TabIndex = 17;
             // 
             // SignUpConfirm
             // 
@@ -998,55 +775,6 @@ namespace BlackJack
             this.CreateAccount.TabIndex = 11;
             this.CreateAccount.Text = "Sign Up For Free";
             this.CreateAccount.Click += new System.EventHandler(this.Label1_Click);
-            // 
-            // PasswordBox
-            // 
-            this.PasswordBox.BackColor = System.Drawing.Color.Turquoise;
-            this.PasswordBox.BorderColor = System.Drawing.Color.Gray;
-            this.PasswordBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PasswordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordBox.ForeColor = System.Drawing.Color.Gray;
-            this.PasswordBox.Location = new System.Drawing.Point(65, 282);
-            this.PasswordBox.Name = "PasswordBox";
-            this.PasswordBox.PasswordChar = '*';
-            this.PasswordBox.Size = new System.Drawing.Size(246, 24);
-            this.PasswordBox.TabIndex = 10;
-            // 
-            // addressBox
-            // 
-            this.addressBox.BackColor = System.Drawing.Color.Turquoise;
-            this.addressBox.BorderColor = System.Drawing.Color.Gray;
-            this.addressBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.addressBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressBox.ForeColor = System.Drawing.Color.Gray;
-            this.addressBox.Location = new System.Drawing.Point(65, 242);
-            this.addressBox.Name = "addressBox";
-            this.addressBox.Size = new System.Drawing.Size(246, 24);
-            this.addressBox.TabIndex = 9;
-            // 
-            // UserNameBox
-            // 
-            this.UserNameBox.BackColor = System.Drawing.Color.Turquoise;
-            this.UserNameBox.BorderColor = System.Drawing.Color.Gray;
-            this.UserNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.UserNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserNameBox.ForeColor = System.Drawing.Color.Gray;
-            this.UserNameBox.Location = new System.Drawing.Point(193, 122);
-            this.UserNameBox.Name = "UserNameBox";
-            this.UserNameBox.Size = new System.Drawing.Size(118, 24);
-            this.UserNameBox.TabIndex = 8;
-            // 
-            // FirstNameBox
-            // 
-            this.FirstNameBox.BackColor = System.Drawing.Color.Turquoise;
-            this.FirstNameBox.BorderColor = System.Drawing.Color.Gray;
-            this.FirstNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FirstNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstNameBox.ForeColor = System.Drawing.Color.Gray;
-            this.FirstNameBox.Location = new System.Drawing.Point(65, 122);
-            this.FirstNameBox.Name = "FirstNameBox";
-            this.FirstNameBox.Size = new System.Drawing.Size(118, 24);
-            this.FirstNameBox.TabIndex = 7;
             // 
             // underSignUp
             // 
@@ -1209,32 +937,6 @@ namespace BlackJack
             this.welcomeBack.TabIndex = 11;
             this.welcomeBack.Text = "Welcome Back! Please Login";
             // 
-            // passwordBox2
-            // 
-            this.passwordBox2.BackColor = System.Drawing.Color.Turquoise;
-            this.passwordBox2.BorderColor = System.Drawing.Color.Gray;
-            this.passwordBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.passwordBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordBox2.ForeColor = System.Drawing.Color.Gray;
-            this.passwordBox2.Location = new System.Drawing.Point(63, 226);
-            this.passwordBox2.Name = "passwordBox2";
-            this.passwordBox2.PasswordChar = '*';
-            this.passwordBox2.Size = new System.Drawing.Size(246, 24);
-            this.passwordBox2.TabIndex = 10;
-            // 
-            // UserNameBox2
-            // 
-            this.UserNameBox2.BackColor = System.Drawing.Color.Turquoise;
-            this.UserNameBox2.BorderColor = System.Drawing.Color.Gray;
-            this.UserNameBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.UserNameBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserNameBox2.ForeColor = System.Drawing.Color.Gray;
-            this.UserNameBox2.Location = new System.Drawing.Point(63, 151);
-            this.UserNameBox2.Name = "UserNameBox2";
-            this.UserNameBox2.Size = new System.Drawing.Size(246, 24);
-            this.UserNameBox2.TabIndex = 8;
-            this.UserNameBox2.TextChanged += new System.EventHandler(this.UserNameBox2_TextChanged);
-            // 
             // underSignIn2
             // 
             this.underSignIn2.BackColor = System.Drawing.Color.DarkRed;
@@ -1284,6 +986,368 @@ namespace BlackJack
             this.SignUpButton2.Text = "Sign Up";
             this.SignUpButton2.UseVisualStyleBackColor = false;
             this.SignUpButton2.Click += new System.EventHandler(this.SignUpButton2_Click);
+            // 
+            // insuranceLabel
+            // 
+            this.insuranceLabel.AutoSize = true;
+            this.insuranceLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insuranceLabel.Location = new System.Drawing.Point(8, 173);
+            this.insuranceLabel.Name = "insuranceLabel";
+            this.insuranceLabel.Size = new System.Drawing.Size(210, 32);
+            this.insuranceLabel.TabIndex = 39;
+            this.insuranceLabel.Text = "Insurance: $0";
+            this.insuranceLabel.Visible = false;
+            // 
+            // insuranceButton
+            // 
+            this.insuranceButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.insuranceButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.insuranceButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.insuranceButton.FlatAppearance.BorderSize = 0;
+            this.insuranceButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.insuranceButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.insuranceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.insuranceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insuranceButton.Location = new System.Drawing.Point(37, 211);
+            this.insuranceButton.Name = "insuranceButton";
+            this.insuranceButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.insuranceButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.insuranceButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.insuranceButton.Size = new System.Drawing.Size(91, 41);
+            this.insuranceButton.TabIndex = 38;
+            this.insuranceButton.Text = "Insurance";
+            this.insuranceButton.TextColor = System.Drawing.Color.Black;
+            this.insuranceButton.UseVisualStyleBackColor = true;
+            this.insuranceButton.Visible = false;
+            this.insuranceButton.Click += new System.EventHandler(this.insuranceButton_Click);
+            // 
+            // splitButton
+            // 
+            this.splitButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.splitButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.splitButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.splitButton.FlatAppearance.BorderSize = 0;
+            this.splitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.splitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.splitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.splitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.splitButton.Location = new System.Drawing.Point(334, 242);
+            this.splitButton.Name = "splitButton";
+            this.splitButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.splitButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.splitButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.splitButton.Size = new System.Drawing.Size(82, 32);
+            this.splitButton.TabIndex = 37;
+            this.splitButton.Text = "Split";
+            this.splitButton.TextColor = System.Drawing.Color.Black;
+            this.splitButton.UseVisualStyleBackColor = true;
+            this.splitButton.Visible = false;
+            // 
+            // insuranceDecBet
+            // 
+            this.insuranceDecBet.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.insuranceDecBet.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.insuranceDecBet.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
+            this.insuranceDecBet.FlatAppearance.BorderSize = 0;
+            this.insuranceDecBet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGreen;
+            this.insuranceDecBet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
+            this.insuranceDecBet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.insuranceDecBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insuranceDecBet.Location = new System.Drawing.Point(50, 105);
+            this.insuranceDecBet.Name = "insuranceDecBet";
+            this.insuranceDecBet.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.insuranceDecBet.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.insuranceDecBet.OnHoverTextColor = System.Drawing.Color.White;
+            this.insuranceDecBet.Size = new System.Drawing.Size(54, 32);
+            this.insuranceDecBet.TabIndex = 31;
+            this.insuranceDecBet.Text = "-";
+            this.insuranceDecBet.TextColor = System.Drawing.Color.Black;
+            this.insuranceDecBet.UseVisualStyleBackColor = true;
+            this.insuranceDecBet.Visible = false;
+            this.insuranceDecBet.Click += new System.EventHandler(this.insuranceDecBet_Click);
+            // 
+            // insuranceIncBet
+            // 
+            this.insuranceIncBet.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.insuranceIncBet.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.insuranceIncBet.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
+            this.insuranceIncBet.FlatAppearance.BorderSize = 0;
+            this.insuranceIncBet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGreen;
+            this.insuranceIncBet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
+            this.insuranceIncBet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.insuranceIncBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insuranceIncBet.Location = new System.Drawing.Point(49, 28);
+            this.insuranceIncBet.Name = "insuranceIncBet";
+            this.insuranceIncBet.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.insuranceIncBet.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.insuranceIncBet.OnHoverTextColor = System.Drawing.Color.White;
+            this.insuranceIncBet.Size = new System.Drawing.Size(54, 32);
+            this.insuranceIncBet.TabIndex = 30;
+            this.insuranceIncBet.Text = "+";
+            this.insuranceIncBet.TextColor = System.Drawing.Color.Black;
+            this.insuranceIncBet.UseVisualStyleBackColor = true;
+            this.insuranceIncBet.Visible = false;
+            this.insuranceIncBet.Click += new System.EventHandler(this.insuranceIncBet_Click);
+            // 
+            // decBet
+            // 
+            this.decBet.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.decBet.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.decBet.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
+            this.decBet.FlatAppearance.BorderSize = 0;
+            this.decBet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGreen;
+            this.decBet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
+            this.decBet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.decBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decBet.Location = new System.Drawing.Point(50, 105);
+            this.decBet.Name = "decBet";
+            this.decBet.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.decBet.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.decBet.OnHoverTextColor = System.Drawing.Color.White;
+            this.decBet.Size = new System.Drawing.Size(54, 32);
+            this.decBet.TabIndex = 29;
+            this.decBet.Text = "-";
+            this.decBet.TextColor = System.Drawing.Color.Black;
+            this.decBet.UseVisualStyleBackColor = true;
+            this.decBet.Click += new System.EventHandler(this.decBet_Click);
+            // 
+            // incBet
+            // 
+            this.incBet.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.incBet.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.incBet.FlatAppearance.BorderColor = System.Drawing.Color.DarkGreen;
+            this.incBet.FlatAppearance.BorderSize = 0;
+            this.incBet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGreen;
+            this.incBet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
+            this.incBet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.incBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.incBet.Location = new System.Drawing.Point(49, 28);
+            this.incBet.Name = "incBet";
+            this.incBet.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.incBet.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.incBet.OnHoverTextColor = System.Drawing.Color.White;
+            this.incBet.Size = new System.Drawing.Size(54, 32);
+            this.incBet.TabIndex = 28;
+            this.incBet.Text = "+";
+            this.incBet.TextColor = System.Drawing.Color.Black;
+            this.incBet.UseVisualStyleBackColor = true;
+            this.incBet.Click += new System.EventHandler(this.incBet_Click);
+            // 
+            // hitButton
+            // 
+            this.hitButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.hitButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.hitButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.hitButton.FlatAppearance.BorderSize = 0;
+            this.hitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.hitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.hitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.hitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hitButton.Location = new System.Drawing.Point(467, 255);
+            this.hitButton.Name = "hitButton";
+            this.hitButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.hitButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.hitButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.hitButton.Size = new System.Drawing.Size(82, 32);
+            this.hitButton.TabIndex = 27;
+            this.hitButton.Text = "Hit";
+            this.hitButton.TextColor = System.Drawing.Color.Black;
+            this.hitButton.UseVisualStyleBackColor = true;
+            this.hitButton.Click += new System.EventHandler(this.hitButton_Click);
+            // 
+            // standButton
+            // 
+            this.standButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.standButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.standButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.standButton.FlatAppearance.BorderSize = 0;
+            this.standButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.standButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.standButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.standButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.standButton.Location = new System.Drawing.Point(197, 255);
+            this.standButton.Name = "standButton";
+            this.standButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.standButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.standButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.standButton.Size = new System.Drawing.Size(82, 32);
+            this.standButton.TabIndex = 26;
+            this.standButton.Text = "Stand";
+            this.standButton.TextColor = System.Drawing.Color.Black;
+            this.standButton.UseVisualStyleBackColor = true;
+            this.standButton.Click += new System.EventHandler(this.standButton_Click);
+            // 
+            // dealButton
+            // 
+            this.dealButton.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.dealButton.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dealButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.dealButton.FlatAppearance.BorderSize = 0;
+            this.dealButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.dealButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
+            this.dealButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dealButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dealButton.Location = new System.Drawing.Point(273, 170);
+            this.dealButton.Name = "dealButton";
+            this.dealButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.dealButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.dealButton.OnHoverTextColor = System.Drawing.Color.White;
+            this.dealButton.Size = new System.Drawing.Size(205, 62);
+            this.dealButton.TabIndex = 25;
+            this.dealButton.Text = "Deal Hand";
+            this.dealButton.TextColor = System.Drawing.Color.Black;
+            this.dealButton.UseVisualStyleBackColor = true;
+            this.dealButton.Click += new System.EventHandler(this.DealButton_Click);
+            // 
+            // phoneBox
+            // 
+            this.phoneBox.BackColor = System.Drawing.Color.Turquoise;
+            this.phoneBox.BorderColor = System.Drawing.Color.Gray;
+            this.phoneBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.phoneBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneBox.ForeColor = System.Drawing.Color.Gray;
+            this.phoneBox.Location = new System.Drawing.Point(65, 161);
+            this.phoneBox.Name = "phoneBox";
+            this.phoneBox.Size = new System.Drawing.Size(246, 24);
+            this.phoneBox.TabIndex = 19;
+            // 
+            // ccBox
+            // 
+            this.ccBox.BackColor = System.Drawing.Color.Turquoise;
+            this.ccBox.BorderColor = System.Drawing.Color.Gray;
+            this.ccBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ccBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ccBox.ForeColor = System.Drawing.Color.Gray;
+            this.ccBox.Location = new System.Drawing.Point(65, 202);
+            this.ccBox.Name = "ccBox";
+            this.ccBox.Size = new System.Drawing.Size(246, 24);
+            this.ccBox.TabIndex = 17;
+            // 
+            // PasswordBox
+            // 
+            this.PasswordBox.BackColor = System.Drawing.Color.Turquoise;
+            this.PasswordBox.BorderColor = System.Drawing.Color.Gray;
+            this.PasswordBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PasswordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordBox.ForeColor = System.Drawing.Color.Gray;
+            this.PasswordBox.Location = new System.Drawing.Point(65, 282);
+            this.PasswordBox.Name = "PasswordBox";
+            this.PasswordBox.PasswordChar = '*';
+            this.PasswordBox.Size = new System.Drawing.Size(246, 24);
+            this.PasswordBox.TabIndex = 10;
+            // 
+            // addressBox
+            // 
+            this.addressBox.BackColor = System.Drawing.Color.Turquoise;
+            this.addressBox.BorderColor = System.Drawing.Color.Gray;
+            this.addressBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.addressBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressBox.ForeColor = System.Drawing.Color.Gray;
+            this.addressBox.Location = new System.Drawing.Point(65, 242);
+            this.addressBox.Name = "addressBox";
+            this.addressBox.Size = new System.Drawing.Size(246, 24);
+            this.addressBox.TabIndex = 9;
+            // 
+            // UserNameBox
+            // 
+            this.UserNameBox.BackColor = System.Drawing.Color.Turquoise;
+            this.UserNameBox.BorderColor = System.Drawing.Color.Gray;
+            this.UserNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UserNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserNameBox.ForeColor = System.Drawing.Color.Gray;
+            this.UserNameBox.Location = new System.Drawing.Point(193, 122);
+            this.UserNameBox.Name = "UserNameBox";
+            this.UserNameBox.Size = new System.Drawing.Size(118, 24);
+            this.UserNameBox.TabIndex = 8;
+            // 
+            // FirstNameBox
+            // 
+            this.FirstNameBox.BackColor = System.Drawing.Color.Turquoise;
+            this.FirstNameBox.BorderColor = System.Drawing.Color.Gray;
+            this.FirstNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FirstNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNameBox.ForeColor = System.Drawing.Color.Gray;
+            this.FirstNameBox.Location = new System.Drawing.Point(65, 122);
+            this.FirstNameBox.Name = "FirstNameBox";
+            this.FirstNameBox.Size = new System.Drawing.Size(118, 24);
+            this.FirstNameBox.TabIndex = 7;
+            // 
+            // Password2
+            // 
+            this.Password2.BackColor = System.Drawing.Color.Turquoise;
+            this.Password2.BorderColor = System.Drawing.Color.Gray;
+            this.Password2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Password2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password2.ForeColor = System.Drawing.Color.Gray;
+            this.Password2.Location = new System.Drawing.Point(63, 222);
+            this.Password2.Name = "Password2";
+            this.Password2.PasswordChar = '*';
+            this.Password2.Size = new System.Drawing.Size(246, 24);
+            this.Password2.TabIndex = 10;
+            this.Password2.TextChanged += new System.EventHandler(this.MyTextBox3_TextChanged);
+            // 
+            // Password1
+            // 
+            this.Password1.BackColor = System.Drawing.Color.Turquoise;
+            this.Password1.BorderColor = System.Drawing.Color.Gray;
+            this.Password1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Password1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password1.ForeColor = System.Drawing.Color.Gray;
+            this.Password1.Location = new System.Drawing.Point(63, 151);
+            this.Password1.Name = "Password1";
+            this.Password1.Size = new System.Drawing.Size(246, 24);
+            this.Password1.TabIndex = 8;
+            // 
+            // verifyNum
+            // 
+            this.verifyNum.BackColor = System.Drawing.Color.Turquoise;
+            this.verifyNum.BorderColor = System.Drawing.Color.Gray;
+            this.verifyNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.verifyNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.verifyNum.ForeColor = System.Drawing.Color.Gray;
+            this.verifyNum.Location = new System.Drawing.Point(63, 222);
+            this.verifyNum.Name = "verifyNum";
+            this.verifyNum.PasswordChar = '*';
+            this.verifyNum.Size = new System.Drawing.Size(246, 24);
+            this.verifyNum.TabIndex = 10;
+            // 
+            // verifyUsername
+            // 
+            this.verifyUsername.BackColor = System.Drawing.Color.Turquoise;
+            this.verifyUsername.BorderColor = System.Drawing.Color.Gray;
+            this.verifyUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.verifyUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.verifyUsername.ForeColor = System.Drawing.Color.Gray;
+            this.verifyUsername.Location = new System.Drawing.Point(63, 151);
+            this.verifyUsername.Name = "verifyUsername";
+            this.verifyUsername.Size = new System.Drawing.Size(246, 24);
+            this.verifyUsername.TabIndex = 8;
+            // 
+            // passwordBox2
+            // 
+            this.passwordBox2.BackColor = System.Drawing.Color.Turquoise;
+            this.passwordBox2.BorderColor = System.Drawing.Color.Gray;
+            this.passwordBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.passwordBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordBox2.ForeColor = System.Drawing.Color.Gray;
+            this.passwordBox2.Location = new System.Drawing.Point(63, 226);
+            this.passwordBox2.Name = "passwordBox2";
+            this.passwordBox2.PasswordChar = '*';
+            this.passwordBox2.Size = new System.Drawing.Size(246, 24);
+            this.passwordBox2.TabIndex = 10;
+            // 
+            // UserNameBox2
+            // 
+            this.UserNameBox2.BackColor = System.Drawing.Color.Turquoise;
+            this.UserNameBox2.BorderColor = System.Drawing.Color.Gray;
+            this.UserNameBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.UserNameBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserNameBox2.ForeColor = System.Drawing.Color.Gray;
+            this.UserNameBox2.Location = new System.Drawing.Point(63, 151);
+            this.UserNameBox2.Name = "UserNameBox2";
+            this.UserNameBox2.Size = new System.Drawing.Size(246, 24);
+            this.UserNameBox2.TabIndex = 8;
+            this.UserNameBox2.TextChanged += new System.EventHandler(this.UserNameBox2_TextChanged);
             // 
             // Form1
             // 
@@ -1422,6 +1486,9 @@ namespace BlackJack
         private System.Windows.Forms.Panel panel10;
         private ePOSOne.btnProduct.Button_WOC splitButton;
         private ePOSOne.btnProduct.Button_WOC insuranceButton;
+        private Label insuranceLabel;
+        private ePOSOne.btnProduct.Button_WOC insuranceDecBet;
+        private ePOSOne.btnProduct.Button_WOC insuranceIncBet;
     }
 }
 
