@@ -53,3 +53,4 @@ C:\Users\fords\Documents\GitHub\Blackjack\BlackJack\BlackJack\bin\Debug\Players.
 C:\Users\Jordan\Documents\GitHub\Blackjack\BlackJack\BlackJack\bin\Debug\Players.xml
 C:\Users\Luke Fleck\Documents\GitHub\Blackjack2\BlackJack\BlackJack\bin\Debug\Players.xml
 C:\Users\Luke\Documents\GitHub\Blackjack\BlackJack\BlackJack\bin\Debug\Players.xml
+C:\Users\DSU\Documents\DSU\Fall2019\CSC-470\final\Blackjack\BlackJack\BlackJack\bin\Debug\Players.xml
