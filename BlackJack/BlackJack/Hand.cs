@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlackJack
 {
-    class Hand
+    public class Hand
     {
         private List<Card> cardsInHand;
         int numCardsInHand;

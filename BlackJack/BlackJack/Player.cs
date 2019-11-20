@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace BlackJack
 {
-    class Player
+    public class Player
     {
         private int money;
         public int wager;
