@@ -262,23 +262,23 @@ namespace BlackJack
             SignInButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
             this.BackColor = Color.FromArgb(0, 25, 50);
             underSignUp.BackColor = Color.FromArgb(74, 154, 122);
-            FirstNameBox.BackColor = Color.FromArgb(0, 25, 50);
-            UserNameBox.BackColor = Color.FromArgb(0, 25, 50);
+            nameBox.BackColor = Color.FromArgb(0, 25, 50);
+            usernameBox.BackColor = Color.FromArgb(0, 25, 50);
             addressBox.BackColor = Color.FromArgb(0, 25, 50);
             phoneBox.BackColor = Color.FromArgb(0, 25, 50);
-            ccBox.BackColor = Color.FromArgb(0, 25, 50);
-            PasswordBox.BackColor = Color.FromArgb(0, 25, 50);
+            creditCardBox.BackColor = Color.FromArgb(0, 25, 50);
+            passwordBox.BackColor = Color.FromArgb(0, 25, 50);
             SignUpConfirm.BackColor = Color.FromArgb(74, 154, 122);
             SignUpConfirm.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
 
             //changePassword
-            Password1.BackColor = Color.FromArgb(0, 25, 50);
-            Password2.BackColor = Color.FromArgb(0, 25, 50);
+            newPasswordTextField.BackColor = Color.FromArgb(0, 25, 50);
+            confirmPasswordTextField.BackColor = Color.FromArgb(0, 25, 50);
             setPassword.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
             setPassword.BackColor = Color.FromArgb(74, 154, 122);
 
             //forgotPassPanel
-            verifyNum.BackColor = Color.FromArgb(0, 25, 50);
+            verifyPhoneNum.BackColor = Color.FromArgb(0, 25, 50);
             verifyUsername.BackColor = Color.FromArgb(0, 25, 50);
             verifyButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
             verifyButton.BackColor = Color.FromArgb(74, 154, 122);
@@ -312,12 +312,16 @@ namespace BlackJack
             SignInPanel.Visible = false;
             forgotPanel.Visible = true;
             forgotPanel.Location = new Point(209, 34);
+
+            noUserLabel.Visible = false;
         }
         public void newPass()
         {
             newPassPanel.Visible = true;
             forgotPanel.Visible = false;
             newPassPanel.Location = new Point(209, 34);
+
+            passDontMatchLabel.Visible = false;
         }
         public void LaunchGame()
         {
@@ -331,9 +335,7 @@ namespace BlackJack
             {
                 string username = node.Attributes[0].InnerText;
                 string password = node.ChildNodes[1].InnerText;
-                Console.WriteLine(username);
-                if (entered_username == username && entered_password == password)
-                {
+                if (entered_username == username && entered_password == password) {
                     SignUpPanel.Visible = false;
                     SignInPanel.Visible = false;
                     forgotPanel.Visible = false;
@@ -867,6 +869,90 @@ namespace BlackJack
             }
         }
 
+        private void verifyButton_Click(object sender, EventArgs e) {
+            XmlDocument doc = new XmlDocument();
+            doc.Load("Players.xml");
+            // Check to make sure that that username and phone number match
+            string entered_username = verifyUsername.Text;
+            string entered_phoneNum = verifyPhoneNum.Text;
+            foreach (XmlNode node in doc.DocumentElement) {
+                string username = node.Attributes[0].InnerText;
+                string phoneNum = node.ChildNodes[4].InnerText;
+                if (entered_username == username && entered_phoneNum == phoneNum) {
+                    newPass();
+                }
+                else {
+                    noUserLabel.Visible = true;
+                }
+            }
+        }
+
+        private void setPassword_Click(object sender, EventArgs e) {
+            string newPass = newPasswordTextField.Text;
+            string confirmNewPass = confirmPasswordTextField.Text;
+            if (newPass == confirmNewPass) {
+                // Update XML file with new password
+                XmlDocument doc = new XmlDocument();
+                doc.Load("Players.xml");
+                foreach (XmlNode node in doc.DocumentElement) {
+                    if (verifyUsername.Text == node.Attributes[0].InnerText) {
+                        node.ChildNodes[1].InnerText = confirmNewPass;
+                        doc.Save("Players.xml");
+                    }
+                }
+                goToLogin();
+            }
+            else {
+                passDontMatchLabel.Visible = true;
+            }
+        }
+
+        private void newPassPanel_Paint(object sender, PaintEventArgs e) {
+
+        }
+
+        private void SignUpConfirm_Click(object sender, EventArgs e) {
+            // nameBox, usernameBox, phoneBox, creditCardBox, addressBox, passwordBox
+            string name = nameBox.Text;
+            string username = usernameBox.Text;
+            string phone = phoneBox.Text;
+            string creditCard = creditCardBox.Text;
+            string address = addressBox.Text;
+            string password = passwordBox.Text;
+            // Make sure each text field is filled out
+            if (name == null || username == null || phone == null || creditCard == null || address == null || password == null) {
+                Console.WriteLine("You need to fill out each text field");
+            }
+            else {
+                // Check if username exists or not
+                XmlDocument doc = new XmlDocument();
+                doc.Load("Players.xml");
+                bool exists = false;
+                foreach (XmlNode node in doc.DocumentElement) {
+                    if (username == node.Attributes[0].InnerText) {
+                        exists = true;
+                    }
+                }
+                // Username exists
+                if (exists) {
+                    Console.WriteLine("User already exists");
+                }
+                // Username doesn't exist
+                else {
+                    // Add user to XML file
+                    
+                    
+                    SignUpPanel.Visible = false;
+                    SignInPanel.Visible = false;
+                    forgotPanel.Visible = false;
+                    newPassPanel.Visible = false;
+                    GamePanel.Visible = true;
+                    GamePanel.Location = new Point(13, 13);
+                    this.BackColor = Color.Green;
+                }
+            }
+        }
+
         private void splitButton_Click(object sender, EventArgs e)
         {
             myTotalLabel.Location = new Point(428, 277);
@@ -988,7 +1074,6 @@ namespace BlackJack
         {
 
         }
-
     }
 }
 
