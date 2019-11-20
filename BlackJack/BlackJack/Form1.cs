@@ -177,21 +177,59 @@ namespace BlackJack
         {
             showDealerCards();
             dealerTotalVal.Text = dealer.hand.getHandTotal().ToString();
-            if (player1.hand.getNumCards() == 5)
+            if (player1.splitHand.show().Length > 0)
             {
-                player1.addMoney(player1.wager * 2);
+                if (player1.splitHand.getNumCards() == 5)
+                {
+                    player1.addMoney(player1.wager);
+                }
+                if (player1.splitHand.getHandTotal() <= 21 && dealer.hand.getHandTotal() <= 21 && player1.splitHand.getHandTotal() > dealer.hand.getHandTotal())
+                {
+                    player1.addMoney(player1.wager);
+                }
+                if (dealer.hand.getHandTotal() > 21 && player1.splitHand.getHandTotal() <= 21)
+                {
+                    player1.addMoney(player1.wager);
+                }
+                if (player1.splitHand.getHandTotal() == dealer.hand.getHandTotal())
+                {
+                    player1.addMoney(player1.wager);
+                }
+                if (player1.hand.getNumCards() == 5)
+                {
+                    player1.addMoney(player1.wager);
+                }
+                if (player1.hand.getHandTotal() <= 21 && dealer.hand.getHandTotal() <= 21 && player1.hand.getHandTotal() > dealer.hand.getHandTotal())
+                {
+                    player1.addMoney(player1.wager);
+                }
+                if (dealer.hand.getHandTotal() > 21 && player1.hand.getHandTotal() <= 21)
+                {
+                    player1.addMoney(player1.wager);
+                }
+                if (player1.hand.getHandTotal() == dealer.hand.getHandTotal())
+                {
+                    player1.addMoney(player1.wager);
+                }
             }
-            if (player1.hand.getHandTotal() <= 21 && dealer.hand.getHandTotal() <= 21 && player1.hand.getHandTotal() > dealer.hand.getHandTotal())
+            else
             {
-                player1.addMoney(player1.wager * 2);
-            }
-            if (dealer.hand.getHandTotal() > 21 && player1.hand.getHandTotal() <= 21)
-            {
-                player1.addMoney(player1.wager * 2);
-            }
-            if (player1.hand.getHandTotal() == dealer.hand.getHandTotal())
-            {
-                player1.addMoney(player1.wager);
+                if (player1.hand.getNumCards() == 5)
+                {
+                    player1.addMoney(player1.wager * 2);
+                }
+                if (player1.hand.getHandTotal() <= 21 && dealer.hand.getHandTotal() <= 21 && player1.hand.getHandTotal() > dealer.hand.getHandTotal())
+                {
+                    player1.addMoney(player1.wager * 2);
+                }
+                if (dealer.hand.getHandTotal() > 21 && player1.hand.getHandTotal() <= 21)
+                {
+                    player1.addMoney(player1.wager * 2);
+                }
+                if (player1.hand.getHandTotal() == dealer.hand.getHandTotal())
+                {
+                    player1.addMoney(player1.wager);
+                }
             }
             if (dealer.hand.getHandTotal() == 21 && dealer.hand.show().Length == 2)
             {
