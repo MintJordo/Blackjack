@@ -120,6 +120,11 @@ namespace BlackJack
             if (Suit == "S") return 3;
             return -1;
         }
+
+        public string ToString()
+        {
+            return Number + Suit;
+        }
     }
 }
 

@@ -20,6 +20,7 @@ namespace BlackJack
         public void addCard(Card c)
         {
             cardsInHand.Add(c);
+            numCardsInHand++;
         }
 
         public Card[] show()
@@ -65,6 +66,17 @@ namespace BlackJack
         public void emptyHand()
         {
             cardsInHand = new List<Card>();
+            numCardsInHand = 0;
+        }
+
+        public string ToString()
+        {
+            string r = "";
+            foreach (Card c in cardsInHand)
+            {
+                r = r + c.ToString() + " ";
+            }
+            return r;
         }
     }
 
