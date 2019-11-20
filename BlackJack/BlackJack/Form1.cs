@@ -76,31 +76,31 @@ namespace BlackJack
             if (player1.splitHand.show().Length >= 1)
             {
                 myHand6.Visible = true;
-                myHand6.BackgroundImage = Image.FromFile(player1.hand.show()[0].getCardPath());
+                myHand6.BackgroundImage = Image.FromFile(player1.splitHand.show()[0].getCardPath());
                 myHand6.BringToFront();
             }
             if (player1.splitHand.show().Length >= 2)
             {
                 myHand7.Visible = true;
-                myHand7.BackgroundImage = Image.FromFile(player1.hand.show()[1].getCardPath());
+                myHand7.BackgroundImage = Image.FromFile(player1.splitHand.show()[1].getCardPath());
                 myHand7.BringToFront();
             }
             if (player1.splitHand.show().Length >= 3)
             {
                 myHand8.Visible = true;
-                myHand8.BackgroundImage = Image.FromFile(player1.hand.show()[2].getCardPath());
+                myHand8.BackgroundImage = Image.FromFile(player1.splitHand.show()[2].getCardPath());
                 myHand8.BringToFront();
             }
             if (player1.splitHand.show().Length >= 4)
             {
                 myHand9.Visible = true;
-                myHand9.BackgroundImage = Image.FromFile(player1.hand.show()[3].getCardPath());
+                myHand9.BackgroundImage = Image.FromFile(player1.splitHand.show()[3].getCardPath());
                 myHand9.BringToFront();
             }
             if (player1.splitHand.show().Length == 5)
             {
                 myHand10.Visible = true;
-                myHand10.BackgroundImage = Image.FromFile(player1.hand.show()[4].getCardPath());
+                myHand10.BackgroundImage = Image.FromFile(player1.splitHand.show()[4].getCardPath());
                 myHand10.BringToFront();
             }
         }
