@@ -43,35 +43,30 @@ namespace BlackJack
             {
                 myHand1.Visible = true;
                 myHand1.BackgroundImage = Image.FromFile(player1.hand.show()[0].getCardPath());
-                myHand1.Location = new Point(339, 309);
                 myHand1.BringToFront();
             }
             if (player1.hand.show().Length >= 2)
             {
                 myHand2.Visible = true;
                 myHand2.BackgroundImage = Image.FromFile(player1.hand.show()[1].getCardPath());
-                myHand2.Location = new Point(359, 309);
                 myHand2.BringToFront();
             }
             if (player1.hand.show().Length >= 3)
             {
                 myHand3.Visible = true;
                 myHand3.BackgroundImage = Image.FromFile(player1.hand.show()[2].getCardPath());
-                myHand3.Location = new Point(379, 309);
                 myHand3.BringToFront();
             }
             if (player1.hand.show().Length >= 4)
             {
                 myHand4.Visible = true;
                 myHand4.BackgroundImage = Image.FromFile(player1.hand.show()[3].getCardPath());
-                myHand4.Location = new Point(399, 309);
                 myHand4.BringToFront();
             }
             if (player1.hand.show().Length == 5)
             {
                 myHand5.Visible = true;
                 myHand5.BackgroundImage = Image.FromFile(player1.hand.show()[4].getCardPath());
-                myHand5.Location = new Point(419, 309);
                 myHand5.BringToFront();
             }
         }
@@ -427,6 +422,12 @@ namespace BlackJack
             myHand10.Visible = false;
             myTotalLabel2.Visible = false;
             myTotalVal2.Visible = false;
+
+            myHand1.Location = new Point(339, 309);
+            myHand2.Location = new Point(359, 309);
+            myHand3.Location = new Point(379, 309);
+            myHand4.Location = new Point(399, 309);
+            myHand5.Location = new Point(419, 309);
 
             player1.hand.addCard(deck.getCard());
             dealer.hand.addCard(deck.getCard());
