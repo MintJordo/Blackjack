@@ -919,7 +919,7 @@ namespace BlackJack
             string address = addressBox.Text;
             string password = passwordBox.Text;
             // Make sure each text field is filled out
-            if (name == null || username == null || phone == null || creditCard == null || address == null || password == null) {
+            if (name == "" || username == "" || phone == "" || creditCard == "" || address == "" || password == "") {
                 Console.WriteLine("You need to fill out each text field");
             }
             else {
@@ -939,8 +939,42 @@ namespace BlackJack
                 // Username doesn't exist
                 else {
                     // Add user to XML file
-                    
-                    
+                    Console.WriteLine("Creating new user " + username);
+                    XmlElement new_user = doc.CreateElement("player");
+                    XmlAttribute uname = doc.CreateAttribute("username");
+                    uname.Value = username;
+                    new_user.Attributes.Append(uname);
+
+                    //create new player
+                    XmlElement fullname = doc.CreateElement("name");
+                    fullname.InnerText = name;
+                    new_user.AppendChild(fullname);
+
+                    //add elements to player
+                    XmlElement element = doc.CreateElement("password");
+                    element.InnerText = password;
+                    new_user.AppendChild(element);
+
+                    element = doc.CreateElement("balance");
+                    element.InnerText = "1000";
+                    new_user.AppendChild(element);
+
+                    element = doc.CreateElement("address");
+                    element.InnerText = address;
+                    new_user.AppendChild(element);
+
+                    element = doc.CreateElement("phone_number");
+                    element.InnerText = phone;
+                    new_user.AppendChild(element);
+
+                    element = doc.CreateElement("credit_card");
+                    element.InnerText = creditCard;
+                    new_user.AppendChild(element);
+
+                    //save to file
+                    doc.DocumentElement.AppendChild(new_user);
+                    doc.Save("Players.xml");
+
                     SignUpPanel.Visible = false;
                     SignInPanel.Visible = false;
                     forgotPanel.Visible = false;
