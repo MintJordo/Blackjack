@@ -1104,8 +1104,10 @@ namespace BlackJack
                 }
             }
             doc.Save("Players.xml");
-            settingsPanel.Visible = false;
             GamePanel.Visible = true;
+            settingsPanel.Visible = false;
+            settingsPanel.Location = new Point(209, 34);
+            this.BackColor = Color.Green;
         }
 
         private void label6_Click(object sender, EventArgs e)
