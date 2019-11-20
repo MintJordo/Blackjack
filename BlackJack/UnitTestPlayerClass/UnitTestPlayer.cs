@@ -1,7 +1,5 @@
-﻿
-/*using System;
-using BlackJack;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 
 namespace UnitTestPlayerClass
 {
@@ -12,7 +10,7 @@ namespace UnitTestPlayerClass
         public void TestPlayerClassInstantiateWithMoney()
         {
             //Arrange
-            Player p1 = new Player(100);
+            //Player p1 = new Player(100);
             //Act
             //Assert
         }
@@ -21,7 +19,7 @@ namespace UnitTestPlayerClass
         public void TestPlayerClassAddMoney()
         {
             //Arrange
-            Player p1 = new Player(100);
+            //Player p1 = new Player(100);
             //Act
             //Assert
         }
@@ -30,9 +28,9 @@ namespace UnitTestPlayerClass
         public void TestPlayerClassRemoveMoney()
         {
             //Arrange
-            Player p1 = new Player(100);
+            //Player p1 = new Player(100);
             //Act
             //Assert
         }
     }
-}*/
+}

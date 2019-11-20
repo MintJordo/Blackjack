@@ -319,6 +319,7 @@ namespace BlackJack
         {
             newPassPanel.Visible = true;
             forgotPanel.Visible = false;
+            settingsPanel.Visible = false;
             newPassPanel.Location = new Point(209, 34);
 
             passDontMatchLabel.Visible = false;
