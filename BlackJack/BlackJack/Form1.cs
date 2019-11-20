@@ -217,6 +217,7 @@ namespace BlackJack
             decBet.Visible = true;
 
             player1.hand.emptyHand();
+            player1.splitHand.emptyHand();
             dealer.hand.emptyHand();
 
             testButton.Visible = true;
