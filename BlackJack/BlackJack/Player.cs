@@ -13,6 +13,7 @@ namespace BlackJack
         public int wager;
         public int insurance;
         public Hand hand;
+        public Hand splitHand;
         public List<PictureBox> cardDisplay;
         private string name;
 
@@ -20,6 +21,7 @@ namespace BlackJack
         {
             money = 100;
             hand = new Hand();
+            splitHand = new Hand();
             cardDisplay = new List<PictureBox>();
             name = "DBDSC";
         }
@@ -28,6 +30,7 @@ namespace BlackJack
         {
             money = m;
             hand = new Hand();
+            splitHand = new Hand();
             cardDisplay = new List<PictureBox>();
             name = "DBDSC";
         }
@@ -36,6 +39,7 @@ namespace BlackJack
         {
             money = m;
             hand = new Hand();
+            splitHand = new Hand();
             cardDisplay = new List<PictureBox>();
             name = s;
         }
@@ -44,6 +48,7 @@ namespace BlackJack
         {
             money = 100;
             hand = new Hand();
+            splitHand = new Hand();
             cardDisplay = new List<PictureBox>();
             name = s;
         }
