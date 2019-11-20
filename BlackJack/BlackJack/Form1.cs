@@ -774,11 +774,6 @@ namespace BlackJack
             goToLogin();
         }
 
-        private void SignUpConfirm_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void testButton_Click(object sender, EventArgs e)
         {
             Card card1, card2, card3, card4;
