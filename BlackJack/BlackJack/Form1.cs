@@ -205,6 +205,7 @@ namespace BlackJack
 
             standButton.Visible = false;
             hitButton.Visible = false;
+            splitHitButton.Visible = false;
             dealButton.Visible = false;
             insuranceIncBet.Visible = false;
             insuranceDecBet.Visible = false;
@@ -964,11 +965,15 @@ namespace BlackJack
             Card[] pHand = player1.hand.show();
             player1.hand.emptyHand();
             player1.hand.addCard(pHand[0]);
+            player1.hand.addCard(deck.getCard());
             player1.splitHand.addCard(pHand[1]);
             updatePlayerSplitHandPictureBox();
             updatePlayerHandPictureBox();
+            myTotalVal.Text = player1.hand.getHandTotal().ToString();
 
             splitButton.Visible = false;
+            standButton.Visible = false;
+            splitStandButton.Visible = true;
 
         }
 
@@ -1145,6 +1150,44 @@ namespace BlackJack
         private void phoneBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void splitStandButton_Click(object sender, EventArgs e)
+        {
+            player1.splitHand.addCard(deck.getCard());
+            updatePlayerSplitHandPictureBox();
+            myTotalLabel2.Visible = true;
+            myTotalVal2.Visible = true;
+            myTotalVal2.Text = player1.splitHand.getHandTotal().ToString();
+            hitButton.Visible = false;
+            splitHitButton.Visible = true;
+            splitStandButton.Visible = false;
+            standButton.Visible = true;
+        }
+
+        private void splitHitButton_Click(object sender, EventArgs e)
+        {
+            if (player1.splitHand.getNumCards() < 5)
+            {
+                player1.splitHand.addCard(deck.getCard());
+                updatePlayerSplitHandPictureBox();
+                myTotalVal2.Text = player1.splitHand.getHandTotal().ToString();
+                if (player1.splitHand.getHandTotal() > 21)
+                {
+                    if (dealer.hand.getHandTotal() < 17)
+                    {
+                        System.Threading.Thread.Sleep(500);
+                        dealer.hand.addCard(deck.getCard());
+                        updateDealerHandPictureBox();
+                    }
+                    endGame();
+
+                }
+            }
+            if (player1.splitHand.getNumCards() == 5)
+            {
+                endGame();
+            }
         }
     }
 }
