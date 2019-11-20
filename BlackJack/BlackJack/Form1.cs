@@ -968,6 +968,9 @@ namespace BlackJack
             updatePlayerSplitHandPictureBox();
             updatePlayerHandPictureBox();
 
+            Console.WriteLine("Hand:  " + player1.hand.ToString());
+            Console.WriteLine("Split: " + player1.splitHand.ToString());
+
             splitButton.Visible = false;
 
         }
