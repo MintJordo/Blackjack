@@ -960,8 +960,13 @@ namespace BlackJack
             myHand3.Location = new Point(463, 309);
             myHand4.Location = new Point(483, 309);
             myHand5.Location = new Point(503, 309);
-            player1.splitHand.addCard(player1.hand.show()[1]);
+
+            Card[] pHand = player1.hand.show();
+            player1.hand.emptyHand();
+            player1.hand.addCard(pHand[0]);
+            player1.splitHand.addCard(pHand[1]);
             updatePlayerSplitHandPictureBox();
+            updatePlayerHandPictureBox();
 
             splitButton.Visible = false;
 
