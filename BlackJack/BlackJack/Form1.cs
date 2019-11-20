@@ -217,6 +217,7 @@ namespace BlackJack
             decBet.Visible = true;
 
             player1.hand.emptyHand();
+            player1.splitHand.emptyHand();
             dealer.hand.emptyHand();
 
             testButton.Visible = true;
@@ -1065,6 +1066,16 @@ namespace BlackJack
         }
 
         private void nameChange_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void myTotalVal2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void phoneBox_TextChanged(object sender, EventArgs e)
         {
 
         }
