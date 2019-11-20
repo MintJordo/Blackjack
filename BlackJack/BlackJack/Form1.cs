@@ -1020,7 +1020,23 @@ namespace BlackJack
 
         private void passChangebtn_Click(object sender, EventArgs e)
         {
+            if (passChange.Text == "") return;
 
+            XmlDocument doc = new XmlDocument();
+            doc.Load("Players.xml");
+            foreach (XmlNode node in doc.DocumentElement)
+            {
+                string username = node.Attributes[0].InnerText;
+                if (player1.getName() == username)
+                {
+                    if (passChange.Text == node.ChildNodes[1].InnerText)
+                    {
+                        Console.WriteLine("updating pass for " + username);
+                        newPass();
+                    }
+                }
+
+            }
         }
 
         private void label17_Click(object sender, EventArgs e)
