@@ -995,6 +995,7 @@ namespace BlackJack
         {
             GamePanel.Visible = false;
             settingsPanel.Visible = true;
+            label8.Visible = false;
             settingsPanel.Location = new Point(209, 34);
             this.BackColor = Color.FromArgb(0, 25, 50);
 
@@ -1109,6 +1110,10 @@ namespace BlackJack
                 }
             }
             doc.Save("Players.xml");
+            GamePanel.Visible = true;
+            settingsPanel.Visible = false;
+            settingsPanel.Location = new Point(209, 34);
+            this.BackColor = Color.Green;
         }
 
         private void label6_Click(object sender, EventArgs e)
