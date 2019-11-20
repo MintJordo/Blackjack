@@ -554,17 +554,21 @@ namespace BlackJack
                 myTotalVal.Text = player1.hand.getHandTotal().ToString();
                 if (player1.hand.getHandTotal() > 21)
                 {
-                    if (dealer.hand.getHandTotal() < 17)
+                    if(player1.splitHand.show().Length > 0)
+                    {
+                        splitStandButton_Click(sender, e);
+                    }
+                    else
                     {
                         System.Threading.Thread.Sleep(500);
                         dealer.hand.addCard(deck.getCard());
                         updateDealerHandPictureBox();
+                        endGame();
                     }
-                    endGame();
 
                 }
             }
-            if (player1.hand.getNumCards() == 5)
+            if (player1.hand.getNumCards() == 5 && player1.splitHand.show().Length == 0)
             {
                 endGame();
             }
@@ -962,6 +966,11 @@ namespace BlackJack
             myHand4.Location = new Point(483, 309);
             myHand5.Location = new Point(503, 309);
 
+            player1.takeMoney(player1.wager);
+            player1.wager *= 2;
+            betLabel.Text = "Bet: $" + player1.wager.ToString();
+            moneyBal.Text = "$" + player1.getMoney();
+
             Card[] pHand = player1.hand.show();
             player1.hand.emptyHand();
             player1.hand.addCard(pHand[0]);
@@ -970,9 +979,6 @@ namespace BlackJack
             updatePlayerSplitHandPictureBox();
             updatePlayerHandPictureBox();
             myTotalVal.Text = player1.hand.getHandTotal().ToString();
-
-            Console.WriteLine("Hand:  " + player1.hand.ToString());
-            Console.WriteLine("Split: " + player1.splitHand.ToString());
 
             splitButton.Visible = false;
             standButton.Visible = false;
