@@ -971,6 +971,9 @@ namespace BlackJack
             updatePlayerHandPictureBox();
             myTotalVal.Text = player1.hand.getHandTotal().ToString();
 
+            Console.WriteLine("Hand:  " + player1.hand.ToString());
+            Console.WriteLine("Split: " + player1.splitHand.ToString());
+
             splitButton.Visible = false;
             standButton.Visible = false;
             splitStandButton.Visible = true;
