@@ -51,6 +51,7 @@ namespace BlackJack
             splitHand = new Hand();
             cardDisplay = new List<PictureBox>();
             name = s;
+            Console.WriteLine("created user with name " + s);
         }
 
         public void addMoney(int m)
@@ -71,6 +72,11 @@ namespace BlackJack
         public string getName()
         {
             return name;
+        }
+        
+        public void setName(string s)
+        {
+            name = String.Copy(s);
         }
         
     }

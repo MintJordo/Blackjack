@@ -32,7 +32,6 @@ namespace BlackJack
         // begin game variable
         Deck deck;
         Player player1;
-        string player1name;
         Player dealer;
         int betInc = 5;
         string cardBackFileLocation = @"..\..\..\..\cards\red_back.png";
@@ -346,7 +345,7 @@ namespace BlackJack
                     GamePanel.Visible = true;
                     GamePanel.Location = new Point(13, 13);
                     this.BackColor = Color.Green;
-                    player1name = username;
+                    player1.setName(username);
                 }
                 else
                 {
@@ -388,7 +387,7 @@ namespace BlackJack
             myTotalVal.Visible = false;
 
             deck = new Deck();
-            player1 = new Player(player1name);
+            player1 = new Player();
             dealer = new Player();
             dealerHand1.Visible = false;
             dealerHand2.Visible = false;
@@ -983,6 +982,7 @@ namespace BlackJack
             foreach (XmlNode node in doc.DocumentElement)
             {
                 string username = node.Attributes[0].InnerText;
+                Console.WriteLine("Comparing " + username + " to " + player1.getName());
                 if (player1.getName() == username)
                 {
                     //read in all the user info
@@ -1055,7 +1055,23 @@ namespace BlackJack
 
         private void saveSettings_Click(object sender, EventArgs e)
         {
-
+            XmlDocument doc = new XmlDocument();
+            doc.Load("Players.xml");
+            foreach (XmlNode node in doc.DocumentElement)
+            {
+                string username = node.Attributes[0].InnerText;
+                if (player1.getName() == username)
+                {
+                    //read in all the user info
+                    node.Attributes[0].InnerText = unsmaeChange.Text;
+                    node.ChildNodes[0].InnerText = nameChange.Text;
+                    //node.ChildNodes[1].InnerText;
+                    node.ChildNodes[2].InnerText = balChange.Text;
+                    node.ChildNodes[3].InnerText = addChange.Text;
+                    node.ChildNodes[4].InnerText = phoneChange.Text;
+                }
+            }
+            doc.Save("Players.xml");
         }
 
         private void label6_Click(object sender, EventArgs e)
