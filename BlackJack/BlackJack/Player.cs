@@ -68,6 +68,10 @@ namespace BlackJack
             return money;
         }
 
+        public string getName()
+        {
+            return name;
+        }
         
     }
 }

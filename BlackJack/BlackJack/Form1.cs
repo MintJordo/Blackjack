@@ -32,6 +32,7 @@ namespace BlackJack
         // begin game variable
         Deck deck;
         Player player1;
+        string player1name;
         Player dealer;
         int betInc = 5;
         string cardBackFileLocation = @"..\..\..\..\cards\red_back.png";
@@ -345,6 +346,7 @@ namespace BlackJack
                     GamePanel.Visible = true;
                     GamePanel.Location = new Point(13, 13);
                     this.BackColor = Color.Green;
+                    player1name = username;
                 }
                 else
                 {
@@ -386,7 +388,7 @@ namespace BlackJack
             myTotalVal.Visible = false;
 
             deck = new Deck();
-            player1 = new Player();
+            player1 = new Player(player1name);
             dealer = new Player();
             dealerHand1.Visible = false;
             dealerHand2.Visible = false;
@@ -975,6 +977,32 @@ namespace BlackJack
             settingsPanel.Visible = true;
             settingsPanel.Location = new Point(209, 34);
             this.BackColor = Color.FromArgb(0, 25, 50);
+
+            XmlDocument doc = new XmlDocument();
+            doc.Load("Players.xml");
+            foreach (XmlNode node in doc.DocumentElement)
+            {
+                string username = node.Attributes[0].InnerText;
+                if (player1.getName() == username)
+                {
+                    //read in all the user info
+                    string name = node.ChildNodes[0].InnerText;
+                    string password = node.ChildNodes[1].InnerText;
+                    string balance = node.ChildNodes[2].InnerText;
+                    string address = node.ChildNodes[3].InnerText;
+                    string phonenumber = node.ChildNodes[4].InnerText;
+                    string creditcard = node.ChildNodes[5].InnerText;
+
+                    //populate the test boxes
+                    nameChange.Text = name;
+                    unsmaeChange.Text = username;
+                    //no passwd
+                    balChange.Text = balance;
+                    addChange.Text = address;
+                    phoneChange.Text = phonenumber;
+                    ccChange.Text = creditcard;
+                }
+            }
         }
 
         private void label18_Click(object sender, EventArgs e)
