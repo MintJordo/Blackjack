@@ -540,8 +540,6 @@ namespace BlackJack
 
         private void hitButton_Click(object sender, EventArgs e)
         {
-            splitButton.Visible = false;
-            insuranceButton.Visible = false;
             if (player1.hand.getNumCards() < 5)
             {
                 player1.hand.addCard(deck.getCard());
@@ -568,9 +566,6 @@ namespace BlackJack
 
         private void standButton_Click(object sender, EventArgs e)
         {
-
-            splitButton.Visible = false;
-            insuranceButton.Visible = false;
             while (dealer.hand.getHandTotal() < 17)
             {
                 dealer.hand.addCard(deck.getCard());
@@ -846,11 +841,12 @@ namespace BlackJack
         private void insuranceButton_Click(object sender, EventArgs e)
         {
             insuranceBet();
+            insuranceButton.Visible = false;
         }
 
         private void insuranceIncBet_Click(object sender, EventArgs e)
         {
-            if (player1.insurance + 5 < player1.wager / 2)
+            if (player1.insurance + 5 <= player1.wager / 2)
             {
                 player1.insurance += betInc;
                 player1.takeMoney(betInc);
@@ -881,6 +877,8 @@ namespace BlackJack
             myHand5.Location = new Point(503, 309);
             player1.splitHand.addCard(player1.hand.show()[1]);
             updatePlayerSplitHandPictureBox();
+
+            splitButton.Visible = false;
 
         }
 
