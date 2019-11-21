@@ -1278,6 +1278,8 @@ namespace BlackJack
 
                     element = doc.CreateElement("balance");
                     element.InnerText = "1000";
+                    moneyBal.Text = "$" + element.InnerText;
+                    player1.setMoney(Int32.Parse(element.InnerText));
                     new_user.AppendChild(element);
 
                     element = doc.CreateElement("address");
