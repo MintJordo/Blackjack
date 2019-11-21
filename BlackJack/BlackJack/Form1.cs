@@ -723,17 +723,101 @@ namespace BlackJack
             doc.Load("Players.xml");
             foreach (XmlNode node in doc.DocumentElement)
             {
-                string username = node.Attributes[0].InnerText;
-                if (player1.getName() == username)
+                string username1 = node.Attributes[0].InnerText;
+                if (player1.getName() == username1)
                 {
                     node.ChildNodes[2].InnerText = moneyBal.Text.Substring(1);
                 }
             }
             doc.Save("Players.xml");
-            GamePanel.Visible = true;
-            settingsPanel.Visible = false;
-            settingsPanel.Location = new Point(209, 34);
-            this.BackColor = Color.Green;
+
+            doc = new XmlDocument();
+            doc.Load("Games1.xml");
+            bool exists = false;
+            string username = player1.getName();
+            foreach (XmlNode node in doc.DocumentElement)
+            {
+                if (username == node.Attributes[0].InnerText)
+                {
+                    exists = true;
+                }
+            }
+            // Username exists
+            if (exists)
+            {
+
+            }
+            // Username doesn't exist
+            else
+            {
+                // Add user to XML file
+                Console.WriteLine("Creating new game state for " + username);
+
+                //create new player
+                XmlElement new_user = doc.CreateElement("player");
+                XmlAttribute uname = doc.CreateAttribute("username");
+                uname.Value = username;
+                new_user.Attributes.Append(uname);
+
+                //dealer hand
+                XmlElement dealerhand = doc.CreateElement("dealerHand");
+                //add dealer hand and up to 5 cards
+                new_user.AppendChild(dealerhand);
+                for (int i = 1; i <= dealer.hand.getNumCards(); i++)
+                {
+                    XmlElement card = doc.CreateElement("card");
+                    card.InnerText = dealer.hand.show()[i - 1].ToString();
+                    dealerhand.AppendChild(card);
+                }
+
+                //player hand
+                XmlElement playerhand = doc.CreateElement("playerHand");
+                //add player hand and up to 5 cards
+                new_user.AppendChild(playerhand);
+                for (int i = 1; i <= player1.hand.getNumCards(); i++)
+                {
+                    XmlElement card = doc.CreateElement("card");
+                    card.InnerText = player1.hand.show()[i - 1].ToString();
+                    playerhand.AppendChild(card);
+                }
+
+                //split hand
+                XmlElement splithand = doc.CreateElement("splitHand");
+                //add split hand and up to 5 cards
+                new_user.AppendChild(splithand);
+                for (int i = 1; i <= player1.splitHand.getNumCards(); i++)
+                {
+                    XmlElement card = doc.CreateElement("card");
+                    card.InnerText = player1.splitHand.show()[i - 1].ToString();
+                    splithand.AppendChild(card);
+                }
+
+                XmlElement bet = doc.CreateElement("bet");
+                bet.InnerText = player1.wager.ToString();
+                new_user.AppendChild(bet);
+
+                XmlElement insurance = doc.CreateElement("insurance");
+                insurance.InnerText = player1.insurance.ToString();
+                new_user.AppendChild(insurance);
+
+                XmlElement deckydoo = doc.CreateElement("deck");
+                XmlAttribute s = doc.CreateAttribute("sentinel");
+                s.Value = deck.getUnshuffledCards().ToString();
+                deckydoo.Attributes.Append(s);
+                foreach (Card c in deck.ToArray())
+                {
+                    XmlElement card = doc.CreateElement("card");
+                    card.InnerText = c.ToString();
+                    deckydoo.AppendChild(card);
+                }
+                new_user.AppendChild(deckydoo);
+
+
+                //save to file
+                doc.DocumentElement.AppendChild(new_user);
+                doc.Save("Games1.xml");
+            }
+
             Close();
         }
 
@@ -1197,6 +1281,7 @@ namespace BlackJack
                 }
             }
             doc.Save("Players.xml");
+            moneyBal.Text = "$" + balChange.Text;
             GamePanel.Visible = true;
             settingsPanel.Visible = false;
             settingsPanel.Location = new Point(209, 34);

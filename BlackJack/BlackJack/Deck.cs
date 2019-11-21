@@ -64,6 +64,16 @@ namespace BlackJack
             }
             return c;
         }
+
+        public Card[] ToArray()
+        {
+            return deck.ToArray();
+        }
+
+        public int getUnshuffledCards()
+        {
+            return unshuffledCards;
+        }
     }
 }
 
