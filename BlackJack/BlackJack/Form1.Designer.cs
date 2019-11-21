@@ -651,7 +651,7 @@ namespace BlackJack
             // 
             this.SettingsButton.Image = global::BlackJack.Properties.Resources.icons8_person_64;
             this.SettingsButton.Location = new System.Drawing.Point(0, 0);
-            this.SettingsButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SettingsButton.Margin = new System.Windows.Forms.Padding(2);
             this.SettingsButton.Name = "SettingsButton";
             this.SettingsButton.Size = new System.Drawing.Size(60, 57);
             this.SettingsButton.TabIndex = 45;
@@ -669,7 +669,7 @@ namespace BlackJack
             this.testButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.testButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.testButton.Location = new System.Drawing.Point(663, 385);
-            this.testButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.testButton.Margin = new System.Windows.Forms.Padding(2);
             this.testButton.Name = "testButton";
             this.testButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.testButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -698,7 +698,7 @@ namespace BlackJack
             this.myHand10.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.myHand10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.myHand10.Location = new System.Drawing.Point(273, 309);
-            this.myHand10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.myHand10.Margin = new System.Windows.Forms.Padding(2);
             this.myHand10.Name = "myHand10";
             this.myHand10.Size = new System.Drawing.Size(73, 109);
             this.myHand10.TabIndex = 43;
@@ -711,7 +711,7 @@ namespace BlackJack
             this.myHand9.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.myHand9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.myHand9.Location = new System.Drawing.Point(253, 309);
-            this.myHand9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.myHand9.Margin = new System.Windows.Forms.Padding(2);
             this.myHand9.Name = "myHand9";
             this.myHand9.Size = new System.Drawing.Size(73, 109);
             this.myHand9.TabIndex = 42;
@@ -724,7 +724,7 @@ namespace BlackJack
             this.myHand8.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.myHand8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.myHand8.Location = new System.Drawing.Point(233, 309);
-            this.myHand8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.myHand8.Margin = new System.Windows.Forms.Padding(2);
             this.myHand8.Name = "myHand8";
             this.myHand8.Size = new System.Drawing.Size(73, 109);
             this.myHand8.TabIndex = 41;
@@ -737,7 +737,7 @@ namespace BlackJack
             this.myHand7.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.myHand7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.myHand7.Location = new System.Drawing.Point(213, 309);
-            this.myHand7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.myHand7.Margin = new System.Windows.Forms.Padding(2);
             this.myHand7.Name = "myHand7";
             this.myHand7.Size = new System.Drawing.Size(73, 109);
             this.myHand7.TabIndex = 40;
@@ -750,7 +750,7 @@ namespace BlackJack
             this.myHand6.BackgroundImage = global::BlackJack.Properties.Resources._10C;
             this.myHand6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.myHand6.Location = new System.Drawing.Point(193, 309);
-            this.myHand6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.myHand6.Margin = new System.Windows.Forms.Padding(2);
             this.myHand6.Name = "myHand6";
             this.myHand6.Size = new System.Drawing.Size(73, 109);
             this.myHand6.TabIndex = 39;
@@ -800,6 +800,7 @@ namespace BlackJack
             this.splitButton.Text = "Split";
             this.splitButton.TextColor = System.Drawing.Color.Black;
             this.splitButton.UseVisualStyleBackColor = false;
+            this.splitButton.Visible = false;
             this.splitButton.Click += new System.EventHandler(this.splitButton_Click);
             // 
             // blinkPanel
@@ -1611,7 +1612,7 @@ namespace BlackJack
             this.settingsPanel.Controls.Add(this.unsmaeChange);
             this.settingsPanel.Controls.Add(this.nameChange);
             this.settingsPanel.Location = new System.Drawing.Point(808, 378);
-            this.settingsPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.settingsPanel.Margin = new System.Windows.Forms.Padding(2);
             this.settingsPanel.Name = "settingsPanel";
             this.settingsPanel.Size = new System.Drawing.Size(372, 348);
             this.settingsPanel.TabIndex = 34;
@@ -1653,7 +1654,7 @@ namespace BlackJack
             this.passChangebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passChangebtn.ForeColor = System.Drawing.Color.White;
             this.passChangebtn.Location = new System.Drawing.Point(204, 207);
-            this.passChangebtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.passChangebtn.Margin = new System.Windows.Forms.Padding(2);
             this.passChangebtn.Name = "passChangebtn";
             this.passChangebtn.Size = new System.Drawing.Size(92, 25);
             this.passChangebtn.TabIndex = 23;
@@ -1683,7 +1684,7 @@ namespace BlackJack
             this.balChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.balChange.ForeColor = System.Drawing.Color.Gray;
             this.balChange.Location = new System.Drawing.Point(73, 247);
-            this.balChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.balChange.Margin = new System.Windows.Forms.Padding(2);
             this.balChange.Name = "balChange";
             this.balChange.Size = new System.Drawing.Size(222, 24);
             this.balChange.TabIndex = 21;
@@ -1711,7 +1712,7 @@ namespace BlackJack
             this.phoneChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneChange.ForeColor = System.Drawing.Color.Gray;
             this.phoneChange.Location = new System.Drawing.Point(73, 88);
-            this.phoneChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.phoneChange.Margin = new System.Windows.Forms.Padding(2);
             this.phoneChange.Name = "phoneChange";
             this.phoneChange.Size = new System.Drawing.Size(222, 24);
             this.phoneChange.TabIndex = 19;
@@ -1739,7 +1740,7 @@ namespace BlackJack
             this.ccChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ccChange.ForeColor = System.Drawing.Color.Gray;
             this.ccChange.Location = new System.Drawing.Point(73, 129);
-            this.ccChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ccChange.Margin = new System.Windows.Forms.Padding(2);
             this.ccChange.Name = "ccChange";
             this.ccChange.Size = new System.Drawing.Size(222, 24);
             this.ccChange.TabIndex = 17;
@@ -1755,7 +1756,7 @@ namespace BlackJack
             this.saveSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveSettings.ForeColor = System.Drawing.Color.White;
             this.saveSettings.Location = new System.Drawing.Point(73, 299);
-            this.saveSettings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.saveSettings.Margin = new System.Windows.Forms.Padding(2);
             this.saveSettings.Name = "saveSettings";
             this.saveSettings.Size = new System.Drawing.Size(222, 30);
             this.saveSettings.TabIndex = 16;
@@ -1841,7 +1842,7 @@ namespace BlackJack
             this.passChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passChange.ForeColor = System.Drawing.Color.Gray;
             this.passChange.Location = new System.Drawing.Point(73, 208);
-            this.passChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.passChange.Margin = new System.Windows.Forms.Padding(2);
             this.passChange.Name = "passChange";
             this.passChange.PasswordChar = '*';
             this.passChange.Size = new System.Drawing.Size(126, 24);
@@ -1856,7 +1857,7 @@ namespace BlackJack
             this.addChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addChange.ForeColor = System.Drawing.Color.Gray;
             this.addChange.Location = new System.Drawing.Point(73, 169);
-            this.addChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addChange.Margin = new System.Windows.Forms.Padding(2);
             this.addChange.Name = "addChange";
             this.addChange.Size = new System.Drawing.Size(222, 24);
             this.addChange.TabIndex = 9;
@@ -1870,7 +1871,7 @@ namespace BlackJack
             this.unsmaeChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unsmaeChange.ForeColor = System.Drawing.Color.Gray;
             this.unsmaeChange.Location = new System.Drawing.Point(190, 48);
-            this.unsmaeChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.unsmaeChange.Margin = new System.Windows.Forms.Padding(2);
             this.unsmaeChange.Name = "unsmaeChange";
             this.unsmaeChange.Size = new System.Drawing.Size(105, 24);
             this.unsmaeChange.TabIndex = 8;
@@ -1884,7 +1885,7 @@ namespace BlackJack
             this.nameChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameChange.ForeColor = System.Drawing.Color.Gray;
             this.nameChange.Location = new System.Drawing.Point(73, 48);
-            this.nameChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nameChange.Margin = new System.Windows.Forms.Padding(2);
             this.nameChange.Name = "nameChange";
             this.nameChange.Size = new System.Drawing.Size(109, 24);
             this.nameChange.TabIndex = 7;
