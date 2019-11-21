@@ -259,8 +259,40 @@ namespace BlackJack
             BetTimer.Enabled = true;
             blinkPanel.BackColor = System.Drawing.Color.FromArgb(212, 175, 55);
 
+            XmlDocument doc = new XmlDocument();
+            doc.Load("Players.xml");
+            foreach (XmlNode node in doc.DocumentElement)
+            {
+                string username1 = node.Attributes[0].InnerText;
+                if (player1.getName() == username1)
+                {
+                    node.ChildNodes[2].InnerText = moneyBal.Text.Substring(1);
+                }
+            }
+            doc.Save("Players.xml");
+
+            doc = new XmlDocument();
+            doc.Load("Games.xml");
+            bool exists = false;
+            XmlNode n = null;
+            string username = player1.getName();
+            foreach (XmlNode node in doc.DocumentElement)
+            {
+                if (username == node.Attributes[0].InnerText)
+                {
+                    exists = true;
+                    n = node;
+                }
+            }
+            // Username exists
+            if (exists)
+            {
+                doc.DocumentElement.RemoveChild(n);
+            }
 
             deck.shuffle();
+
+
         }
 
         /* This function intercepts all the commands sent to the application. 
@@ -385,11 +417,112 @@ namespace BlackJack
                     player1.setMoney(balance);
                     moneyBal.Text = "$" + balance.ToString();
                     //Console.WriteLine("Initialized player " + username + " with balance " + balance);
+                    doc = new XmlDocument();
+                    doc.Load("Games.xml");
+                    bool exists = false;
+                    XmlNode n = null;
+                    //string username = player1.getName();
+                    foreach (XmlNode nod in doc.DocumentElement)
+                    {
+                        if (username == nod.Attributes[0].InnerText)
+                        {
+                            exists = true;
+                            n = nod;
+                        }
+                    }
+                    // Username exists
+                    if (exists)
+                    {
+                        int bet = Int32.Parse(n.ChildNodes[3].InnerText);
+                        int insurance = Int32.Parse(n.ChildNodes[4].InnerText);
+                        player1.setBet(bet);
+                        player1.setInsurance(insurance);
+                        betLabel.Text = "Bet: $" + bet;
+                        insuranceLabel.Text = "Insurance: $" + insurance;
+                        foreach(XmlElement xe in n.ChildNodes[0])
+                        {
+                            dealer.hand.addCard(new Card(xe.InnerText));
+                        }
+                        foreach (XmlElement xe in n.ChildNodes[1])
+                        {
+                            player1.hand.addCard(new Card(xe.InnerText));
+                        }
+                        foreach (XmlElement xe in n.ChildNodes[2])
+                        {
+                            player1.splitHand.addCard(new Card(xe.InnerText));
+                        }
+                        myTotalVal.Text = player1.hand.getHandTotal().ToString();
+                        updateDealerHandPictureBox();
+                        updatePlayerHandPictureBox();
+                        if (player1.splitHand.show().Length > 0)
+                        {
+                            myTotalVal2.Text = player1.splitHand.getHandTotal().ToString();
+                            myTotalVal2.Visible = true;
+                            myTotalLabel.Location = new Point(428, 277);
+                            myTotalVal.Location = new Point(527, 277);
+                            myHand1.Location = new Point(423, 309);
+                            myHand2.Location = new Point(443, 309);
+                            myHand3.Location = new Point(463, 309);
+                            myHand4.Location = new Point(483, 309);
+                            myHand5.Location = new Point(503, 309);
+                            updatePlayerSplitHandPictureBox();
+                            splitStandButton.Visible = true;
+                            hitButton.Visible = true;
+                            myTotalVal2.Visible = true;
+
+                        }
+                        else
+                        {
+                            hitButton.Visible = true;
+                            standButton.Visible = true;
+
+                            myHand1.Location = new Point(339, 309);
+                            myHand2.Location = new Point(359, 309);
+                            myHand3.Location = new Point(379, 309);
+                            myHand4.Location = new Point(399, 309);
+                            myHand5.Location = new Point(419, 309);
+                        }
+                        myTotalVal.Visible = true;
+                        dealerTotalLabel.Visible = true;
+                        dealerTotalVal.Visible = true;
+                        myTotalLabel.Visible = true;
+                        if(dealer.hand.show().Length > 0 && dealer.hand.show()[0].Suit == "A")
+                        {
+                            insuranceButton.Visible = true;
+                        }
+                    }
                 }
                 else
                 {
                     incorrectLabel.Visible = true;
                 }
+
+
+                
+
+                dealButton.Visible = false;
+                splitButton.Visible = false;
+                insuranceButton.Visible = false;
+                hitButton.Visible = true;
+                standButton.Visible = true;
+                dealerTotalLabel.Visible = true;
+                dealerTotalVal.Visible = true;
+                myTotalLabel.Visible = true;
+                myTotalVal.Visible = true;
+                incBet.Visible = false;
+                decBet.Visible = false;
+                insuranceIncBet.Visible = false;
+                insuranceDecBet.Visible = false;
+                insuranceLabel.Visible = false;
+                testButton.Visible = false;
+
+                dealerTotalVal.Text = "?";
+
+                updatePlayerHandPictureBox();
+                updateDealerHandPictureBox();
+                myTotalLabel.Location = new Point(307, 277);
+                myTotalVal.Location = new Point(407, 277);
+                myTotalVal.Text = player1.hand.getHandTotal().ToString();
             }
         }
 
@@ -732,91 +865,91 @@ namespace BlackJack
             doc.Save("Players.xml");
 
             doc = new XmlDocument();
-            doc.Load("Games1.xml");
+            doc.Load("Games.xml");
             bool exists = false;
+            XmlNode n = null;
             string username = player1.getName();
             foreach (XmlNode node in doc.DocumentElement)
             {
                 if (username == node.Attributes[0].InnerText)
                 {
                     exists = true;
+                    n = node;
                 }
             }
             // Username exists
             if (exists)
             {
-
+                doc.DocumentElement.RemoveChild(n);
             }
             // Username doesn't exist
-            else
+            
+            // Add user to XML file
+            Console.WriteLine("Creating new game state for " + username);
+
+            //create new player
+            XmlElement new_user = doc.CreateElement("player");
+            XmlAttribute uname = doc.CreateAttribute("username");
+            uname.Value = username;
+            new_user.Attributes.Append(uname);
+
+            //dealer hand
+            XmlElement dealerhand = doc.CreateElement("dealerHand");
+            //add dealer hand and up to 5 cards
+            new_user.AppendChild(dealerhand);
+            for (int i = 1; i <= dealer.hand.getNumCards(); i++)
             {
-                // Add user to XML file
-                Console.WriteLine("Creating new game state for " + username);
-
-                //create new player
-                XmlElement new_user = doc.CreateElement("player");
-                XmlAttribute uname = doc.CreateAttribute("username");
-                uname.Value = username;
-                new_user.Attributes.Append(uname);
-
-                //dealer hand
-                XmlElement dealerhand = doc.CreateElement("dealerHand");
-                //add dealer hand and up to 5 cards
-                new_user.AppendChild(dealerhand);
-                for (int i = 1; i <= dealer.hand.getNumCards(); i++)
-                {
-                    XmlElement card = doc.CreateElement("card");
-                    card.InnerText = dealer.hand.show()[i - 1].ToString();
-                    dealerhand.AppendChild(card);
-                }
-
-                //player hand
-                XmlElement playerhand = doc.CreateElement("playerHand");
-                //add player hand and up to 5 cards
-                new_user.AppendChild(playerhand);
-                for (int i = 1; i <= player1.hand.getNumCards(); i++)
-                {
-                    XmlElement card = doc.CreateElement("card");
-                    card.InnerText = player1.hand.show()[i - 1].ToString();
-                    playerhand.AppendChild(card);
-                }
-
-                //split hand
-                XmlElement splithand = doc.CreateElement("splitHand");
-                //add split hand and up to 5 cards
-                new_user.AppendChild(splithand);
-                for (int i = 1; i <= player1.splitHand.getNumCards(); i++)
-                {
-                    XmlElement card = doc.CreateElement("card");
-                    card.InnerText = player1.splitHand.show()[i - 1].ToString();
-                    splithand.AppendChild(card);
-                }
-
-                XmlElement bet = doc.CreateElement("bet");
-                bet.InnerText = player1.wager.ToString();
-                new_user.AppendChild(bet);
-
-                XmlElement insurance = doc.CreateElement("insurance");
-                insurance.InnerText = player1.insurance.ToString();
-                new_user.AppendChild(insurance);
-
-                XmlElement deckydoo = doc.CreateElement("deck");
-                XmlAttribute s = doc.CreateAttribute("sentinel");
-                s.Value = deck.getUnshuffledCards().ToString();
-                deckydoo.Attributes.Append(s);
-                foreach (Card c in deck.ToArray())
-                {
-                    XmlElement card = doc.CreateElement("card");
-                    card.InnerText = c.ToString();
-                    deckydoo.AppendChild(card);
-                }
-                new_user.AppendChild(deckydoo);
-
-
-                //save to file
-                doc.DocumentElement.AppendChild(new_user);
-                doc.Save("Games1.xml");
+                XmlElement card = doc.CreateElement("card");
+                card.InnerText = dealer.hand.show()[i - 1].ToString();
+                dealerhand.AppendChild(card);
             }
+
+            //player hand
+            XmlElement playerhand = doc.CreateElement("playerHand");
+            //add player hand and up to 5 cards
+            new_user.AppendChild(playerhand);
+            for (int i = 1; i <= player1.hand.getNumCards(); i++)
+            {
+                XmlElement card = doc.CreateElement("card");
+                card.InnerText = player1.hand.show()[i - 1].ToString();
+                playerhand.AppendChild(card);
+            }
+
+            //split hand
+            XmlElement splithand = doc.CreateElement("splitHand");
+            //add split hand and up to 5 cards
+            new_user.AppendChild(splithand);
+            for (int i = 1; i <= player1.splitHand.getNumCards(); i++)
+            {
+                XmlElement card = doc.CreateElement("card");
+                card.InnerText = player1.splitHand.show()[i - 1].ToString();
+                splithand.AppendChild(card);
+            }
+
+            XmlElement bet = doc.CreateElement("bet");
+            bet.InnerText = player1.wager.ToString();
+            new_user.AppendChild(bet);
+
+            XmlElement insurance = doc.CreateElement("insurance");
+            insurance.InnerText = player1.insurance.ToString();
+            new_user.AppendChild(insurance);
+
+            XmlElement deckydoo = doc.CreateElement("deck");
+            XmlAttribute s = doc.CreateAttribute("sentinel");
+            s.Value = deck.getUnshuffledCards().ToString();
+            deckydoo.Attributes.Append(s);
+            foreach (Card c in deck.ToArray())
+            {
+                XmlElement card = doc.CreateElement("card");
+                card.InnerText = c.ToString();
+                deckydoo.AppendChild(card);
+            }
+            new_user.AppendChild(deckydoo);
+
+
+            //save to file
+            doc.DocumentElement.AppendChild(new_user);
+            doc.Save("Games.xml");
 
             Close();
         }

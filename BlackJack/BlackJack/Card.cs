@@ -42,6 +42,56 @@ namespace BlackJack
             number = n;
         }
 
+        public Card(string sn)
+        {
+            if (sn.Length == 2)
+            {
+                string s = sn.Substring(1, 1);
+                if(s.ToUpper() == "S")
+                {
+                    suit = "spade";
+                }
+                else if(s.ToUpper() == "H")
+                {
+                    suit = "heart";
+                }
+                else if(s.ToUpper() == "D")
+                {
+                    suit = "diamond";
+                }
+                else if(s.ToUpper() == "C")
+                {
+                    suit = "club";
+                }
+                number = sn.Substring(0, 1);
+            }
+            else if (sn.Length == 0)
+            {
+                return;
+            }
+            else
+            {
+                string s = sn.Substring(2, 1);
+                if (s.ToUpper() == "S")
+                {
+                    suit = "spade";
+                }
+                else if (s.ToUpper() == "H")
+                {
+                    suit = "heart";
+                }
+                else if (s.ToUpper() == "D")
+                {
+                    suit = "diamond";
+                }
+                else if (s.ToUpper() == "C")
+                {
+                    suit = "club";
+                }
+                number = sn.Substring(0, 2);
+            }
+        }
+
         public string getCardPath()
         {
             return @"..\..\..\..\cards\" + Number + Suit + ".png";

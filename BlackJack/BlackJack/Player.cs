@@ -83,6 +83,15 @@ namespace BlackJack
         {
             money = m;
         }
+
+        public void setBet(int m)
+        {
+            wager = m;
+        }
         
+        public void setInsurance(int m)
+        {
+            insurance = m;
+        }
     }
 }
