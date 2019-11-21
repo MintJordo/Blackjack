@@ -46,8 +46,8 @@ namespace BlackJack
         {
             if (sn.Length == 2)
             {
-                string s = sn.Substring(1, 1);
-                if(s.ToUpper() == "S")
+                suit = sn.Substring(1, 1);
+                /*if(s.ToUpper() == "S")
                 {
                     suit = "spade";
                 }
@@ -62,7 +62,7 @@ namespace BlackJack
                 else if(s.ToUpper() == "C")
                 {
                     suit = "club";
-                }
+                }*/
                 number = sn.Substring(0, 1);
             }
             else if (sn.Length == 0)
@@ -71,8 +71,8 @@ namespace BlackJack
             }
             else
             {
-                string s = sn.Substring(2, 1);
-                if (s.ToUpper() == "S")
+                suit = sn.Substring(2, 1);
+               /* if (s.ToUpper() == "S")
                 {
                     suit = "spade";
                 }
@@ -87,7 +87,7 @@ namespace BlackJack
                 else if (s.ToUpper() == "C")
                 {
                     suit = "club";
-                }
+                }*/
                 number = sn.Substring(0, 2);
             }
         }

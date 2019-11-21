@@ -195,10 +195,9 @@ namespace BlackJack
             // 
             this.moneyLabel.AutoSize = true;
             this.moneyLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.moneyLabel.Location = new System.Drawing.Point(80, 1);
-            this.moneyLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.moneyLabel.Location = new System.Drawing.Point(60, 1);
             this.moneyLabel.Name = "moneyLabel";
-            this.moneyLabel.Size = new System.Drawing.Size(131, 40);
+            this.moneyLabel.Size = new System.Drawing.Size(105, 32);
             this.moneyLabel.TabIndex = 7;
             this.moneyLabel.Text = "Money:";
             this.moneyLabel.Click += new System.EventHandler(this.moneyLabel_Click);
@@ -208,10 +207,9 @@ namespace BlackJack
             this.moneyBal.AutoSize = true;
             this.moneyBal.Enabled = false;
             this.moneyBal.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.moneyBal.Location = new System.Drawing.Point(211, 1);
-            this.moneyBal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.moneyBal.Location = new System.Drawing.Point(158, 1);
             this.moneyBal.Name = "moneyBal";
-            this.moneyBal.Size = new System.Drawing.Size(55, 40);
+            this.moneyBal.Size = new System.Drawing.Size(45, 32);
             this.moneyBal.TabIndex = 8;
             this.moneyBal.Text = "$1";
             this.moneyBal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -221,10 +219,9 @@ namespace BlackJack
             // 
             this.myTotalLabel.AutoSize = true;
             this.myTotalLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.myTotalLabel.Location = new System.Drawing.Point(573, 337);
-            this.myTotalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.myTotalLabel.Location = new System.Drawing.Point(430, 274);
             this.myTotalLabel.Name = "myTotalLabel";
-            this.myTotalLabel.Size = new System.Drawing.Size(131, 40);
+            this.myTotalLabel.Size = new System.Drawing.Size(105, 32);
             this.myTotalLabel.TabIndex = 9;
             this.myTotalLabel.Text = "Total:";
             this.myTotalLabel.Click += new System.EventHandler(this.myTotal_Click);
@@ -233,10 +230,9 @@ namespace BlackJack
             // 
             this.myTotalVal.AutoSize = true;
             this.myTotalVal.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.myTotalVal.Location = new System.Drawing.Point(707, 337);
-            this.myTotalVal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.myTotalVal.Location = new System.Drawing.Point(530, 274);
             this.myTotalVal.Name = "myTotalVal";
-            this.myTotalVal.Size = new System.Drawing.Size(36, 40);
+            this.myTotalVal.Size = new System.Drawing.Size(30, 32);
             this.myTotalVal.TabIndex = 10;
             this.myTotalVal.Text = "0";
             this.myTotalVal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -246,10 +242,9 @@ namespace BlackJack
             // 
             this.dealerTotalLabel.AutoSize = true;
             this.dealerTotalLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dealerTotalLabel.Location = new System.Drawing.Point(409, 150);
-            this.dealerTotalLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.dealerTotalLabel.Location = new System.Drawing.Point(307, 122);
             this.dealerTotalLabel.Name = "dealerTotalLabel";
-            this.dealerTotalLabel.Size = new System.Drawing.Size(131, 40);
+            this.dealerTotalLabel.Size = new System.Drawing.Size(105, 32);
             this.dealerTotalLabel.TabIndex = 11;
             this.dealerTotalLabel.Text = "Total:";
             this.dealerTotalLabel.Click += new System.EventHandler(this.dealerTotalLabel_Click);
@@ -258,10 +253,9 @@ namespace BlackJack
             // 
             this.dealerTotalVal.AutoSize = true;
             this.dealerTotalVal.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dealerTotalVal.Location = new System.Drawing.Point(541, 150);
-            this.dealerTotalVal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.dealerTotalVal.Location = new System.Drawing.Point(406, 122);
             this.dealerTotalVal.Name = "dealerTotalVal";
-            this.dealerTotalVal.Size = new System.Drawing.Size(36, 40);
+            this.dealerTotalVal.Size = new System.Drawing.Size(30, 32);
             this.dealerTotalVal.TabIndex = 12;
             this.dealerTotalVal.Text = "?";
             this.dealerTotalVal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -275,10 +269,9 @@ namespace BlackJack
             this.panel1.Controls.Add(this.decBet);
             this.panel1.Controls.Add(this.incBet);
             this.panel1.Controls.Add(this.betLabel);
-            this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(213, 197);
+            this.panel1.Size = new System.Drawing.Size(160, 160);
             this.panel1.TabIndex = 16;
             // 
             // insuranceDecBet
@@ -291,13 +284,12 @@ namespace BlackJack
             this.insuranceDecBet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
             this.insuranceDecBet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.insuranceDecBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insuranceDecBet.Location = new System.Drawing.Point(69, 139);
-            this.insuranceDecBet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.insuranceDecBet.Location = new System.Drawing.Point(52, 113);
             this.insuranceDecBet.Name = "insuranceDecBet";
             this.insuranceDecBet.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.insuranceDecBet.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.insuranceDecBet.OnHoverTextColor = System.Drawing.Color.White;
-            this.insuranceDecBet.Size = new System.Drawing.Size(68, 37);
+            this.insuranceDecBet.Size = new System.Drawing.Size(51, 30);
             this.insuranceDecBet.TabIndex = 31;
             this.insuranceDecBet.Text = "-";
             this.insuranceDecBet.TextColor = System.Drawing.Color.Black;
@@ -315,13 +307,12 @@ namespace BlackJack
             this.insuranceIncBet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
             this.insuranceIncBet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.insuranceIncBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insuranceIncBet.Location = new System.Drawing.Point(69, 27);
-            this.insuranceIncBet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.insuranceIncBet.Location = new System.Drawing.Point(52, 22);
             this.insuranceIncBet.Name = "insuranceIncBet";
             this.insuranceIncBet.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.insuranceIncBet.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.insuranceIncBet.OnHoverTextColor = System.Drawing.Color.White;
-            this.insuranceIncBet.Size = new System.Drawing.Size(68, 38);
+            this.insuranceIncBet.Size = new System.Drawing.Size(51, 31);
             this.insuranceIncBet.TabIndex = 30;
             this.insuranceIncBet.Text = "+";
             this.insuranceIncBet.TextColor = System.Drawing.Color.Black;
@@ -339,13 +330,12 @@ namespace BlackJack
             this.decBet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
             this.decBet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.decBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.decBet.Location = new System.Drawing.Point(69, 139);
-            this.decBet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.decBet.Location = new System.Drawing.Point(52, 113);
             this.decBet.Name = "decBet";
             this.decBet.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.decBet.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.decBet.OnHoverTextColor = System.Drawing.Color.White;
-            this.decBet.Size = new System.Drawing.Size(68, 37);
+            this.decBet.Size = new System.Drawing.Size(51, 30);
             this.decBet.TabIndex = 29;
             this.decBet.Text = "-";
             this.decBet.TextColor = System.Drawing.Color.Black;
@@ -362,13 +352,12 @@ namespace BlackJack
             this.incBet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
             this.incBet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.incBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.incBet.Location = new System.Drawing.Point(69, 27);
-            this.incBet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.incBet.Location = new System.Drawing.Point(52, 22);
             this.incBet.Name = "incBet";
             this.incBet.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.incBet.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.incBet.OnHoverTextColor = System.Drawing.Color.White;
-            this.incBet.Size = new System.Drawing.Size(68, 38);
+            this.incBet.Size = new System.Drawing.Size(51, 31);
             this.incBet.TabIndex = 28;
             this.incBet.Text = "+";
             this.incBet.TextColor = System.Drawing.Color.Black;
@@ -379,10 +368,9 @@ namespace BlackJack
             // 
             this.betLabel.AutoSize = true;
             this.betLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.betLabel.Location = new System.Drawing.Point(23, 81);
-            this.betLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.betLabel.Location = new System.Drawing.Point(17, 66);
             this.betLabel.Name = "betLabel";
-            this.betLabel.Size = new System.Drawing.Size(150, 40);
+            this.betLabel.Size = new System.Drawing.Size(120, 32);
             this.betLabel.TabIndex = 16;
             this.betLabel.Text = "Bet: $0";
             this.betLabel.Click += new System.EventHandler(this.betLabel_Click);
@@ -391,10 +379,9 @@ namespace BlackJack
             // 
             this.closeButton.BackgroundImage = global::BlackJack.Properties.Resources.x;
             this.closeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.closeButton.Location = new System.Drawing.Point(1023, 15);
-            this.closeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.closeButton.Location = new System.Drawing.Point(767, 12);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(27, 25);
+            this.closeButton.Size = new System.Drawing.Size(20, 20);
             this.closeButton.TabIndex = 23;
             this.closeButton.TabStop = false;
             this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
@@ -406,10 +393,9 @@ namespace BlackJack
             this.dealerHand5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.dealerHand5.Enabled = false;
             this.dealerHand5.Image = global::BlackJack.Properties.Resources.transparent;
-            this.dealerHand5.Location = new System.Drawing.Point(503, 5);
-            this.dealerHand5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dealerHand5.Location = new System.Drawing.Point(377, 4);
             this.dealerHand5.Name = "dealerHand5";
-            this.dealerHand5.Size = new System.Drawing.Size(97, 134);
+            this.dealerHand5.Size = new System.Drawing.Size(73, 109);
             this.dealerHand5.TabIndex = 22;
             this.dealerHand5.TabStop = false;
             this.dealerHand5.Click += new System.EventHandler(this.DealerHand5_Click);
@@ -419,10 +405,9 @@ namespace BlackJack
             this.dealerHand4.BackColor = System.Drawing.Color.Transparent;
             this.dealerHand4.BackgroundImage = global::BlackJack.Properties.Resources._9H;
             this.dealerHand4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dealerHand4.Location = new System.Drawing.Point(480, 5);
-            this.dealerHand4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dealerHand4.Location = new System.Drawing.Point(360, 4);
             this.dealerHand4.Name = "dealerHand4";
-            this.dealerHand4.Size = new System.Drawing.Size(97, 134);
+            this.dealerHand4.Size = new System.Drawing.Size(73, 109);
             this.dealerHand4.TabIndex = 21;
             this.dealerHand4.TabStop = false;
             // 
@@ -431,10 +416,9 @@ namespace BlackJack
             this.dealerHand3.BackColor = System.Drawing.Color.Transparent;
             this.dealerHand3.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.dealerHand3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dealerHand3.Location = new System.Drawing.Point(456, 5);
-            this.dealerHand3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dealerHand3.Location = new System.Drawing.Point(342, 4);
             this.dealerHand3.Name = "dealerHand3";
-            this.dealerHand3.Size = new System.Drawing.Size(97, 134);
+            this.dealerHand3.Size = new System.Drawing.Size(73, 109);
             this.dealerHand3.TabIndex = 20;
             this.dealerHand3.TabStop = false;
             // 
@@ -443,10 +427,9 @@ namespace BlackJack
             this.myHand5.BackColor = System.Drawing.Color.Transparent;
             this.myHand5.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.myHand5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.myHand5.Location = new System.Drawing.Point(669, 380);
-            this.myHand5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.myHand5.Location = new System.Drawing.Point(502, 309);
             this.myHand5.Name = "myHand5";
-            this.myHand5.Size = new System.Drawing.Size(97, 134);
+            this.myHand5.Size = new System.Drawing.Size(73, 109);
             this.myHand5.TabIndex = 19;
             this.myHand5.TabStop = false;
             this.myHand5.Click += new System.EventHandler(this.MyCard5_Click);
@@ -456,10 +439,9 @@ namespace BlackJack
             this.myHand4.BackColor = System.Drawing.Color.Transparent;
             this.myHand4.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.myHand4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.myHand4.Location = new System.Drawing.Point(644, 380);
-            this.myHand4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.myHand4.Location = new System.Drawing.Point(483, 309);
             this.myHand4.Name = "myHand4";
-            this.myHand4.Size = new System.Drawing.Size(97, 134);
+            this.myHand4.Size = new System.Drawing.Size(73, 109);
             this.myHand4.TabIndex = 18;
             this.myHand4.TabStop = false;
             // 
@@ -468,10 +450,9 @@ namespace BlackJack
             this.myHand3.BackColor = System.Drawing.Color.Transparent;
             this.myHand3.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.myHand3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.myHand3.Location = new System.Drawing.Point(616, 380);
-            this.myHand3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.myHand3.Location = new System.Drawing.Point(462, 309);
             this.myHand3.Name = "myHand3";
-            this.myHand3.Size = new System.Drawing.Size(97, 134);
+            this.myHand3.Size = new System.Drawing.Size(73, 109);
             this.myHand3.TabIndex = 17;
             this.myHand3.TabStop = false;
             // 
@@ -479,10 +460,9 @@ namespace BlackJack
             // 
             this.deckCard.BackgroundImage = global::BlackJack.Properties.Resources.red_back;
             this.deckCard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.deckCard.Location = new System.Drawing.Point(699, 1);
-            this.deckCard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.deckCard.Location = new System.Drawing.Point(524, 1);
             this.deckCard.Name = "deckCard";
-            this.deckCard.Size = new System.Drawing.Size(97, 134);
+            this.deckCard.Size = new System.Drawing.Size(73, 109);
             this.deckCard.TabIndex = 6;
             this.deckCard.TabStop = false;
             this.deckCard.Click += new System.EventHandler(this.deckCard_Click);
@@ -492,10 +472,9 @@ namespace BlackJack
             this.myHand2.BackColor = System.Drawing.Color.Transparent;
             this.myHand2.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.myHand2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.myHand2.Location = new System.Drawing.Point(591, 380);
-            this.myHand2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.myHand2.Location = new System.Drawing.Point(443, 309);
             this.myHand2.Name = "myHand2";
-            this.myHand2.Size = new System.Drawing.Size(97, 134);
+            this.myHand2.Size = new System.Drawing.Size(73, 109);
             this.myHand2.TabIndex = 5;
             this.myHand2.TabStop = false;
             this.myHand2.Click += new System.EventHandler(this.myHand2_Click);
@@ -505,10 +484,9 @@ namespace BlackJack
             this.myHand1.BackColor = System.Drawing.Color.Transparent;
             this.myHand1.BackgroundImage = global::BlackJack.Properties.Resources._10C;
             this.myHand1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.myHand1.Location = new System.Drawing.Point(564, 380);
-            this.myHand1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.myHand1.Location = new System.Drawing.Point(423, 309);
             this.myHand1.Name = "myHand1";
-            this.myHand1.Size = new System.Drawing.Size(97, 134);
+            this.myHand1.Size = new System.Drawing.Size(73, 109);
             this.myHand1.TabIndex = 4;
             this.myHand1.TabStop = false;
             this.myHand1.Click += new System.EventHandler(this.myHand1_Click);
@@ -518,10 +496,9 @@ namespace BlackJack
             this.dealerHand2.BackColor = System.Drawing.Color.Transparent;
             this.dealerHand2.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.dealerHand2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dealerHand2.Location = new System.Drawing.Point(429, 5);
-            this.dealerHand2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dealerHand2.Location = new System.Drawing.Point(322, 4);
             this.dealerHand2.Name = "dealerHand2";
-            this.dealerHand2.Size = new System.Drawing.Size(97, 134);
+            this.dealerHand2.Size = new System.Drawing.Size(73, 109);
             this.dealerHand2.TabIndex = 3;
             this.dealerHand2.TabStop = false;
             this.dealerHand2.Click += new System.EventHandler(this.dealerHand2_Click);
@@ -531,10 +508,9 @@ namespace BlackJack
             this.dealerHand1.BackColor = System.Drawing.Color.Transparent;
             this.dealerHand1.BackgroundImage = global::BlackJack.Properties.Resources._9H;
             this.dealerHand1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.dealerHand1.Location = new System.Drawing.Point(409, 5);
-            this.dealerHand1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dealerHand1.Location = new System.Drawing.Point(307, 4);
             this.dealerHand1.Name = "dealerHand1";
-            this.dealerHand1.Size = new System.Drawing.Size(97, 134);
+            this.dealerHand1.Size = new System.Drawing.Size(73, 109);
             this.dealerHand1.TabIndex = 2;
             this.dealerHand1.TabStop = false;
             this.dealerHand1.Click += new System.EventHandler(this.dealerHand1_Click);
@@ -542,19 +518,17 @@ namespace BlackJack
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.panel2.Location = new System.Drawing.Point(-7, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(-5, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1077, 12);
+            this.panel2.Size = new System.Drawing.Size(808, 10);
             this.panel2.TabIndex = 28;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.panel3.Location = new System.Drawing.Point(-7, 542);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(-5, 440);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1077, 12);
+            this.panel3.Size = new System.Drawing.Size(808, 10);
             this.panel3.TabIndex = 29;
             // 
             // GamePanel
@@ -595,10 +569,9 @@ namespace BlackJack
             this.GamePanel.Controls.Add(this.deckCard);
             this.GamePanel.Controls.Add(this.myHand2);
             this.GamePanel.Controls.Add(this.myHand1);
-            this.GamePanel.Location = new System.Drawing.Point(29, 581);
-            this.GamePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GamePanel.Location = new System.Drawing.Point(22, 472);
             this.GamePanel.Name = "GamePanel";
-            this.GamePanel.Size = new System.Drawing.Size(1004, 522);
+            this.GamePanel.Size = new System.Drawing.Size(753, 424);
             this.GamePanel.TabIndex = 32;
             this.GamePanel.Visible = false;
             // 
@@ -612,13 +585,12 @@ namespace BlackJack
             this.splitHitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.splitHitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.splitHitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splitHitButton.Location = new System.Drawing.Point(591, 261);
-            this.splitHitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitHitButton.Location = new System.Drawing.Point(443, 212);
             this.splitHitButton.Name = "splitHitButton";
             this.splitHitButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.splitHitButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.splitHitButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.splitHitButton.Size = new System.Drawing.Size(105, 44);
+            this.splitHitButton.Size = new System.Drawing.Size(79, 36);
             this.splitHitButton.TabIndex = 48;
             this.splitHitButton.Text = "Hit";
             this.splitHitButton.TextColor = System.Drawing.Color.Black;
@@ -636,13 +608,12 @@ namespace BlackJack
             this.splitStandButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.splitStandButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.splitStandButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splitStandButton.Location = new System.Drawing.Point(275, 260);
-            this.splitStandButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitStandButton.Location = new System.Drawing.Point(206, 211);
             this.splitStandButton.Name = "splitStandButton";
             this.splitStandButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.splitStandButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.splitStandButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.splitStandButton.Size = new System.Drawing.Size(115, 44);
+            this.splitStandButton.Size = new System.Drawing.Size(86, 36);
             this.splitStandButton.TabIndex = 47;
             this.splitStandButton.Text = "Stand";
             this.splitStandButton.TextColor = System.Drawing.Color.Black;
@@ -654,9 +625,10 @@ namespace BlackJack
             // 
             this.myTotalVal2.AutoSize = true;
             this.myTotalVal2.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.myTotalVal2.Location = new System.Drawing.Point(399, 337);
+            this.myTotalVal2.Location = new System.Drawing.Point(299, 274);
+            this.myTotalVal2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.myTotalVal2.Name = "myTotalVal2";
-            this.myTotalVal2.Size = new System.Drawing.Size(36, 40);
+            this.myTotalVal2.Size = new System.Drawing.Size(30, 32);
             this.myTotalVal2.TabIndex = 45;
             this.myTotalVal2.Text = "0";
             this.myTotalVal2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -667,9 +639,10 @@ namespace BlackJack
             // 
             this.myTotalLabel2.AutoSize = true;
             this.myTotalLabel2.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.myTotalLabel2.Location = new System.Drawing.Point(263, 337);
+            this.myTotalLabel2.Location = new System.Drawing.Point(197, 274);
+            this.myTotalLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.myTotalLabel2.Name = "myTotalLabel2";
-            this.myTotalLabel2.Size = new System.Drawing.Size(131, 40);
+            this.myTotalLabel2.Size = new System.Drawing.Size(105, 32);
             this.myTotalLabel2.TabIndex = 44;
             this.myTotalLabel2.Text = "Total:";
             this.myTotalLabel2.Visible = false;
@@ -678,9 +651,9 @@ namespace BlackJack
             // 
             this.SettingsButton.Image = global::BlackJack.Properties.Resources.icons8_person_64;
             this.SettingsButton.Location = new System.Drawing.Point(0, 0);
-            this.SettingsButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SettingsButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SettingsButton.Name = "SettingsButton";
-            this.SettingsButton.Size = new System.Drawing.Size(80, 70);
+            this.SettingsButton.Size = new System.Drawing.Size(60, 57);
             this.SettingsButton.TabIndex = 45;
             this.SettingsButton.TabStop = false;
             this.SettingsButton.Click += new System.EventHandler(this.SettingsButton_Click);
@@ -695,13 +668,13 @@ namespace BlackJack
             this.testButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.testButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.testButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.testButton.Location = new System.Drawing.Point(884, 474);
-            this.testButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.testButton.Location = new System.Drawing.Point(663, 385);
+            this.testButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.testButton.Name = "testButton";
             this.testButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.testButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.testButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.testButton.Size = new System.Drawing.Size(105, 41);
+            this.testButton.Size = new System.Drawing.Size(79, 33);
             this.testButton.TabIndex = 44;
             this.testButton.Text = "Test";
             this.testButton.TextColor = System.Drawing.Color.Black;
@@ -712,10 +685,9 @@ namespace BlackJack
             // 
             this.insuranceLabel.AutoSize = true;
             this.insuranceLabel.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insuranceLabel.Location = new System.Drawing.Point(7, 210);
-            this.insuranceLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.insuranceLabel.Location = new System.Drawing.Point(5, 171);
             this.insuranceLabel.Name = "insuranceLabel";
-            this.insuranceLabel.Size = new System.Drawing.Size(264, 40);
+            this.insuranceLabel.Size = new System.Drawing.Size(210, 32);
             this.insuranceLabel.TabIndex = 39;
             this.insuranceLabel.Text = "Insurance: $0";
             this.insuranceLabel.Visible = false;
@@ -725,10 +697,10 @@ namespace BlackJack
             this.myHand10.BackColor = System.Drawing.Color.Transparent;
             this.myHand10.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.myHand10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.myHand10.Location = new System.Drawing.Point(364, 380);
-            this.myHand10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.myHand10.Location = new System.Drawing.Point(273, 309);
+            this.myHand10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.myHand10.Name = "myHand10";
-            this.myHand10.Size = new System.Drawing.Size(97, 134);
+            this.myHand10.Size = new System.Drawing.Size(73, 109);
             this.myHand10.TabIndex = 43;
             this.myHand10.TabStop = false;
             this.myHand10.Visible = false;
@@ -738,10 +710,10 @@ namespace BlackJack
             this.myHand9.BackColor = System.Drawing.Color.Transparent;
             this.myHand9.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.myHand9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.myHand9.Location = new System.Drawing.Point(337, 380);
-            this.myHand9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.myHand9.Location = new System.Drawing.Point(253, 309);
+            this.myHand9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.myHand9.Name = "myHand9";
-            this.myHand9.Size = new System.Drawing.Size(97, 134);
+            this.myHand9.Size = new System.Drawing.Size(73, 109);
             this.myHand9.TabIndex = 42;
             this.myHand9.TabStop = false;
             this.myHand9.Visible = false;
@@ -751,10 +723,10 @@ namespace BlackJack
             this.myHand8.BackColor = System.Drawing.Color.Transparent;
             this.myHand8.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.myHand8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.myHand8.Location = new System.Drawing.Point(311, 380);
-            this.myHand8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.myHand8.Location = new System.Drawing.Point(233, 309);
+            this.myHand8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.myHand8.Name = "myHand8";
-            this.myHand8.Size = new System.Drawing.Size(97, 134);
+            this.myHand8.Size = new System.Drawing.Size(73, 109);
             this.myHand8.TabIndex = 41;
             this.myHand8.TabStop = false;
             this.myHand8.Visible = false;
@@ -764,10 +736,10 @@ namespace BlackJack
             this.myHand7.BackColor = System.Drawing.Color.Transparent;
             this.myHand7.BackgroundImage = global::BlackJack.Properties.Resources._2C;
             this.myHand7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.myHand7.Location = new System.Drawing.Point(284, 380);
-            this.myHand7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.myHand7.Location = new System.Drawing.Point(213, 309);
+            this.myHand7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.myHand7.Name = "myHand7";
-            this.myHand7.Size = new System.Drawing.Size(97, 134);
+            this.myHand7.Size = new System.Drawing.Size(73, 109);
             this.myHand7.TabIndex = 40;
             this.myHand7.TabStop = false;
             this.myHand7.Visible = false;
@@ -777,10 +749,10 @@ namespace BlackJack
             this.myHand6.BackColor = System.Drawing.Color.Transparent;
             this.myHand6.BackgroundImage = global::BlackJack.Properties.Resources._10C;
             this.myHand6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.myHand6.Location = new System.Drawing.Point(257, 380);
-            this.myHand6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.myHand6.Location = new System.Drawing.Point(193, 309);
+            this.myHand6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.myHand6.Name = "myHand6";
-            this.myHand6.Size = new System.Drawing.Size(97, 134);
+            this.myHand6.Size = new System.Drawing.Size(73, 109);
             this.myHand6.TabIndex = 39;
             this.myHand6.TabStop = false;
             this.myHand6.Visible = false;
@@ -795,13 +767,12 @@ namespace BlackJack
             this.insuranceButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.insuranceButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.insuranceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insuranceButton.Location = new System.Drawing.Point(49, 260);
-            this.insuranceButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.insuranceButton.Location = new System.Drawing.Point(37, 211);
             this.insuranceButton.Name = "insuranceButton";
             this.insuranceButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.insuranceButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.insuranceButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.insuranceButton.Size = new System.Drawing.Size(121, 50);
+            this.insuranceButton.Size = new System.Drawing.Size(91, 41);
             this.insuranceButton.TabIndex = 38;
             this.insuranceButton.Text = "Insurance";
             this.insuranceButton.TextColor = System.Drawing.Color.Black;
@@ -819,13 +790,12 @@ namespace BlackJack
             this.splitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.splitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.splitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splitButton.Location = new System.Drawing.Point(447, 295);
-            this.splitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitButton.Location = new System.Drawing.Point(335, 240);
             this.splitButton.Name = "splitButton";
             this.splitButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.splitButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.splitButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.splitButton.Size = new System.Drawing.Size(99, 43);
+            this.splitButton.Size = new System.Drawing.Size(74, 35);
             this.splitButton.TabIndex = 46;
             this.splitButton.Text = "Split";
             this.splitButton.TextColor = System.Drawing.Color.Black;
@@ -836,10 +806,9 @@ namespace BlackJack
             // 
             this.blinkPanel.BackColor = System.Drawing.Color.DarkGreen;
             this.blinkPanel.Controls.Add(this.panel1);
-            this.blinkPanel.Location = new System.Drawing.Point(3, 314);
-            this.blinkPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.blinkPanel.Location = new System.Drawing.Point(2, 255);
             this.blinkPanel.Name = "blinkPanel";
-            this.blinkPanel.Size = new System.Drawing.Size(221, 204);
+            this.blinkPanel.Size = new System.Drawing.Size(166, 166);
             this.blinkPanel.TabIndex = 30;
             // 
             // hitButton
@@ -852,13 +821,12 @@ namespace BlackJack
             this.hitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.hitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.hitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hitButton.Location = new System.Drawing.Point(591, 261);
-            this.hitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.hitButton.Location = new System.Drawing.Point(443, 212);
             this.hitButton.Name = "hitButton";
             this.hitButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.hitButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.hitButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.hitButton.Size = new System.Drawing.Size(105, 44);
+            this.hitButton.Size = new System.Drawing.Size(79, 36);
             this.hitButton.TabIndex = 27;
             this.hitButton.Text = "Hit";
             this.hitButton.TextColor = System.Drawing.Color.Black;
@@ -875,13 +843,12 @@ namespace BlackJack
             this.standButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.standButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.standButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.standButton.Location = new System.Drawing.Point(275, 260);
-            this.standButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.standButton.Location = new System.Drawing.Point(206, 211);
             this.standButton.Name = "standButton";
             this.standButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.standButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.standButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.standButton.Size = new System.Drawing.Size(115, 44);
+            this.standButton.Size = new System.Drawing.Size(86, 36);
             this.standButton.TabIndex = 26;
             this.standButton.Text = "Stand";
             this.standButton.TextColor = System.Drawing.Color.Black;
@@ -898,13 +865,12 @@ namespace BlackJack
             this.dealButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.dealButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dealButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dealButton.Location = new System.Drawing.Point(379, 190);
-            this.dealButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dealButton.Location = new System.Drawing.Point(292, 154);
             this.dealButton.Name = "dealButton";
             this.dealButton.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.dealButton.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.dealButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.dealButton.Size = new System.Drawing.Size(215, 71);
+            this.dealButton.Size = new System.Drawing.Size(161, 58);
             this.dealButton.TabIndex = 25;
             this.dealButton.Text = "Deal Hand";
             this.dealButton.TextColor = System.Drawing.Color.Black;
@@ -923,10 +889,9 @@ namespace BlackJack
             this.newPassPanel.Controls.Add(this.confirmPasswordTextField);
             this.newPassPanel.Controls.Add(this.newPasswordTextField);
             this.newPassPanel.Controls.Add(this.panel10);
-            this.newPassPanel.Location = new System.Drawing.Point(1445, 6);
-            this.newPassPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.newPassPanel.Location = new System.Drawing.Point(1084, 5);
             this.newPassPanel.Name = "newPassPanel";
-            this.newPassPanel.Size = new System.Drawing.Size(501, 433);
+            this.newPassPanel.Size = new System.Drawing.Size(376, 352);
             this.newPassPanel.TabIndex = 36;
             this.newPassPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.newPassPanel_Paint);
             // 
@@ -936,10 +901,9 @@ namespace BlackJack
             this.passDontMatchLabel.BackColor = System.Drawing.Color.Transparent;
             this.passDontMatchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passDontMatchLabel.ForeColor = System.Drawing.Color.Red;
-            this.passDontMatchLabel.Location = new System.Drawing.Point(136, 315);
-            this.passDontMatchLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.passDontMatchLabel.Location = new System.Drawing.Point(102, 256);
             this.passDontMatchLabel.Name = "passDontMatchLabel";
-            this.passDontMatchLabel.Size = new System.Drawing.Size(215, 24);
+            this.passDontMatchLabel.Size = new System.Drawing.Size(174, 18);
             this.passDontMatchLabel.TabIndex = 18;
             this.passDontMatchLabel.Text = "Passwords do not match";
             // 
@@ -948,10 +912,9 @@ namespace BlackJack
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.ForeColor = System.Drawing.Color.Teal;
-            this.label9.Location = new System.Drawing.Point(215, 406);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(161, 330);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 17);
+            this.label9.Size = new System.Drawing.Size(40, 13);
             this.label9.TabIndex = 17;
             this.label9.Text = "Cancel";
             this.label9.Click += new System.EventHandler(this.Label9_Click);
@@ -965,10 +928,9 @@ namespace BlackJack
             this.setPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.setPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.setPassword.ForeColor = System.Drawing.Color.White;
-            this.setPassword.Location = new System.Drawing.Point(84, 350);
-            this.setPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.setPassword.Location = new System.Drawing.Point(63, 284);
             this.setPassword.Name = "setPassword";
-            this.setPassword.Size = new System.Drawing.Size(328, 43);
+            this.setPassword.Size = new System.Drawing.Size(246, 35);
             this.setPassword.TabIndex = 16;
             this.setPassword.Text = "Set Password";
             this.setPassword.UseVisualStyleBackColor = false;
@@ -980,10 +942,9 @@ namespace BlackJack
             this.confirmNewPassword.BackColor = System.Drawing.Color.Transparent;
             this.confirmNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmNewPassword.ForeColor = System.Drawing.Color.Gray;
-            this.confirmNewPassword.Location = new System.Drawing.Point(80, 247);
-            this.confirmNewPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.confirmNewPassword.Location = new System.Drawing.Point(60, 201);
             this.confirmNewPassword.Name = "confirmNewPassword";
-            this.confirmNewPassword.Size = new System.Drawing.Size(185, 20);
+            this.confirmNewPassword.Size = new System.Drawing.Size(146, 16);
             this.confirmNewPassword.TabIndex = 15;
             this.confirmNewPassword.Text = "Confirm New Password";
             // 
@@ -993,10 +954,9 @@ namespace BlackJack
             this.newPassword.BackColor = System.Drawing.Color.Transparent;
             this.newPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newPassword.ForeColor = System.Drawing.Color.Gray;
-            this.newPassword.Location = new System.Drawing.Point(83, 162);
-            this.newPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.newPassword.Location = new System.Drawing.Point(62, 132);
             this.newPassword.Name = "newPassword";
-            this.newPassword.Size = new System.Drawing.Size(121, 20);
+            this.newPassword.Size = new System.Drawing.Size(98, 16);
             this.newPassword.TabIndex = 13;
             this.newPassword.Text = "New Password";
             // 
@@ -1006,10 +966,9 @@ namespace BlackJack
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(53, 78);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(40, 63);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(355, 31);
+            this.label12.Size = new System.Drawing.Size(282, 25);
             this.label12.TabIndex = 11;
             this.label12.Text = "Please enter new password.";
             // 
@@ -1020,11 +979,10 @@ namespace BlackJack
             this.confirmPasswordTextField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.confirmPasswordTextField.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmPasswordTextField.ForeColor = System.Drawing.Color.Gray;
-            this.confirmPasswordTextField.Location = new System.Drawing.Point(84, 273);
-            this.confirmPasswordTextField.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.confirmPasswordTextField.Location = new System.Drawing.Point(63, 222);
             this.confirmPasswordTextField.Name = "confirmPasswordTextField";
             this.confirmPasswordTextField.PasswordChar = '*';
-            this.confirmPasswordTextField.Size = new System.Drawing.Size(327, 29);
+            this.confirmPasswordTextField.Size = new System.Drawing.Size(246, 24);
             this.confirmPasswordTextField.TabIndex = 10;
             this.confirmPasswordTextField.TextChanged += new System.EventHandler(this.MyTextBox3_TextChanged);
             // 
@@ -1035,20 +993,18 @@ namespace BlackJack
             this.newPasswordTextField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.newPasswordTextField.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newPasswordTextField.ForeColor = System.Drawing.Color.Gray;
-            this.newPasswordTextField.Location = new System.Drawing.Point(84, 186);
-            this.newPasswordTextField.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.newPasswordTextField.Location = new System.Drawing.Point(63, 151);
             this.newPasswordTextField.Name = "newPasswordTextField";
             this.newPasswordTextField.PasswordChar = '*';
-            this.newPasswordTextField.Size = new System.Drawing.Size(327, 29);
+            this.newPasswordTextField.Size = new System.Drawing.Size(246, 24);
             this.newPasswordTextField.TabIndex = 8;
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.Transparent;
-            this.panel10.Location = new System.Drawing.Point(87, 69);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel10.Location = new System.Drawing.Point(65, 56);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(157, 4);
+            this.panel10.Size = new System.Drawing.Size(118, 3);
             this.panel10.TabIndex = 5;
             // 
             // forgotPanel
@@ -1063,10 +1019,9 @@ namespace BlackJack
             this.forgotPanel.Controls.Add(this.verifyPhoneNum);
             this.forgotPanel.Controls.Add(this.verifyUsername);
             this.forgotPanel.Controls.Add(this.panel9);
-            this.forgotPanel.Location = new System.Drawing.Point(1585, 453);
-            this.forgotPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.forgotPanel.Location = new System.Drawing.Point(1189, 368);
             this.forgotPanel.Name = "forgotPanel";
-            this.forgotPanel.Size = new System.Drawing.Size(501, 433);
+            this.forgotPanel.Size = new System.Drawing.Size(376, 352);
             this.forgotPanel.TabIndex = 35;
             // 
             // noUserLabel
@@ -1075,10 +1030,9 @@ namespace BlackJack
             this.noUserLabel.BackColor = System.Drawing.Color.Transparent;
             this.noUserLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noUserLabel.ForeColor = System.Drawing.Color.Red;
-            this.noUserLabel.Location = new System.Drawing.Point(92, 314);
-            this.noUserLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.noUserLabel.Location = new System.Drawing.Point(69, 255);
             this.noUserLabel.Name = "noUserLabel";
-            this.noUserLabel.Size = new System.Drawing.Size(298, 24);
+            this.noUserLabel.Size = new System.Drawing.Size(238, 18);
             this.noUserLabel.TabIndex = 18;
             this.noUserLabel.Text = "Information does not match a user.";
             // 
@@ -1087,10 +1041,9 @@ namespace BlackJack
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.Color.Teal;
-            this.label4.Location = new System.Drawing.Point(215, 406);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(161, 330);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 17);
+            this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 17;
             this.label4.Text = "Cancel";
             this.label4.Click += new System.EventHandler(this.Label4_Click);
@@ -1104,10 +1057,9 @@ namespace BlackJack
             this.verifyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.verifyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.verifyButton.ForeColor = System.Drawing.Color.White;
-            this.verifyButton.Location = new System.Drawing.Point(84, 350);
-            this.verifyButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.verifyButton.Location = new System.Drawing.Point(63, 284);
             this.verifyButton.Name = "verifyButton";
-            this.verifyButton.Size = new System.Drawing.Size(328, 43);
+            this.verifyButton.Size = new System.Drawing.Size(246, 35);
             this.verifyButton.TabIndex = 16;
             this.verifyButton.Text = "Verify";
             this.verifyButton.UseVisualStyleBackColor = false;
@@ -1119,10 +1071,9 @@ namespace BlackJack
             this.verifyUserLabel1.BackColor = System.Drawing.Color.Transparent;
             this.verifyUserLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.verifyUserLabel1.ForeColor = System.Drawing.Color.Gray;
-            this.verifyUserLabel1.Location = new System.Drawing.Point(80, 247);
-            this.verifyUserLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.verifyUserLabel1.Location = new System.Drawing.Point(60, 201);
             this.verifyUserLabel1.Name = "verifyUserLabel1";
-            this.verifyUserLabel1.Size = new System.Drawing.Size(120, 20);
+            this.verifyUserLabel1.Size = new System.Drawing.Size(98, 16);
             this.verifyUserLabel1.TabIndex = 15;
             this.verifyUserLabel1.Text = "Phone Number";
             this.verifyUserLabel1.Click += new System.EventHandler(this.Label5_Click);
@@ -1133,10 +1084,9 @@ namespace BlackJack
             this.UsernameLabelVerify.BackColor = System.Drawing.Color.Transparent;
             this.UsernameLabelVerify.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameLabelVerify.ForeColor = System.Drawing.Color.Gray;
-            this.UsernameLabelVerify.Location = new System.Drawing.Point(83, 162);
-            this.UsernameLabelVerify.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.UsernameLabelVerify.Location = new System.Drawing.Point(62, 132);
             this.UsernameLabelVerify.Name = "UsernameLabelVerify";
-            this.UsernameLabelVerify.Size = new System.Drawing.Size(94, 20);
+            this.UsernameLabelVerify.Size = new System.Drawing.Size(77, 16);
             this.UsernameLabelVerify.TabIndex = 13;
             this.UsernameLabelVerify.Text = "User Name";
             // 
@@ -1146,10 +1096,9 @@ namespace BlackJack
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(53, 80);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(40, 65);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(371, 31);
+            this.label7.Size = new System.Drawing.Size(296, 25);
             this.label7.TabIndex = 11;
             this.label7.Text = "Please verify user information";
             this.label7.Click += new System.EventHandler(this.Label7_Click);
@@ -1161,10 +1110,9 @@ namespace BlackJack
             this.verifyPhoneNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.verifyPhoneNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.verifyPhoneNum.ForeColor = System.Drawing.Color.Gray;
-            this.verifyPhoneNum.Location = new System.Drawing.Point(84, 273);
-            this.verifyPhoneNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.verifyPhoneNum.Location = new System.Drawing.Point(63, 222);
             this.verifyPhoneNum.Name = "verifyPhoneNum";
-            this.verifyPhoneNum.Size = new System.Drawing.Size(327, 29);
+            this.verifyPhoneNum.Size = new System.Drawing.Size(246, 24);
             this.verifyPhoneNum.TabIndex = 10;
             // 
             // verifyUsername
@@ -1174,19 +1122,17 @@ namespace BlackJack
             this.verifyUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.verifyUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.verifyUsername.ForeColor = System.Drawing.Color.Gray;
-            this.verifyUsername.Location = new System.Drawing.Point(84, 186);
-            this.verifyUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.verifyUsername.Location = new System.Drawing.Point(63, 151);
             this.verifyUsername.Name = "verifyUsername";
-            this.verifyUsername.Size = new System.Drawing.Size(325, 29);
+            this.verifyUsername.Size = new System.Drawing.Size(244, 24);
             this.verifyUsername.TabIndex = 8;
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.Transparent;
-            this.panel9.Location = new System.Drawing.Point(57, 44);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Location = new System.Drawing.Point(43, 36);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(105, 2);
+            this.panel9.Size = new System.Drawing.Size(79, 2);
             this.panel9.TabIndex = 5;
             // 
             // SignUpPanel
@@ -1210,10 +1156,9 @@ namespace BlackJack
             this.SignUpPanel.Controls.Add(this.underSignUp);
             this.SignUpPanel.Controls.Add(this.SignInButton);
             this.SignUpPanel.Controls.Add(this.signUpButton);
-            this.SignUpPanel.Location = new System.Drawing.Point(23, 38);
-            this.SignUpPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SignUpPanel.Location = new System.Drawing.Point(17, 31);
             this.SignUpPanel.Name = "SignUpPanel";
-            this.SignUpPanel.Size = new System.Drawing.Size(501, 433);
+            this.SignUpPanel.Size = new System.Drawing.Size(376, 352);
             this.SignUpPanel.TabIndex = 33;
             this.SignUpPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.SignUpPanel_Paint);
             // 
@@ -1223,10 +1168,9 @@ namespace BlackJack
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(52, 356);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(39, 289);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(384, 24);
+            this.label2.Size = new System.Drawing.Size(308, 18);
             this.label2.TabIndex = 19;
             this.label2.Text = "User does not exist or password is incorrect. ";
             // 
@@ -1236,10 +1180,9 @@ namespace BlackJack
             this.phoneLabel.BackColor = System.Drawing.Color.Transparent;
             this.phoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneLabel.ForeColor = System.Drawing.Color.Gray;
-            this.phoneLabel.Location = new System.Drawing.Point(83, 154);
-            this.phoneLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.phoneLabel.Location = new System.Drawing.Point(62, 125);
             this.phoneLabel.Name = "phoneLabel";
-            this.phoneLabel.Size = new System.Drawing.Size(108, 18);
+            this.phoneLabel.Size = new System.Drawing.Size(91, 15);
             this.phoneLabel.TabIndex = 20;
             this.phoneLabel.Text = "Phone Number";
             // 
@@ -1250,10 +1193,9 @@ namespace BlackJack
             this.phoneBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.phoneBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneBox.ForeColor = System.Drawing.Color.Gray;
-            this.phoneBox.Location = new System.Drawing.Point(87, 176);
-            this.phoneBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.phoneBox.Location = new System.Drawing.Point(65, 143);
             this.phoneBox.Name = "phoneBox";
-            this.phoneBox.Size = new System.Drawing.Size(327, 29);
+            this.phoneBox.Size = new System.Drawing.Size(246, 24);
             this.phoneBox.TabIndex = 19;
             this.phoneBox.TextChanged += new System.EventHandler(this.phoneBox_TextChanged);
             // 
@@ -1263,10 +1205,9 @@ namespace BlackJack
             this.ccLabel.BackColor = System.Drawing.Color.Transparent;
             this.ccLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ccLabel.ForeColor = System.Drawing.Color.Gray;
-            this.ccLabel.Location = new System.Drawing.Point(83, 204);
-            this.ccLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ccLabel.Location = new System.Drawing.Point(62, 166);
             this.ccLabel.Name = "ccLabel";
-            this.ccLabel.Size = new System.Drawing.Size(140, 18);
+            this.ccLabel.Size = new System.Drawing.Size(116, 15);
             this.ccLabel.TabIndex = 18;
             this.ccLabel.Text = "Credit Card Number";
             // 
@@ -1277,10 +1218,9 @@ namespace BlackJack
             this.creditCardBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.creditCardBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.creditCardBox.ForeColor = System.Drawing.Color.Gray;
-            this.creditCardBox.Location = new System.Drawing.Point(87, 223);
-            this.creditCardBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.creditCardBox.Location = new System.Drawing.Point(65, 181);
             this.creditCardBox.Name = "creditCardBox";
-            this.creditCardBox.Size = new System.Drawing.Size(327, 29);
+            this.creditCardBox.Size = new System.Drawing.Size(246, 24);
             this.creditCardBox.TabIndex = 17;
             // 
             // SignUpConfirm
@@ -1292,10 +1232,9 @@ namespace BlackJack
             this.SignUpConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignUpConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUpConfirm.ForeColor = System.Drawing.Color.White;
-            this.SignUpConfirm.Location = new System.Drawing.Point(87, 384);
-            this.SignUpConfirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SignUpConfirm.Location = new System.Drawing.Point(65, 312);
             this.SignUpConfirm.Name = "SignUpConfirm";
-            this.SignUpConfirm.Size = new System.Drawing.Size(328, 43);
+            this.SignUpConfirm.Size = new System.Drawing.Size(246, 35);
             this.SignUpConfirm.TabIndex = 16;
             this.SignUpConfirm.Text = "Sign Up";
             this.SignUpConfirm.UseVisualStyleBackColor = false;
@@ -1307,10 +1246,9 @@ namespace BlackJack
             this.passwordLabel.BackColor = System.Drawing.Color.Transparent;
             this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordLabel.ForeColor = System.Drawing.Color.Gray;
-            this.passwordLabel.Location = new System.Drawing.Point(83, 303);
-            this.passwordLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.passwordLabel.Location = new System.Drawing.Point(62, 246);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(75, 18);
+            this.passwordLabel.Size = new System.Drawing.Size(61, 15);
             this.passwordLabel.TabIndex = 15;
             this.passwordLabel.Text = "Password";
             // 
@@ -1320,10 +1258,9 @@ namespace BlackJack
             this.addressLabel.BackColor = System.Drawing.Color.Transparent;
             this.addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addressLabel.ForeColor = System.Drawing.Color.Gray;
-            this.addressLabel.Location = new System.Drawing.Point(83, 254);
-            this.addressLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.addressLabel.Location = new System.Drawing.Point(62, 206);
             this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(62, 18);
+            this.addressLabel.Size = new System.Drawing.Size(51, 15);
             this.addressLabel.TabIndex = 14;
             this.addressLabel.Text = "Address";
             // 
@@ -1333,10 +1270,9 @@ namespace BlackJack
             this.usernameLabel.BackColor = System.Drawing.Color.Transparent;
             this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameLabel.ForeColor = System.Drawing.Color.Gray;
-            this.usernameLabel.Location = new System.Drawing.Point(253, 106);
-            this.usernameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.usernameLabel.Location = new System.Drawing.Point(190, 86);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(77, 18);
+            this.usernameLabel.Size = new System.Drawing.Size(65, 15);
             this.usernameLabel.TabIndex = 13;
             this.usernameLabel.Text = "Username";
             // 
@@ -1346,10 +1282,9 @@ namespace BlackJack
             this.FirstLabel.BackColor = System.Drawing.Color.Transparent;
             this.FirstLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstLabel.ForeColor = System.Drawing.Color.Gray;
-            this.FirstLabel.Location = new System.Drawing.Point(83, 106);
-            this.FirstLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.FirstLabel.Location = new System.Drawing.Point(62, 86);
             this.FirstLabel.Name = "FirstLabel";
-            this.FirstLabel.Size = new System.Drawing.Size(48, 18);
+            this.FirstLabel.Size = new System.Drawing.Size(41, 15);
             this.FirstLabel.TabIndex = 12;
             this.FirstLabel.Text = "Name";
             this.FirstLabel.Click += new System.EventHandler(this.FirstLabel_Click);
@@ -1360,10 +1295,9 @@ namespace BlackJack
             this.CreateAccount.BackColor = System.Drawing.Color.Transparent;
             this.CreateAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateAccount.ForeColor = System.Drawing.Color.White;
-            this.CreateAccount.Location = new System.Drawing.Point(132, 79);
-            this.CreateAccount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.CreateAccount.Location = new System.Drawing.Point(99, 64);
             this.CreateAccount.Name = "CreateAccount";
-            this.CreateAccount.Size = new System.Drawing.Size(221, 31);
+            this.CreateAccount.Size = new System.Drawing.Size(176, 25);
             this.CreateAccount.TabIndex = 11;
             this.CreateAccount.Text = "Sign Up For Free";
             this.CreateAccount.Click += new System.EventHandler(this.Label1_Click);
@@ -1375,11 +1309,10 @@ namespace BlackJack
             this.passwordBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.passwordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordBox.ForeColor = System.Drawing.Color.Gray;
-            this.passwordBox.Location = new System.Drawing.Point(87, 321);
-            this.passwordBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.passwordBox.Location = new System.Drawing.Point(65, 261);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.PasswordChar = '*';
-            this.passwordBox.Size = new System.Drawing.Size(327, 29);
+            this.passwordBox.Size = new System.Drawing.Size(246, 24);
             this.passwordBox.TabIndex = 10;
             // 
             // addressBox
@@ -1389,10 +1322,9 @@ namespace BlackJack
             this.addressBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.addressBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addressBox.ForeColor = System.Drawing.Color.Gray;
-            this.addressBox.Location = new System.Drawing.Point(87, 272);
-            this.addressBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addressBox.Location = new System.Drawing.Point(65, 221);
             this.addressBox.Name = "addressBox";
-            this.addressBox.Size = new System.Drawing.Size(327, 29);
+            this.addressBox.Size = new System.Drawing.Size(246, 24);
             this.addressBox.TabIndex = 9;
             // 
             // usernameBox
@@ -1402,10 +1334,9 @@ namespace BlackJack
             this.usernameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.usernameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameBox.ForeColor = System.Drawing.Color.Gray;
-            this.usernameBox.Location = new System.Drawing.Point(257, 124);
-            this.usernameBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usernameBox.Location = new System.Drawing.Point(193, 101);
             this.usernameBox.Name = "usernameBox";
-            this.usernameBox.Size = new System.Drawing.Size(157, 29);
+            this.usernameBox.Size = new System.Drawing.Size(118, 24);
             this.usernameBox.TabIndex = 8;
             // 
             // nameBox
@@ -1415,18 +1346,16 @@ namespace BlackJack
             this.nameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameBox.ForeColor = System.Drawing.Color.Gray;
-            this.nameBox.Location = new System.Drawing.Point(87, 124);
-            this.nameBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nameBox.Location = new System.Drawing.Point(65, 101);
             this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(157, 29);
+            this.nameBox.Size = new System.Drawing.Size(118, 24);
             this.nameBox.TabIndex = 7;
             // 
             // underSignUp
             // 
-            this.underSignUp.Location = new System.Drawing.Point(87, 69);
-            this.underSignUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.underSignUp.Location = new System.Drawing.Point(65, 56);
             this.underSignUp.Name = "underSignUp";
-            this.underSignUp.Size = new System.Drawing.Size(157, 4);
+            this.underSignUp.Size = new System.Drawing.Size(118, 3);
             this.underSignUp.TabIndex = 5;
             // 
             // SignInButton
@@ -1438,10 +1367,9 @@ namespace BlackJack
             this.SignInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignInButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignInButton.ForeColor = System.Drawing.Color.White;
-            this.SignInButton.Location = new System.Drawing.Point(257, 27);
-            this.SignInButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SignInButton.Location = new System.Drawing.Point(193, 22);
             this.SignInButton.Name = "SignInButton";
-            this.SignInButton.Size = new System.Drawing.Size(157, 43);
+            this.SignInButton.Size = new System.Drawing.Size(118, 35);
             this.SignInButton.TabIndex = 4;
             this.SignInButton.Text = "Sign In";
             this.SignInButton.UseVisualStyleBackColor = false;
@@ -1457,10 +1385,9 @@ namespace BlackJack
             this.signUpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.signUpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signUpButton.ForeColor = System.Drawing.Color.White;
-            this.signUpButton.Location = new System.Drawing.Point(87, 27);
-            this.signUpButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.signUpButton.Location = new System.Drawing.Point(65, 22);
             this.signUpButton.Name = "signUpButton";
-            this.signUpButton.Size = new System.Drawing.Size(157, 43);
+            this.signUpButton.Size = new System.Drawing.Size(118, 35);
             this.signUpButton.TabIndex = 2;
             this.signUpButton.Text = "Sign Up";
             this.signUpButton.UseVisualStyleBackColor = false;
@@ -1468,19 +1395,17 @@ namespace BlackJack
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.panel4.Location = new System.Drawing.Point(1053, -1);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Location = new System.Drawing.Point(790, -1);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(13, 549);
+            this.panel4.Size = new System.Drawing.Size(10, 446);
             this.panel4.TabIndex = 30;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.panel5.Location = new System.Drawing.Point(0, 10);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Location = new System.Drawing.Point(0, 8);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(13, 549);
+            this.panel5.Size = new System.Drawing.Size(10, 446);
             this.panel5.TabIndex = 31;
             // 
             // BetTimer
@@ -1503,10 +1428,9 @@ namespace BlackJack
             this.SignInPanel.Controls.Add(this.panel8);
             this.SignInPanel.Controls.Add(this.button2);
             this.SignInPanel.Controls.Add(this.SignUpButton2);
-            this.SignInPanel.Location = new System.Drawing.Point(532, 38);
-            this.SignInPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SignInPanel.Location = new System.Drawing.Point(399, 31);
             this.SignInPanel.Name = "SignInPanel";
-            this.SignInPanel.Size = new System.Drawing.Size(501, 433);
+            this.SignInPanel.Size = new System.Drawing.Size(376, 352);
             this.SignInPanel.TabIndex = 34;
             // 
             // incorrectLabel
@@ -1515,10 +1439,9 @@ namespace BlackJack
             this.incorrectLabel.BackColor = System.Drawing.Color.Transparent;
             this.incorrectLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.incorrectLabel.ForeColor = System.Drawing.Color.Red;
-            this.incorrectLabel.Location = new System.Drawing.Point(52, 316);
-            this.incorrectLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.incorrectLabel.Location = new System.Drawing.Point(39, 257);
             this.incorrectLabel.Name = "incorrectLabel";
-            this.incorrectLabel.Size = new System.Drawing.Size(384, 24);
+            this.incorrectLabel.Size = new System.Drawing.Size(308, 18);
             this.incorrectLabel.TabIndex = 18;
             this.incorrectLabel.Text = "User does not exist or password is incorrect. ";
             this.incorrectLabel.Click += new System.EventHandler(this.Label2_Click);
@@ -1529,10 +1452,9 @@ namespace BlackJack
             this.forgotLabel.BackColor = System.Drawing.Color.Transparent;
             this.forgotLabel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.forgotLabel.ForeColor = System.Drawing.Color.Teal;
-            this.forgotLabel.Location = new System.Drawing.Point(192, 404);
-            this.forgotLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.forgotLabel.Location = new System.Drawing.Point(144, 328);
             this.forgotLabel.Name = "forgotLabel";
-            this.forgotLabel.Size = new System.Drawing.Size(114, 17);
+            this.forgotLabel.Size = new System.Drawing.Size(86, 13);
             this.forgotLabel.TabIndex = 17;
             this.forgotLabel.Text = "Forgot Password";
             this.forgotLabel.Click += new System.EventHandler(this.Label1_Click_1);
@@ -1546,10 +1468,9 @@ namespace BlackJack
             this.SignInConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignInConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignInConfirm.ForeColor = System.Drawing.Color.White;
-            this.SignInConfirm.Location = new System.Drawing.Point(84, 350);
-            this.SignInConfirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SignInConfirm.Location = new System.Drawing.Point(63, 284);
             this.SignInConfirm.Name = "SignInConfirm";
-            this.SignInConfirm.Size = new System.Drawing.Size(328, 43);
+            this.SignInConfirm.Size = new System.Drawing.Size(246, 35);
             this.SignInConfirm.TabIndex = 16;
             this.SignInConfirm.Text = "Sign In";
             this.SignInConfirm.UseVisualStyleBackColor = false;
@@ -1561,10 +1482,9 @@ namespace BlackJack
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(80, 261);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(60, 212);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 20);
+            this.label3.Size = new System.Drawing.Size(68, 16);
             this.label3.TabIndex = 15;
             this.label3.Text = "Password";
             // 
@@ -1574,10 +1494,9 @@ namespace BlackJack
             this.usernameLabel2.BackColor = System.Drawing.Color.Transparent;
             this.usernameLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameLabel2.ForeColor = System.Drawing.Color.Gray;
-            this.usernameLabel2.Location = new System.Drawing.Point(83, 164);
-            this.usernameLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.usernameLabel2.Location = new System.Drawing.Point(62, 133);
             this.usernameLabel2.Name = "usernameLabel2";
-            this.usernameLabel2.Size = new System.Drawing.Size(94, 20);
+            this.usernameLabel2.Size = new System.Drawing.Size(77, 16);
             this.usernameLabel2.TabIndex = 13;
             this.usernameLabel2.Text = "User Name";
             // 
@@ -1587,10 +1506,9 @@ namespace BlackJack
             this.welcomeBack.BackColor = System.Drawing.Color.Transparent;
             this.welcomeBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.welcomeBack.ForeColor = System.Drawing.Color.White;
-            this.welcomeBack.Location = new System.Drawing.Point(53, 98);
-            this.welcomeBack.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.welcomeBack.Location = new System.Drawing.Point(40, 80);
             this.welcomeBack.Name = "welcomeBack";
-            this.welcomeBack.Size = new System.Drawing.Size(365, 31);
+            this.welcomeBack.Size = new System.Drawing.Size(292, 25);
             this.welcomeBack.TabIndex = 11;
             this.welcomeBack.Text = "Welcome Back! Please Login";
             // 
@@ -1601,11 +1519,10 @@ namespace BlackJack
             this.passwordBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.passwordBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordBox2.ForeColor = System.Drawing.Color.Gray;
-            this.passwordBox2.Location = new System.Drawing.Point(84, 283);
-            this.passwordBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.passwordBox2.Location = new System.Drawing.Point(63, 230);
             this.passwordBox2.Name = "passwordBox2";
             this.passwordBox2.PasswordChar = '*';
-            this.passwordBox2.Size = new System.Drawing.Size(327, 29);
+            this.passwordBox2.Size = new System.Drawing.Size(246, 24);
             this.passwordBox2.TabIndex = 10;
             // 
             // UserNameBox2
@@ -1615,29 +1532,26 @@ namespace BlackJack
             this.UserNameBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.UserNameBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserNameBox2.ForeColor = System.Drawing.Color.Gray;
-            this.UserNameBox2.Location = new System.Drawing.Point(84, 186);
-            this.UserNameBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UserNameBox2.Location = new System.Drawing.Point(63, 151);
             this.UserNameBox2.Name = "UserNameBox2";
-            this.UserNameBox2.Size = new System.Drawing.Size(327, 29);
+            this.UserNameBox2.Size = new System.Drawing.Size(246, 24);
             this.UserNameBox2.TabIndex = 8;
             this.UserNameBox2.TextChanged += new System.EventHandler(this.UserNameBox2_TextChanged);
             // 
             // underSignIn2
             // 
             this.underSignIn2.BackColor = System.Drawing.Color.DarkRed;
-            this.underSignIn2.Location = new System.Drawing.Point(257, 69);
-            this.underSignIn2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.underSignIn2.Location = new System.Drawing.Point(193, 56);
             this.underSignIn2.Name = "underSignIn2";
-            this.underSignIn2.Size = new System.Drawing.Size(157, 4);
+            this.underSignIn2.Size = new System.Drawing.Size(118, 3);
             this.underSignIn2.TabIndex = 6;
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Transparent;
-            this.panel8.Location = new System.Drawing.Point(87, 69);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Location = new System.Drawing.Point(65, 56);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(157, 4);
+            this.panel8.Size = new System.Drawing.Size(118, 3);
             this.panel8.TabIndex = 5;
             // 
             // button2
@@ -1650,10 +1564,9 @@ namespace BlackJack
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(257, 27);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(193, 22);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(157, 43);
+            this.button2.Size = new System.Drawing.Size(118, 35);
             this.button2.TabIndex = 4;
             this.button2.Text = "Sign In";
             this.button2.UseVisualStyleBackColor = false;
@@ -1667,10 +1580,9 @@ namespace BlackJack
             this.SignUpButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignUpButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUpButton2.ForeColor = System.Drawing.Color.White;
-            this.SignUpButton2.Location = new System.Drawing.Point(87, 27);
-            this.SignUpButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SignUpButton2.Location = new System.Drawing.Point(65, 22);
             this.SignUpButton2.Name = "SignUpButton2";
-            this.SignUpButton2.Size = new System.Drawing.Size(157, 43);
+            this.SignUpButton2.Size = new System.Drawing.Size(118, 35);
             this.SignUpButton2.TabIndex = 2;
             this.SignUpButton2.Text = "Sign Up";
             this.SignUpButton2.UseVisualStyleBackColor = false;
@@ -1698,10 +1610,10 @@ namespace BlackJack
             this.settingsPanel.Controls.Add(this.addChange);
             this.settingsPanel.Controls.Add(this.unsmaeChange);
             this.settingsPanel.Controls.Add(this.nameChange);
-            this.settingsPanel.Location = new System.Drawing.Point(1077, 465);
-            this.settingsPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.settingsPanel.Location = new System.Drawing.Point(808, 378);
+            this.settingsPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.settingsPanel.Name = "settingsPanel";
-            this.settingsPanel.Size = new System.Drawing.Size(496, 428);
+            this.settingsPanel.Size = new System.Drawing.Size(372, 348);
             this.settingsPanel.TabIndex = 34;
             this.settingsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
@@ -1711,10 +1623,9 @@ namespace BlackJack
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(89, 338);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(67, 275);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(298, 24);
+            this.label8.Size = new System.Drawing.Size(238, 18);
             this.label8.TabIndex = 19;
             this.label8.Text = "Information does not match a user.";
             // 
@@ -1724,9 +1635,10 @@ namespace BlackJack
             this.CancelSettings.BackColor = System.Drawing.Color.Transparent;
             this.CancelSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelSettings.ForeColor = System.Drawing.Color.Gray;
-            this.CancelSettings.Location = new System.Drawing.Point(217, 407);
+            this.CancelSettings.Location = new System.Drawing.Point(163, 331);
+            this.CancelSettings.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CancelSettings.Name = "CancelSettings";
-            this.CancelSettings.Size = new System.Drawing.Size(54, 18);
+            this.CancelSettings.Size = new System.Drawing.Size(45, 15);
             this.CancelSettings.TabIndex = 24;
             this.CancelSettings.Text = "Cancel";
             this.CancelSettings.Click += new System.EventHandler(this.label18_Click);
@@ -1740,10 +1652,10 @@ namespace BlackJack
             this.passChangebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.passChangebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passChangebtn.ForeColor = System.Drawing.Color.White;
-            this.passChangebtn.Location = new System.Drawing.Point(272, 255);
-            this.passChangebtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.passChangebtn.Location = new System.Drawing.Point(204, 207);
+            this.passChangebtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.passChangebtn.Name = "passChangebtn";
-            this.passChangebtn.Size = new System.Drawing.Size(123, 31);
+            this.passChangebtn.Size = new System.Drawing.Size(92, 25);
             this.passChangebtn.TabIndex = 23;
             this.passChangebtn.Text = "Change";
             this.passChangebtn.UseVisualStyleBackColor = false;
@@ -1755,9 +1667,10 @@ namespace BlackJack
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Gray;
-            this.label17.Location = new System.Drawing.Point(93, 286);
+            this.label17.Location = new System.Drawing.Point(70, 232);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(61, 18);
+            this.label17.Size = new System.Drawing.Size(52, 15);
             this.label17.TabIndex = 22;
             this.label17.Text = "Balance";
             this.label17.Click += new System.EventHandler(this.label17_Click);
@@ -1769,10 +1682,10 @@ namespace BlackJack
             this.balChange.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.balChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.balChange.ForeColor = System.Drawing.Color.Gray;
-            this.balChange.Location = new System.Drawing.Point(97, 304);
-            this.balChange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.balChange.Location = new System.Drawing.Point(73, 247);
+            this.balChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.balChange.Name = "balChange";
-            this.balChange.Size = new System.Drawing.Size(295, 29);
+            this.balChange.Size = new System.Drawing.Size(222, 24);
             this.balChange.TabIndex = 21;
             this.balChange.TextChanged += new System.EventHandler(this.balChange_TextChanged);
             // 
@@ -1782,9 +1695,10 @@ namespace BlackJack
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(93, 89);
+            this.label1.Location = new System.Drawing.Point(70, 72);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 18);
+            this.label1.Size = new System.Drawing.Size(91, 15);
             this.label1.TabIndex = 20;
             this.label1.Text = "Phone Number";
             this.label1.Click += new System.EventHandler(this.label1_Click_2);
@@ -1796,10 +1710,10 @@ namespace BlackJack
             this.phoneChange.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.phoneChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneChange.ForeColor = System.Drawing.Color.Gray;
-            this.phoneChange.Location = new System.Drawing.Point(97, 108);
-            this.phoneChange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.phoneChange.Location = new System.Drawing.Point(73, 88);
+            this.phoneChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.phoneChange.Name = "phoneChange";
-            this.phoneChange.Size = new System.Drawing.Size(295, 29);
+            this.phoneChange.Size = new System.Drawing.Size(222, 24);
             this.phoneChange.TabIndex = 19;
             this.phoneChange.TextChanged += new System.EventHandler(this.phoneChange_TextChanged);
             // 
@@ -1809,9 +1723,10 @@ namespace BlackJack
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(93, 139);
+            this.label5.Location = new System.Drawing.Point(70, 113);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(140, 18);
+            this.label5.Size = new System.Drawing.Size(116, 15);
             this.label5.TabIndex = 18;
             this.label5.Text = "Credit Card Number";
             this.label5.Click += new System.EventHandler(this.label5_Click_1);
@@ -1823,10 +1738,10 @@ namespace BlackJack
             this.ccChange.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ccChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ccChange.ForeColor = System.Drawing.Color.Gray;
-            this.ccChange.Location = new System.Drawing.Point(97, 159);
-            this.ccChange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ccChange.Location = new System.Drawing.Point(73, 129);
+            this.ccChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ccChange.Name = "ccChange";
-            this.ccChange.Size = new System.Drawing.Size(295, 29);
+            this.ccChange.Size = new System.Drawing.Size(222, 24);
             this.ccChange.TabIndex = 17;
             this.ccChange.TextChanged += new System.EventHandler(this.ccChange_TextChanged);
             // 
@@ -1839,10 +1754,10 @@ namespace BlackJack
             this.saveSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveSettings.ForeColor = System.Drawing.Color.White;
-            this.saveSettings.Location = new System.Drawing.Point(97, 368);
-            this.saveSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.saveSettings.Location = new System.Drawing.Point(73, 299);
+            this.saveSettings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.saveSettings.Name = "saveSettings";
-            this.saveSettings.Size = new System.Drawing.Size(296, 37);
+            this.saveSettings.Size = new System.Drawing.Size(222, 30);
             this.saveSettings.TabIndex = 16;
             this.saveSettings.Text = "Save";
             this.saveSettings.UseVisualStyleBackColor = false;
@@ -1854,9 +1769,10 @@ namespace BlackJack
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(93, 238);
+            this.label6.Location = new System.Drawing.Point(70, 193);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 18);
+            this.label6.Size = new System.Drawing.Size(61, 15);
             this.label6.TabIndex = 15;
             this.label6.Text = "Password";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -1867,9 +1783,10 @@ namespace BlackJack
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Gray;
-            this.label13.Location = new System.Drawing.Point(93, 188);
+            this.label13.Location = new System.Drawing.Point(70, 153);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(62, 18);
+            this.label13.Size = new System.Drawing.Size(51, 15);
             this.label13.TabIndex = 14;
             this.label13.Text = "Address";
             this.label13.Click += new System.EventHandler(this.label13_Click);
@@ -1880,9 +1797,10 @@ namespace BlackJack
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Gray;
-            this.label14.Location = new System.Drawing.Point(248, 41);
+            this.label14.Location = new System.Drawing.Point(186, 33);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(77, 18);
+            this.label14.Size = new System.Drawing.Size(65, 15);
             this.label14.TabIndex = 13;
             this.label14.Text = "Username";
             this.label14.Click += new System.EventHandler(this.label14_Click);
@@ -1893,9 +1811,10 @@ namespace BlackJack
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Gray;
-            this.label15.Location = new System.Drawing.Point(93, 41);
+            this.label15.Location = new System.Drawing.Point(70, 33);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(48, 18);
+            this.label15.Size = new System.Drawing.Size(41, 15);
             this.label15.TabIndex = 12;
             this.label15.Text = "Name";
             this.label15.Click += new System.EventHandler(this.label15_Click);
@@ -1906,9 +1825,10 @@ namespace BlackJack
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(72, 16);
+            this.label16.Location = new System.Drawing.Point(54, 13);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(310, 31);
+            this.label16.Size = new System.Drawing.Size(244, 25);
             this.label16.TabIndex = 11;
             this.label16.Text = "Update User Information";
             this.label16.Click += new System.EventHandler(this.label16_Click);
@@ -1920,11 +1840,11 @@ namespace BlackJack
             this.passChange.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.passChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passChange.ForeColor = System.Drawing.Color.Gray;
-            this.passChange.Location = new System.Drawing.Point(97, 256);
-            this.passChange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.passChange.Location = new System.Drawing.Point(73, 208);
+            this.passChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.passChange.Name = "passChange";
             this.passChange.PasswordChar = '*';
-            this.passChange.Size = new System.Drawing.Size(167, 29);
+            this.passChange.Size = new System.Drawing.Size(126, 24);
             this.passChange.TabIndex = 10;
             this.passChange.TextChanged += new System.EventHandler(this.passChange_TextChanged);
             // 
@@ -1935,10 +1855,10 @@ namespace BlackJack
             this.addChange.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.addChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addChange.ForeColor = System.Drawing.Color.Gray;
-            this.addChange.Location = new System.Drawing.Point(97, 208);
-            this.addChange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addChange.Location = new System.Drawing.Point(73, 169);
+            this.addChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addChange.Name = "addChange";
-            this.addChange.Size = new System.Drawing.Size(295, 29);
+            this.addChange.Size = new System.Drawing.Size(222, 24);
             this.addChange.TabIndex = 9;
             this.addChange.TextChanged += new System.EventHandler(this.addChange_TextChanged);
             // 
@@ -1949,10 +1869,10 @@ namespace BlackJack
             this.unsmaeChange.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.unsmaeChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unsmaeChange.ForeColor = System.Drawing.Color.Gray;
-            this.unsmaeChange.Location = new System.Drawing.Point(253, 59);
-            this.unsmaeChange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.unsmaeChange.Location = new System.Drawing.Point(190, 48);
+            this.unsmaeChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.unsmaeChange.Name = "unsmaeChange";
-            this.unsmaeChange.Size = new System.Drawing.Size(139, 29);
+            this.unsmaeChange.Size = new System.Drawing.Size(105, 24);
             this.unsmaeChange.TabIndex = 8;
             this.unsmaeChange.TextChanged += new System.EventHandler(this.unsmaeChange_TextChanged);
             // 
@@ -1963,19 +1883,19 @@ namespace BlackJack
             this.nameChange.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nameChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameChange.ForeColor = System.Drawing.Color.Gray;
-            this.nameChange.Location = new System.Drawing.Point(97, 59);
-            this.nameChange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nameChange.Location = new System.Drawing.Point(73, 48);
+            this.nameChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nameChange.Name = "nameChange";
-            this.nameChange.Size = new System.Drawing.Size(145, 29);
+            this.nameChange.Size = new System.Drawing.Size(109, 24);
             this.nameChange.TabIndex = 7;
             this.nameChange.TextChanged += new System.EventHandler(this.nameChange_TextChanged);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1941, 1100);
+            this.ClientSize = new System.Drawing.Size(1456, 894);
             this.Controls.Add(this.settingsPanel);
             this.Controls.Add(this.GamePanel);
             this.Controls.Add(this.SignUpPanel);
@@ -1989,7 +1909,6 @@ namespace BlackJack
             this.Controls.Add(this.closeButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Blackjack";
             this.Load += new System.EventHandler(this.Form1_Load);
