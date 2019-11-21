@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <players>
   <player username="cford">
     <name>Connor Ford</name>
@@ -11,7 +11,7 @@
   <player username="hdemeyer">
     <name>Hunter Demeyer</name>
     <password>hunter</password>
-    <balance>1000000</balance>
+    <balance>999900</balance>
     <address>820 N Washington Ave, Madison, SD 57042</address>
     <phone_number>1234567890</phone_number>
     <credit_card>1234567812345678</credit_card>
@@ -31,5 +31,21 @@
     <address>820 N Washington Ave, Madison, SD 57042</address>
     <phone_number>1234567890</phone_number>
     <credit_card>1234567812345678</credit_card>
+  </player>
+  <player username="dbdsc">
+    <name>Dave Bishop</name>
+    <password>scrum</password>
+    <balance>1020</balance>
+    <address>Secret Fishing Spot</address>
+    <phone_number>6052328936</phone_number>
+    <credit_card>6372938471029367</credit_card>
+  </player>
+  <player username="Cereal">
+    <name>Bailey</name>
+    <password>fye</password>
+    <balance>1000</balance>
+    <address>ATL</address>
+    <phone_number>7023268392</phone_number>
+    <credit_card>283918364892863</credit_card>
   </player>
 </players>

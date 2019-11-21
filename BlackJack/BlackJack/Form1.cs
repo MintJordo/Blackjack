@@ -262,7 +262,7 @@ namespace BlackJack
             blinkPanel.BackColor = System.Drawing.Color.FromArgb(212, 175, 55);
 
             XmlDocument doc = new XmlDocument();
-            doc.Load("Players.xml");
+            doc.Load(@"..\..\Players.xml");
             foreach (XmlNode node in doc.DocumentElement)
             {
                 string username1 = node.Attributes[0].InnerText;
@@ -271,10 +271,10 @@ namespace BlackJack
                     node.ChildNodes[2].InnerText = moneyBal.Text.Substring(1);
                 }
             }
-            doc.Save("Players.xml");
+            doc.Save(@"..\..\Players.xml");
 
             doc = new XmlDocument();
-            doc.Load("Games.xml");
+            doc.Load(@"..\..\Games.xml");
             bool exists = false;
             XmlNode n = null;
             string username = player1.getName();
@@ -398,7 +398,7 @@ namespace BlackJack
             string entered_username = UserNameBox2.Text;
             string entered_password = passwordBox2.Text;
             XmlDocument doc = new XmlDocument();
-            doc.Load("Players.xml");
+            doc.Load(@"..\..\Players.xml");
             foreach (XmlNode node in doc.DocumentElement)
             {
                 string username = node.Attributes[0].InnerText;
@@ -419,7 +419,7 @@ namespace BlackJack
                     moneyBal.Text = "$" + balance.ToString();
                     //Console.WriteLine("Initialized player " + username + " with balance " + balance);
                     doc = new XmlDocument();
-                    doc.Load("Games.xml");
+                    doc.Load(@"..\..\Games.xml");
                     bool exists = false;
                     XmlNode n = null;
                     //string username = player1.getName();
@@ -871,7 +871,7 @@ namespace BlackJack
             //System.IO.File.WriteAllText(@"..\..\..\Money.txt", moneyBal.Text);
             //save game state
             XmlDocument doc = new XmlDocument();
-            doc.Load("Players.xml");
+            doc.Load(@"..\..\Players.xml");
             foreach (XmlNode node in doc.DocumentElement)
             {
                 string username1 = node.Attributes[0].InnerText;
@@ -880,12 +880,12 @@ namespace BlackJack
                     node.ChildNodes[2].InnerText = moneyBal.Text.Substring(1);
                 }
             }
-            doc.Save("Players.xml");
+            doc.Save(@"..\..\Players.xml");
 
             if (midGame)
             {
                 doc = new XmlDocument();
-                doc.Load("Games.xml");
+                doc.Load(@"..\..\Games.xml");
                 bool exists = false;
                 XmlNode n = null;
                 string username = player1.getName();
@@ -969,12 +969,12 @@ namespace BlackJack
 
                 //save to file
                 doc.DocumentElement.AppendChild(new_user);
-                doc.Save("Games.xml");
+                doc.Save(@"..\..\Games.xml");
             }
             else
             {
                 doc = new XmlDocument();
-                doc.Load("Games.xml");
+                doc.Load(@"..\..\Games.xml");
                 bool exists = false;
                 XmlNode n = null;
                 string username = player1.getName();
@@ -991,7 +991,7 @@ namespace BlackJack
                 {
                     doc.DocumentElement.RemoveChild(n);
                 }
-                doc.Save("Games.xml");
+                doc.Save(@"..\..\Games.xml");
             }
             Close();
         }
@@ -1187,7 +1187,7 @@ namespace BlackJack
 
         private void verifyButton_Click(object sender, EventArgs e) {
             XmlDocument doc = new XmlDocument();
-            doc.Load("Players.xml");
+            doc.Load(@"..\..\Players.xml");
             // Check to make sure that that username and phone number match
             string entered_username = verifyUsername.Text;
             string entered_phoneNum = verifyPhoneNum.Text;
@@ -1209,11 +1209,11 @@ namespace BlackJack
             if (newPass == confirmNewPass) {
                 // Update XML file with new password
                 XmlDocument doc = new XmlDocument();
-                doc.Load("Players.xml");
+                doc.Load(@"..\..\Players.xml");
                 foreach (XmlNode node in doc.DocumentElement) {
                     if (verifyUsername.Text == node.Attributes[0].InnerText) {
                         node.ChildNodes[1].InnerText = confirmNewPass;
-                        doc.Save("Players.xml");
+                        doc.Save(@"..\..\Players.xml");
                     }
                 }
                 goToLogin();
@@ -1242,7 +1242,7 @@ namespace BlackJack
             else {
                 // Check if username exists or not
                 XmlDocument doc = new XmlDocument();
-                doc.Load("Players.xml");
+                doc.Load(@"..\..\Players.xml");
                 bool exists = false;
                 foreach (XmlNode node in doc.DocumentElement) {
                     if (username == node.Attributes[0].InnerText) {
@@ -1290,13 +1290,14 @@ namespace BlackJack
 
                     //save to file
                     doc.DocumentElement.AppendChild(new_user);
-                    doc.Save("Players.xml");
+                    doc.Save(@"..\..\Players.xml");
 
                     SignUpPanel.Visible = false;
                     SignInPanel.Visible = false;
                     forgotPanel.Visible = false;
                     newPassPanel.Visible = false;
                     GamePanel.Visible = true;
+                    
                     GamePanel.Location = new Point(13, 13);
                     this.BackColor = Color.Green;
                 }
@@ -1347,7 +1348,7 @@ namespace BlackJack
             this.BackColor = Color.FromArgb(0, 25, 50);
 
             XmlDocument doc = new XmlDocument();
-            doc.Load("Players.xml");
+            doc.Load(@"..\..\Players.xml");
             foreach (XmlNode node in doc.DocumentElement)
             {
                 string username = node.Attributes[0].InnerText;
@@ -1392,7 +1393,7 @@ namespace BlackJack
             if (passChange.Text == "") return;
 
             XmlDocument doc = new XmlDocument();
-            doc.Load("Players.xml");
+            doc.Load(@"..\..\Players.xml");
             foreach (XmlNode node in doc.DocumentElement)
             {
                 string username = node.Attributes[0].InnerText;
@@ -1441,7 +1442,7 @@ namespace BlackJack
         private void saveSettings_Click(object sender, EventArgs e)
         {
             XmlDocument doc = new XmlDocument();
-            doc.Load("Players.xml");
+            doc.Load(@"..\..\Players.xml");
             foreach (XmlNode node in doc.DocumentElement)
             {
                 string username = node.Attributes[0].InnerText;
@@ -1456,7 +1457,7 @@ namespace BlackJack
                     node.ChildNodes[4].InnerText = phoneChange.Text;
                 }
             }
-            doc.Save("Players.xml");
+            doc.Save(@"..\..\Players.xml");
             moneyBal.Text = "$" + balChange.Text;
             GamePanel.Visible = true;
             settingsPanel.Visible = false;
