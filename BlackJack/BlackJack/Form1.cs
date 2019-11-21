@@ -361,6 +361,7 @@ namespace BlackJack
             SignUpPanel.Visible = false;
             GamePanel.Visible = false;
             forgotPanel.Visible = false;
+            newPassPanel.Visible = false;
 
             SignInPanel.BackColor = Color.FromArgb(0, 25, 50);
             SignUpButton2.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
@@ -1237,7 +1238,8 @@ namespace BlackJack
             string password = passwordBox.Text;
             // Make sure each text field is filled out
             if (name == "" || username == "" || phone == "" || creditCard == "" || address == "" || password == "") {
-                Console.WriteLine("You need to fill out each text field");
+                signUpError.Text = "You need to fill out each text field";
+                signUpError.Location = new Point(79, 288);
             }
             else {
                 // Check if username exists or not
@@ -1251,10 +1253,12 @@ namespace BlackJack
                 }
                 // Username exists
                 if (exists) {
-                    Console.WriteLine("User already exists");
+                    signUpError.Text = "User already exists.";
+                    signUpError.Location = new Point(120, 288);
                 }
                 // Username doesn't exist
                 else {
+                    signUpError.Text = "";
                     // Add user to XML file
                     Console.WriteLine("Creating new user " + username);
                     XmlElement new_user = doc.CreateElement("player");
@@ -1551,6 +1555,11 @@ namespace BlackJack
             {
                 endGame();
             }
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
