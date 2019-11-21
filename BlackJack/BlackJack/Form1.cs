@@ -735,6 +735,8 @@ namespace BlackJack
 
         private void hitButton_Click(object sender, EventArgs e)
         {
+            splitButton.Visible = false;
+
             updatePlayerHandPictureBox();
             if (player1.hand.getNumCards() < 5)
             {
@@ -766,6 +768,8 @@ namespace BlackJack
 
         private void standButton_Click(object sender, EventArgs e)
         {
+            splitButton.Visible = false;
+
             while (dealer.hand.getHandTotal() < 17)
             {
                 dealer.hand.addCard(deck.getCard());
