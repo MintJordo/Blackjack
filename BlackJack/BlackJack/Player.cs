@@ -78,6 +78,11 @@ namespace BlackJack
         {
             name = String.Copy(s);
         }
+
+        public void setMoney(int m)
+        {
+            money = m;
+        }
         
     }
 }

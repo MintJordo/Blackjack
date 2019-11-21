@@ -31,7 +31,7 @@ namespace BlackJack
 
         // begin game variable
         Deck deck;
-        Player player1;
+        Player player1 = new Player();
         Player dealer;
         int betInc = 5;
         string cardBackFileLocation = @"..\..\..\..\cards\red_back.png";
@@ -380,7 +380,11 @@ namespace BlackJack
                     GamePanel.Visible = true;
                     GamePanel.Location = new Point(13, 13);
                     this.BackColor = Color.Green;
+                    int balance = Int32.Parse(node.ChildNodes[2].InnerText);
                     player1.setName(username);
+                    player1.setMoney(balance);
+                    moneyBal.Text = "$" + balance.ToString();
+                    //Console.WriteLine("Initialized player " + username + " with balance " + balance);
                 }
                 else
                 {
@@ -403,11 +407,6 @@ namespace BlackJack
             //Get rounded corners on the form
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15, 15));
-            moneyBal.Text = System.IO.File.ReadAllText(@"..\..\..\Money.txt");
-            if (moneyBal.Text == "$0")
-            {
-                moneyBal.Text = "$100";
-            }
 
             //Hide Deal Button until bet
             dealButton.Visible = false;
@@ -422,7 +421,7 @@ namespace BlackJack
             myTotalVal.Visible = false;
 
             deck = new Deck();
-            player1 = new Player();
+            //player1 = new Player();
             dealer = new Player();
             dealerHand1.Visible = false;
             dealerHand2.Visible = false;
@@ -718,7 +717,23 @@ namespace BlackJack
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            System.IO.File.WriteAllText(@"..\..\..\Money.txt", moneyBal.Text);
+            //System.IO.File.WriteAllText(@"..\..\..\Money.txt", moneyBal.Text);
+            //save game state
+            XmlDocument doc = new XmlDocument();
+            doc.Load("Players.xml");
+            foreach (XmlNode node in doc.DocumentElement)
+            {
+                string username = node.Attributes[0].InnerText;
+                if (player1.getName() == username)
+                {
+                    node.ChildNodes[2].InnerText = moneyBal.Text.Substring(1);
+                }
+            }
+            doc.Save("Players.xml");
+            GamePanel.Visible = true;
+            settingsPanel.Visible = false;
+            settingsPanel.Location = new Point(209, 34);
+            this.BackColor = Color.Green;
             Close();
         }
 
