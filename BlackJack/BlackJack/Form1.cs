@@ -247,6 +247,7 @@ namespace BlackJack
             hitButton.Visible = false;
             splitHitButton.Visible = false;
             dealButton.Visible = false;
+            insuranceButton.Visible = false;
             insuranceIncBet.Visible = false;
             insuranceDecBet.Visible = false;
             incBet.Visible = true;
