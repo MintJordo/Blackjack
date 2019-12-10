@@ -179,48 +179,48 @@ namespace BlackJack
             midGame = false;
             showDealerCards();
             dealerTotalVal.Text = dealer.hand.getHandTotal().ToString();
-            outcomeLabel.Text = "YouLose!";
+            outcomeLabel.Text = "You Lose!";
             if (player1.splitHand.show().Length > 0)
             {
                 if (player1.splitHand.getNumCards() == 5)
                 {
                     player1.addMoney(player1.wager);
-                    outcomeLabel.Text = "YouWin!";
+                    outcomeLabel.Text = "You Win!";
                 }
                 if (player1.splitHand.getHandTotal() <= 21 && dealer.hand.getHandTotal() <= 21 && player1.splitHand.getHandTotal() > dealer.hand.getHandTotal())
                 {
                     player1.addMoney(player1.wager);
-                    outcomeLabel.Text = "YouWin!";
+                    outcomeLabel.Text = "You Win!";
                 }
                 if (dealer.hand.getHandTotal() > 21 && player1.splitHand.getHandTotal() <= 21)
                 {
                     player1.addMoney(player1.wager);
-                    outcomeLabel.Text = "YouWin!";
+                    outcomeLabel.Text = "You Win!";
                 }
                 if (player1.splitHand.getHandTotal() == dealer.hand.getHandTotal())
                 {
                     player1.addMoney(player1.wager);
-                    outcomeLabel.Text = "YouWin!";
+                    outcomeLabel.Text = "You Win!";
                 }
                 if (player1.hand.getNumCards() == 5)
                 {
                     player1.addMoney(player1.wager);
-                    outcomeLabel.Text = "YouWin!";
+                    outcomeLabel.Text = "You Win!";
                 }
                 if (player1.hand.getHandTotal() <= 21 && dealer.hand.getHandTotal() <= 21 && player1.hand.getHandTotal() > dealer.hand.getHandTotal())
                 {
                     player1.addMoney(player1.wager);
-                    outcomeLabel.Text = "YouWin!";
+                    outcomeLabel.Text = "You Win!";
                 }
                 if (dealer.hand.getHandTotal() > 21 && player1.hand.getHandTotal() <= 21)
                 {
                     player1.addMoney(player1.wager);
-                    outcomeLabel.Text = "YouWin!";
+                    outcomeLabel.Text = "You Win!";
                 }
                 if (player1.hand.getHandTotal() == dealer.hand.getHandTotal())
                 {
                     player1.addMoney(player1.wager);
-                    outcomeLabel.Text = "YouWin!";
+                    outcomeLabel.Text = "You Win!";
                 }
             }
             else
@@ -228,22 +228,22 @@ namespace BlackJack
                 if (player1.hand.getNumCards() == 5)
                 {
                     player1.addMoney(player1.wager * 2);
-                    outcomeLabel.Text = "YouWin!";
+                    outcomeLabel.Text = "You Win!";
                 }
                 if (player1.hand.getHandTotal() <= 21 && dealer.hand.getHandTotal() <= 21 && player1.hand.getHandTotal() > dealer.hand.getHandTotal())
                 {
                     player1.addMoney(player1.wager * 2);
-                    outcomeLabel.Text = "YouWin!";
+                    outcomeLabel.Text = "You Win!";
                 }
                 if (dealer.hand.getHandTotal() > 21 && player1.hand.getHandTotal() <= 21)
                 {
                     player1.addMoney(player1.wager * 2);
-                    outcomeLabel.Text = "YouWin!";
+                    outcomeLabel.Text = "You Win!";
                 }
                 if (player1.hand.getHandTotal() == dealer.hand.getHandTotal())
                 {
                     player1.addMoney(player1.wager);
-                    outcomeLabel.Text = "YouWin!";
+                    outcomeLabel.Text = "You Win!";
                 }
             }
             if (dealer.hand.getHandTotal() == 21 && dealer.hand.show().Length == 2)
