@@ -66,6 +66,8 @@ namespace BlackJack
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.GamePanel = new System.Windows.Forms.Panel();
+            this.outcomeLabel = new System.Windows.Forms.Label();
+            this.loggedinTag = new System.Windows.Forms.Label();
             this.myTotalVal2 = new System.Windows.Forms.Label();
             this.myTotalLabel2 = new System.Windows.Forms.Label();
             this.SettingsButton = new System.Windows.Forms.PictureBox();
@@ -127,13 +129,11 @@ namespace BlackJack
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.saveSettings = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.loggedinTag = new System.Windows.Forms.Label();
-            this.outcomeLabel = new System.Windows.Forms.Label();
             this.balChange = new ePOSOne.btnProduct.MyTextBox();
             this.phoneChange = new ePOSOne.btnProduct.MyTextBox();
             this.ccChange = new ePOSOne.btnProduct.MyTextBox();
@@ -488,6 +488,26 @@ namespace BlackJack
             this.GamePanel.TabIndex = 32;
             this.GamePanel.Visible = false;
             this.GamePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.GamePanel_Paint);
+            // 
+            // outcomeLabel
+            // 
+            this.outcomeLabel.AutoSize = true;
+            this.outcomeLabel.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outcomeLabel.Location = new System.Drawing.Point(335, 215);
+            this.outcomeLabel.Name = "outcomeLabel";
+            this.outcomeLabel.Size = new System.Drawing.Size(80, 22);
+            this.outcomeLabel.TabIndex = 50;
+            this.outcomeLabel.Text = "YouWin!";
+            // 
+            // loggedinTag
+            // 
+            this.loggedinTag.AutoSize = true;
+            this.loggedinTag.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loggedinTag.Location = new System.Drawing.Point(2, 59);
+            this.loggedinTag.Name = "loggedinTag";
+            this.loggedinTag.Size = new System.Drawing.Size(70, 22);
+            this.loggedinTag.TabIndex = 49;
+            this.loggedinTag.Text = "lfleck";
             // 
             // myTotalVal2
             // 
@@ -1304,20 +1324,6 @@ namespace BlackJack
             this.saveSettings.UseVisualStyleBackColor = false;
             this.saveSettings.Click += new System.EventHandler(this.saveSettings_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(70, 236);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 15);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Password";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -1346,6 +1352,20 @@ namespace BlackJack
             this.label14.Text = "Username";
             this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Gray;
+            this.label6.Location = new System.Drawing.Point(70, 236);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(136, 15);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Enter Current Password";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -1373,26 +1393,6 @@ namespace BlackJack
             this.label16.TabIndex = 11;
             this.label16.Text = "Update User Information";
             this.label16.Click += new System.EventHandler(this.label16_Click);
-            // 
-            // loggedinTag
-            // 
-            this.loggedinTag.AutoSize = true;
-            this.loggedinTag.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loggedinTag.Location = new System.Drawing.Point(2, 59);
-            this.loggedinTag.Name = "loggedinTag";
-            this.loggedinTag.Size = new System.Drawing.Size(70, 22);
-            this.loggedinTag.TabIndex = 49;
-            this.loggedinTag.Text = "lfleck";
-            // 
-            // outcomeLabel
-            // 
-            this.outcomeLabel.AutoSize = true;
-            this.outcomeLabel.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outcomeLabel.Location = new System.Drawing.Point(335, 215);
-            this.outcomeLabel.Name = "outcomeLabel";
-            this.outcomeLabel.Size = new System.Drawing.Size(80, 22);
-            this.outcomeLabel.TabIndex = 50;
-            this.outcomeLabel.Text = "YouWin!";
             // 
             // balChange
             // 

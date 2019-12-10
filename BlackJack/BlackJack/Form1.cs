@@ -404,6 +404,9 @@ namespace BlackJack
             forgotPanel.Visible = false;
             settingsPanel.Visible = false;
             newPassPanel.Location = new Point(209, 34);
+            confirmPasswordTextField.Text = "";
+            newPasswordTextField.Text = "";
+
 
             passDontMatchLabel.Visible = false;
         }
@@ -1232,11 +1235,12 @@ namespace BlackJack
                 XmlDocument doc = new XmlDocument();
                 doc.Load(@"..\..\Players.xml");
                 foreach (XmlNode node in doc.DocumentElement) {
-                    if (verifyUsername.Text == node.Attributes[0].InnerText) {
+                    if (verifyUsername.Text == node.Attributes[0].InnerText || player1.getName() == node.Attributes[0].InnerText) {
                         node.ChildNodes[1].InnerText = confirmNewPass;
                         doc.Save(@"..\..\Players.xml");
                     }
                 }
+                incorrectLabel.Visible = false;
                 goToLogin();
             }
             else {
