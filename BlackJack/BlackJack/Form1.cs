@@ -1336,6 +1336,7 @@ namespace BlackJack
                     GamePanel.Visible = true;
                     
                     GamePanel.Location = new Point(13, 13);
+                    loggedinTag.Text = username;
                     this.BackColor = Color.Green;
                 }
             }
