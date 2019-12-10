@@ -179,39 +179,48 @@ namespace BlackJack
             midGame = false;
             showDealerCards();
             dealerTotalVal.Text = dealer.hand.getHandTotal().ToString();
+            outcomeLabel.Text = "YouLose!";
             if (player1.splitHand.show().Length > 0)
             {
                 if (player1.splitHand.getNumCards() == 5)
                 {
                     player1.addMoney(player1.wager);
+                    outcomeLabel.Text = "YouWin!";
                 }
                 if (player1.splitHand.getHandTotal() <= 21 && dealer.hand.getHandTotal() <= 21 && player1.splitHand.getHandTotal() > dealer.hand.getHandTotal())
                 {
                     player1.addMoney(player1.wager);
+                    outcomeLabel.Text = "YouWin!";
                 }
                 if (dealer.hand.getHandTotal() > 21 && player1.splitHand.getHandTotal() <= 21)
                 {
                     player1.addMoney(player1.wager);
+                    outcomeLabel.Text = "YouWin!";
                 }
                 if (player1.splitHand.getHandTotal() == dealer.hand.getHandTotal())
                 {
                     player1.addMoney(player1.wager);
+                    outcomeLabel.Text = "YouWin!";
                 }
                 if (player1.hand.getNumCards() == 5)
                 {
                     player1.addMoney(player1.wager);
+                    outcomeLabel.Text = "YouWin!";
                 }
                 if (player1.hand.getHandTotal() <= 21 && dealer.hand.getHandTotal() <= 21 && player1.hand.getHandTotal() > dealer.hand.getHandTotal())
                 {
                     player1.addMoney(player1.wager);
+                    outcomeLabel.Text = "YouWin!";
                 }
                 if (dealer.hand.getHandTotal() > 21 && player1.hand.getHandTotal() <= 21)
                 {
                     player1.addMoney(player1.wager);
+                    outcomeLabel.Text = "YouWin!";
                 }
                 if (player1.hand.getHandTotal() == dealer.hand.getHandTotal())
                 {
                     player1.addMoney(player1.wager);
+                    outcomeLabel.Text = "YouWin!";
                 }
             }
             else
@@ -219,18 +228,22 @@ namespace BlackJack
                 if (player1.hand.getNumCards() == 5)
                 {
                     player1.addMoney(player1.wager * 2);
+                    outcomeLabel.Text = "YouWin!";
                 }
                 if (player1.hand.getHandTotal() <= 21 && dealer.hand.getHandTotal() <= 21 && player1.hand.getHandTotal() > dealer.hand.getHandTotal())
                 {
                     player1.addMoney(player1.wager * 2);
+                    outcomeLabel.Text = "YouWin!";
                 }
                 if (dealer.hand.getHandTotal() > 21 && player1.hand.getHandTotal() <= 21)
                 {
                     player1.addMoney(player1.wager * 2);
+                    outcomeLabel.Text = "YouWin!";
                 }
                 if (player1.hand.getHandTotal() == dealer.hand.getHandTotal())
                 {
                     player1.addMoney(player1.wager);
+                    outcomeLabel.Text = "YouWin!";
                 }
             }
             if (dealer.hand.getHandTotal() == 21 && dealer.hand.show().Length == 2)
@@ -417,6 +430,7 @@ namespace BlackJack
                     this.BackColor = Color.Green;
                     int balance = Int32.Parse(node.ChildNodes[2].InnerText);
                     player1.setName(username);
+                    loggedinTag.Text = player1.getName();
                     player1.setMoney(balance);
                     moneyBal.Text = "$" + balance.ToString();
                     //Console.WriteLine("Initialized player " + username + " with balance " + balance);
@@ -550,12 +564,12 @@ namespace BlackJack
             InitializeComponent();
             makeLogin();
             goToLogin();
-
+            
             this.Size = new Size(800, 450);
             //Timer Code
             BetTimer.Start();
             BetTimer.Enabled = true;
-
+            outcomeLabel.Text = "";
             //Get rounded corners on the form
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 15, 15));
@@ -784,6 +798,7 @@ namespace BlackJack
         {
             if (player1.getMoney() - betInc >= 0)
             {
+                outcomeLabel.Text = "";
                 player1.wager += betInc;
                 player1.takeMoney(betInc);
                 betLabel.Text = "Bet: $" + player1.wager.ToString();
@@ -1565,6 +1580,11 @@ namespace BlackJack
         }
 
         private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GamePanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
