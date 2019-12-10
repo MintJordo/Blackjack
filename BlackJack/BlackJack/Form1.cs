@@ -339,6 +339,7 @@ namespace BlackJack
             newPassPanel.Visible = false;
             incorrectLabel.Visible = false;
             testButton.Visible = false;
+            passwordBox2.Text = "";
 
             SignUpPanel.BackColor = Color.FromArgb(0, 25, 50);
             SignInButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
@@ -376,6 +377,7 @@ namespace BlackJack
             GamePanel.Visible = false;
             forgotPanel.Visible = false;
             newPassPanel.Visible = false;
+            passwordBox2.Text = "";
 
             SignInPanel.BackColor = Color.FromArgb(0, 25, 50);
             SignUpButton2.FlatAppearance.MouseOverBackColor = Color.FromArgb(74, 154, 122);
