@@ -2,7 +2,7 @@
 <players>
   <player username="cford">
     <name>Connor Ford</name>
-    <password>cocoa</password>
+    <password>740D9472155D310672C71C284D4B91E751B93F8F0A5A3ED9EE01B30F204BF0A8</password>
     <balance>1000000</balance>
     <address>820 N Washington Ave, Madison, SD 57042</address>
     <phone_number>1234567890</phone_number>
@@ -10,7 +10,7 @@
   </player>
   <player username="hdemeyer">
     <name>Hunter Demeyer</name>
-    <password>hunter</password>
+    <password>E9A63A4EB15738AE85CD416221C8FCC4CCC0018FAC91335B42EAA016C76E87F9</password>
     <balance>999900</balance>
     <address>820 N Washington Ave, Madison, SD 57042</address>
     <phone_number>1234567890</phone_number>
@@ -18,7 +18,7 @@
   </player>
   <player username="lfleck">
     <name>Luke Fleck</name>
-    <password>luke</password>
+    <password>CCCF52F3D03C5072EE64A136F74FC56B27E04F15FFE5D1D277D58AB18D94B327</password>
     <balance>980</balance>
     <address>820 N Washington Ave, Madison, SD 57042</address>
     <phone_number>1234567890</phone_number>
@@ -26,23 +26,15 @@
   </player>
   <player username="joberg">
     <name>Jordan Oberg</name>
-    <password>jordan</password>
+    <password>136C67657614311F32238751044A0A3C0294F2A521E573AFA8E496992D3786BA</password>
     <balance>1000000</balance>
     <address>820 N Washington Ave, Madison, SD 57042</address>
     <phone_number>1234567890</phone_number>
     <credit_card>1234567812345678</credit_card>
   </player>
-  <player username="dbdsc">
-    <name>Dave Bishop</name>
-    <password>scrum</password>
-    <balance>1020</balance>
-    <address>Secret Fishing Spot</address>
-    <phone_number>6052328936</phone_number>
-    <credit_card>6372938471029367</credit_card>
-  </player>
-  <player username="Cereal">
+  <player username="cereal">
     <name>Bailey</name>
-    <password>fye</password>
+    <password>ADA5DCF09BF7A203A52AADE256DD66C88DA07DEF5E339E66F314F88A99452FE0</password>
     <balance>1000</balance>
     <address>ATL</address>
     <phone_number>7023268392</phone_number>

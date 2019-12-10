@@ -11,6 +11,8 @@ using System.Runtime.InteropServices;
 using System.Xml;
 using Microsoft.VisualBasic;
 
+using System.Security.Cryptography;
+
 namespace BlackJack
 {
     public partial class Form1 : Form
@@ -417,6 +419,8 @@ namespace BlackJack
             // Check right here if login is correct
             string entered_username = UserNameBox2.Text;
             string entered_password = passwordBox2.Text;
+            // Change entered_password to hashed version of entered_password
+            entered_password = GetHashString(entered_password);
             XmlDocument doc = new XmlDocument();
             doc.Load(@"..\..\Players.xml");
             foreach (XmlNode node in doc.DocumentElement)
@@ -1230,8 +1234,8 @@ namespace BlackJack
         }
 
         private void setPassword_Click(object sender, EventArgs e) {
-            string newPass = newPasswordTextField.Text;
-            string confirmNewPass = confirmPasswordTextField.Text;
+            string newPass = GetHashString(newPasswordTextField.Text);
+            string confirmNewPass = GetHashString(confirmPasswordTextField.Text);
             if (newPass == confirmNewPass) {
                 // Update XML file with new password
                 XmlDocument doc = new XmlDocument();
@@ -1262,6 +1266,7 @@ namespace BlackJack
             string creditCard = creditCardBox.Text;
             string address = addressBox.Text;
             string password = passwordBox.Text;
+            password = GetHashString(password);
             // Make sure each text field is filled out
             if (name == "" || username == "" || phone == "" || creditCard == "" || address == "" || password == "") {
                 signUpError.Text = "You need to fill out each text field";
@@ -1422,6 +1427,7 @@ namespace BlackJack
 
         private void passChangebtn_Click(object sender, EventArgs e)
         {
+            string password = GetHashString(passChange.Text);
             if (passChange.Text == "") return;
 
             XmlDocument doc = new XmlDocument();
@@ -1431,7 +1437,7 @@ namespace BlackJack
                 string username = node.Attributes[0].InnerText;
                 if (player1.getName() == username)
                 {
-                    if (passChange.Text == node.ChildNodes[1].InnerText)
+                    if (password == node.ChildNodes[1].InnerText)
                     {
                         Console.WriteLine("updating pass for " + username);
                         newPass();
@@ -1594,6 +1600,19 @@ namespace BlackJack
         {
 
         }
+
+        // Functions for hashing a string
+        public static byte[] GetHash(string inputString) {
+            HashAlgorithm algorithm = SHA256.Create();
+            return algorithm.ComputeHash(Encoding.UTF8.GetBytes(inputString));
+        }
+        public static string GetHashString(string inputString) {
+            StringBuilder sb = new StringBuilder();
+            foreach (byte b in GetHash(inputString))
+                sb.Append(b.ToString("X2"));
+            return sb.ToString();
+        }
+
     }
 }
 
